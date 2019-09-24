@@ -15,12 +15,6 @@ public class MainActivity extends AppCompatActivity {
        // setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_quizz);
 
-        final ImageView imV = (ImageView) findViewById(R.id.imageView7);
-            imV.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(getApplicationContext(),"TEST",Toast.LENGTH_LONG);
-                }
-            });
+
     }
 }
