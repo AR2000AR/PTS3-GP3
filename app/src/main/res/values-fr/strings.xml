@@ -2,5 +2,5 @@
 <resources>
     <string name="map">Carte</string>
     <string name="encyclopedia">Encyclopédie</string>
-    <string name="quiz">quizz</string>
+    <string name="quiz">Quizz</string>
 </resources>
