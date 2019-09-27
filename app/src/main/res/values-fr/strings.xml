@@ -3,4 +3,9 @@
     <string name="map">Carte</string>
     <string name="encyclopedia">Encyclopédie</string>
     <string name="quiz">Quizz</string>
+    <string name="carbonifere">CARBONIFÈRE</string>
+    <string name="cretace">CRÉTACÉ</string>
+    <string name="devonien">DÉVONIEN</string>
+    <string name="mesozoique">MÉSOZOÏQUE</string>
+    <string name="paleozoique">PALÉOZOÏQUE</string>
 </resources>

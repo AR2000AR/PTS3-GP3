@@ -26,13 +26,16 @@ public class MainActivity extends AppCompatActivity {
         ImageButton encycloIcone = findViewById(R.id.encycloIcone);
         ImageButton quizIcone = findViewById(R.id.quizIcone);
 
-        /*mapLayout.setOnClickListener(new View.OnClickListener() {
+
+        View.OnClickListener mapClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lauchIntent = new Intent(getBaseContext(),);
+                Intent lauchIntent = new Intent(getBaseContext(),MapActivity.class);
                 startActivity(lauchIntent);
             }
-        });*/
+        };
+        mapLayout.setOnClickListener(mapClickListener);
+        mapIcone.setOnClickListener(mapClickListener);
 
         View.OnClickListener encycloClickListener = new View.OnClickListener() {
             @Override
