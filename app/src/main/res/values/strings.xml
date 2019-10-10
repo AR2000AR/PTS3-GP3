@@ -14,4 +14,5 @@
     <string name="cretace">CRETACE</string>
     <string name="paleozoique">PALEOZOIQUE</string>
     <string name="mesozoique">MESOZOIQUE</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
