@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
+
+import com.pts3.gp3.dinomap.encyclopedia.EncyclopediaActivity;
+import com.pts3.gp3.dinomap.encyclopedia.EncyclopediaMenu;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener encycloClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lauchIntent = new Intent(getBaseContext(),EncyclopediaActivity.class);
+                Intent lauchIntent = new Intent(getBaseContext(), EncyclopediaMenu.class);
                 startActivity(lauchIntent);
 
             }

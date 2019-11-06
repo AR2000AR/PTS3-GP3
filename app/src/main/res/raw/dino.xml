@@ -1,0 +1,18 @@
+<Encyclopedia>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>TestDino</NomCommun>
+            <NomScientifique>TestDino</NomScientifique>
+        </Nom>
+        <Taille>1</Taille>
+        <Poids>2</Poids>
+        <Epoque>Never</Epoque>
+        <LieuDecouverteFossile>Nowhere</LieuDecouverteFossile>
+        <RegimeAlimentaire />
+        <DescriptionDetaille>
+            <ModeDeVie>Virtual</ModeDeVie>
+            <ModeAlimentation>nothing</ModeAlimentation>
+            <Commentaire>test</Commentaire>
+        </DescriptionDetaille>
+    </Dinosaure>
+</Encyclopedia>
