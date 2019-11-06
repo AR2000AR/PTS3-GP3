@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.R;
 import com.pts3.gp3.dinomap.data.DatabaseParser;
+import com.pts3.gp3.dinomap.data.Dino;
 
 import org.jdom.JDOMException;
 
@@ -51,17 +52,7 @@ public class EncyclopediaMenu extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*BufferedReader bufferedReader= new BufferedReader(new InputStreamReader(inputStream));
-        String eachline = null;
-        try {
-            eachline = bufferedReader.readLine();
-            bufferedReader.readLine();
-            while (eachline != null) {
-                Log.d("TEST",eachline);
-                eachline = bufferedReader.readLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
+        Dino dino = database.getDino(database.getDinoNameListe().get(0));
+        Log.d("PAUSE","PAUSE");
     }
 }

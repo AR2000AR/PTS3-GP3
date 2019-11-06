@@ -8,7 +8,7 @@
         <Poids>2</Poids>
         <Epoque>Never</Epoque>
         <LieuDecouverteFossile>Nowhere</LieuDecouverteFossile>
-        <RegimeAlimentaire />
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
         <DescriptionDetaille>
             <ModeDeVie>Virtual</ModeDeVie>
             <ModeAlimentation>nothing</ModeAlimentation>
