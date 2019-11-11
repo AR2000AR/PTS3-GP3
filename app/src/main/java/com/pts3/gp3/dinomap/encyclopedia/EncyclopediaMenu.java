@@ -14,10 +14,8 @@ import com.pts3.gp3.dinomap.data.Dino;
 
 import org.jdom.JDOMException;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.List;
 
 public class EncyclopediaMenu extends AppCompatActivity {
@@ -54,5 +52,13 @@ public class EncyclopediaMenu extends AppCompatActivity {
         }
         Dino dino = database.getDino(database.getDinoNameListe().get(0));
         Log.d("PAUSE","PAUSE");
+
+        for (int i = 0; i < 20; i++) {
+            listLayout.addView(new DinoNameView(this, getString(R.string.placeholder_name_sc), getString(R.string.placeholder_name_com)));
+        }
+    }
+
+    private DinoNameView makeViewFromDino(Dino dino) {
+        return new DinoNameView(this, dino.getNomScientifique(), dino.getNomCommun());
     }
 }
