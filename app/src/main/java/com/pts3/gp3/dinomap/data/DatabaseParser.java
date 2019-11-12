@@ -1,5 +1,7 @@
 package com.pts3.gp3.dinomap.data;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
@@ -62,17 +64,16 @@ public class DatabaseParser {
         Element epoqueElement = dino.getChild("Epoque");
         Element lieuDecouverteFossileElement = dino.getChild("LieuDecouverteFossile");
         Element regimeAlimentaireElement = dino.getChild("RegimeAlimentaire");
-        Element descriptionDetailleElement = dino.getChild("DescriptionDetaille");
-        Element modeDeVieElement = descriptionDetailleElement.getChild("ModeDeVie");
-        Element modeAlimentationElement = descriptionDetailleElement.getChild("ModeAlimentation");
-        Element commentaireElement = descriptionDetailleElement.getChild("Commentaire");
+        Element descriptionDetailleeElement = dino.getChild("DescriptionDetaillee");
+        Element modeDeVieElement = descriptionDetailleeElement.getChild("ModeDeVie");
+        Element modeAlimentationElement = descriptionDetailleeElement.getChild("ModeAlimentation");
+        Element commentaireElement = descriptionDetailleeElement.getChild("Commentaire");
 
         String nomCom = nomCommunElement.getText();
         String nomSc = nomCommunElement.getText();
         String taille = tailleElement.getText();
         String poids = poidsElement.getText();
         String epoque = epoqueElement.getText();
-        String lieuDecouverteFossile = lieuDecouverteFossileElement.getText();
         String regimeAlimentaire = regimeAlimentaireElement.getText();
         String modeDeVie = modeDeVieElement.getText();
         String modeAliementation = modeAlimentationElement.getText();
@@ -81,6 +82,16 @@ public class DatabaseParser {
             commentaire = commentaireElement.getText();
         }
 
-        return new Dino(nomCom,nomCom,taille,poids,epoque,lieuDecouverteFossile,regimeAlimentaire,modeDeVie,modeAliementation,commentaire);
+        List<LatLng> lieus = new LinkedList<>();
+        for (Object lieu : lieuDecouverteFossileElement.getChildren("Lieu")) {
+            Element lieuElement = (Element) lieu;
+            double lat;
+            double lng;
+            lat = Double.parseDouble(((Element) lieu).getText().split("|")[0]);
+            lng = Double.parseDouble(((Element) lieu).getText().split("|")[1]);
+            lieus.add(new LatLng(lat, lng));
+        }
+
+        return new Dino(nomCom, nomCom, taille, poids, epoque, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
     }
 }
