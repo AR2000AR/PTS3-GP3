@@ -91,7 +91,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     public void onMapReady(GoogleMap googleMap) {
         this.googleMap = googleMap;
 
-        LatLng ceneter = new LatLng(46.603354, 1.8883335);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(ceneter));
+        LatLng center = new LatLng(46.603354, 1.8883335);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(center));
     }
 }
