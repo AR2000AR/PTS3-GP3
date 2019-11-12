@@ -1,5 +1,5 @@
 <Encyclopedia>
-    <Dinosaure>
+    <Dinosaure id_dino="1">
         <Nom>
             <NomCommun>TestDino</NomCommun>
             <NomScientifique>TestDino</NomScientifique>
@@ -7,12 +7,14 @@
         <Taille>1</Taille>
         <Poids>2</Poids>
         <Epoque>Never</Epoque>
-        <LieuDecouverteFossile>Nowhere</LieuDecouverteFossile>
+        <LieuDecouverteFossile>
+            <Lieu>0.0|0.0</Lieu>
+        </LieuDecouverteFossile>
         <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
-        <DescriptionDetaille>
+        <DescriptionDetaillee>
             <ModeDeVie>Virtual</ModeDeVie>
             <ModeAlimentation>nothing</ModeAlimentation>
             <Commentaire>test</Commentaire>
-        </DescriptionDetaille>
+        </DescriptionDetaillee>
     </Dinosaure>
 </Encyclopedia>
