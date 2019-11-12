@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.org/NewXMLSchema"
+    elementFormDefault="qualified">
+    <element name="Encyclopedia">
+        <complexType>
+            <sequence>
+                <element
+                    name="Dinosaure"
+                    maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element
+                                name="Nom"
+                                minOccurs="1"
+                                maxOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element
+                                            name="NomCommun"
+                                            type="string"
+                                            maxOccurs="1"></element>
+                                        <element
+                                            name="NomScientifique"
+                                            type="string"
+                                            minOccurs="1"
+                                            maxOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element
+                                name="Taille"
+                                minOccurs="1"
+                                maxOccurs="1">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <maxLength value="6"></maxLength>
+                                        <pattern value="[0-9]*m"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element
+                                name="Poids"
+                                minOccurs="1"
+                                maxOccurs="1">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <maxLength value="6"></maxLength>
+                                        <pattern value="[0-9]*kg"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element
+                                name="Epoque"
+                                minOccurs="1"
+                                maxOccurs="1">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[A-Z]([a-z])+"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element
+                                name="LieuDecouverteFossile"
+                                minOccurs="1"
+                                maxOccurs="1">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[A-Z][a-z]*( [a-z]*)+"></pattern>
+                                    </restriction>
+                                </simpleType>
+
+                            </element>
+                            <element
+                                name="RegimeAlimentaire"
+                                minOccurs="1"
+                                maxOccurs="1">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="Herbivore|Carnivore|Omnivore"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element
+                                name="DescriptionDetaillee"
+                                minOccurs="1"
+                                maxOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element
+                                            name="ModeDeVie"
+                                            type="string"
+                                            minOccurs="1"
+                                            maxOccurs="1"></element>
+                                        <element
+                                            name="ModeAlimentation"
+                                            type="string"
+                                            minOccurs="1"
+                                            maxOccurs="1"></element>
+                                        <element
+                                            name="Commentaire"
+                                            type="string"></element>
+
+                                    </sequence>
+                                </complexType>
+                            </element>
+                        </sequence>
+                        <attribute
+                            name="id_dino"
+                            type="integer"
+                            use="required" />
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
