@@ -13,7 +13,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DatabaseParser {
-    public static Document database = null;
+
+
+    private static Document database = null;
 
     public DatabaseParser(InputStream inputStream) throws JDOMException, IOException {
         if (database == null) {
