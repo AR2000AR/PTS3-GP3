@@ -87,19 +87,19 @@ public class DatabaseParser {
             Element lieuElement = (Element) lieu;
             double lat;
             double lng;
-            lat = Double.parseDouble(((Element) lieu).getText().split("|")[0]);
-            lng = Double.parseDouble(((Element) lieu).getText().split("|")[1]);
+            lat = Double.parseDouble(((Element) lieu).getText().split(";")[0]);
+            lng = Double.parseDouble(((Element) lieu).getText().split(";")[1]);
             lieus.add(new LatLng(lat, lng));
         }
         double[] tailles = new double[2];
-        if (taille.split("|").length == 2) {
-            tailles[Dino.LONGUEUR] = Double.parseDouble(taille.split("|")[Dino.LONGUEUR]);
-            tailles[Dino.HAUTEUR] = Double.parseDouble(taille.split("|")[Dino.HAUTEUR]);
+        if (taille.split(";").length == 2) {
+            tailles[Dino.LONGUEUR] = Double.parseDouble(taille.split(";")[Dino.LONGUEUR]);
+            tailles[Dino.HAUTEUR] = Double.parseDouble(taille.split(";")[Dino.HAUTEUR]);
         } else {
             tailles[Dino.LONGUEUR] = Integer.parseInt(taille);
             tailles[Dino.HAUTEUR] = -1;
         }
 
-        return new Dino(nomCom, nomCom, tailles, Double.parseDouble(poids), epoque, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
+        return new Dino(nomCom, nomSc, tailles, Double.parseDouble(poids), epoque, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
     }
 }
