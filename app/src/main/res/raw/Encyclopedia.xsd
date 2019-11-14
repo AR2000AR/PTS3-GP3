@@ -34,7 +34,7 @@
                                 minOccurs="1">
                                 <simpleType>
                                     <restriction base="string">
-                                        <pattern value="-?\d+\.\d+(\|-?\d+\.\d+)?" />
+                                        <pattern value="-?\d+\.\d+(;-?\d+\.\d+)?" />
                                     </restriction>
                                 </simpleType>
                             </element>
@@ -64,7 +64,7 @@
                                             minOccurs="1">
                                             <simpleType>
                                                 <restriction base="string">
-                                                    <pattern value="-?\d+\.\d+\|-?\d+\.\d+" />
+                                                    <pattern value="-?\d+\.\d+;-?\d+\.\d+" />
                                                 </restriction>
                                             </simpleType>
                                         </element>

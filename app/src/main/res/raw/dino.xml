@@ -4,11 +4,11 @@
             <NomCommun>TestDino</NomCommun>
             <NomScientifique>TestDino</NomScientifique>
         </Nom>
-        <Taille>1</Taille>
-        <Poids>2</Poids>
+        <Taille>1.0</Taille>
+        <Poids>2.0</Poids>
         <Epoque>Never</Epoque>
         <LieuDecouverteFossile>
-            <Lieu>0.0|0.0</Lieu>
+            <Lieu>0.0;0.0</Lieu>
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
         <DescriptionDetaillee>
