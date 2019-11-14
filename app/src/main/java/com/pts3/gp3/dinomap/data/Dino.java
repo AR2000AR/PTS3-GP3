@@ -5,9 +5,13 @@ import com.google.android.gms.maps.model.LatLng;
 import java.util.List;
 
 public class Dino {
+
+    public static int LONGUEUR = 0;
+    public static int HAUTEUR = 0;
+
     private String nomCommun,nomScientifique;
-    private String taille;
-    private String poid;
+    private double[] taille;
+    private double poid;
     private String epoque;
     private List<LatLng> lieuDeDecouverte;
     private String regimeAlimentaire;
@@ -15,7 +19,7 @@ public class Dino {
     private String modeAlimentaire;
     private String commentaire;
 
-    public Dino(String nomCommun, String nomScientifique, String taille, String poid, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire, String commentaire) {
+    public Dino(String nomCommun, String nomScientifique, double[] taille, double poid, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire, String commentaire) {
         this.nomCommun = nomCommun;
         this.nomScientifique = nomScientifique;
         this.taille = taille;
@@ -36,11 +40,11 @@ public class Dino {
         return nomScientifique;
     }
 
-    public String getTaille() {
+    public double[] getTaille() {
         return taille;
     }
 
-    public String getPoid() {
+    public double getPoid() {
         return poid;
     }
 
@@ -68,7 +72,7 @@ public class Dino {
         return commentaire;
     }
 
-    public Dino(String nomCommun, String nomScientifique, String taille, String poid, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire) {
+    public Dino(String nomCommun, String nomScientifique, double[] taille, double poid, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire) {
         this(nomCommun,nomScientifique,taille,poid,epoque,lieuDeDecouverte,regimeAlimentaire,modeDeVie,modeAlimentaire,null);
     }
 }

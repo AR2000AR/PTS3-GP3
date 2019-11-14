@@ -16,40 +16,40 @@ public class DatabaseParser {
     public static Document database = null;
 
     public DatabaseParser(InputStream inputStream) throws JDOMException, IOException {
-        if (database == null){
+        if (database == null) {
             SAXBuilder databaseBuilder = new SAXBuilder();
             database = databaseBuilder.build(inputStream);
         }
     }
 
     public DatabaseParser() throws NoDatabaseException {
-        if(database == null){
+        if (database == null) {
             throw new NoDatabaseException();
         }
     }
 
-    public List<String[]> getDinoNameListe(){
+    public List<String[]> getDinoNameListe() {
         List<String[]> dinoNameListe = new LinkedList<>();
         Element rootElement = database.getRootElement();
-        for (Object dino: rootElement.getChildren("Dinosaure")) {
+        for (Object dino : rootElement.getChildren("Dinosaure")) {
             Element nomElement = ((Element) dino).getChild("Nom");
             Element nomCom = nomElement.getChild("NomCommun");
             Element nomSc = nomElement.getChild("NomScientifique");
-            String[] nomDino = {nomCom.getText(),nomSc.getText()};
+            String[] nomDino = {nomCom.getText(), nomSc.getText()};
             dinoNameListe.add(nomDino);
         }
         return dinoNameListe;
     }
 
-    public Dino getDino(String[] nom){
+    public Dino getDino(String[] nom) {
         Element rootElement = database.getRootElement();
-        for (Object dino: rootElement.getChildren("Dinosaure")) {
+        for (Object dino : rootElement.getChildren("Dinosaure")) {
             Element nomElement = ((Element) dino).getChild("Nom");
             Element nomCom = nomElement.getChild("NomCommun");
             Element nomSc = nomElement.getChild("NomScientifique");
-            String[] nomDino = {nomCom.getText(),nomSc.getText()};
-            if(nomCom.getText().equals(nom[0]) && nomSc.getText().equals(nom[1])){
-                return makeDinoObject((Element)dino);
+            String[] nomDino = {nomCom.getText(), nomSc.getText()};
+            if (nomCom.getText().equals(nom[0]) && nomSc.getText().equals(nom[1])) {
+                return makeDinoObject((Element) dino);
             }
         }
         return null;
@@ -78,7 +78,7 @@ public class DatabaseParser {
         String modeDeVie = modeDeVieElement.getText();
         String modeAliementation = modeAlimentationElement.getText();
         String commentaire = null;
-        if(commentaireElement!=null){
+        if (commentaireElement != null) {
             commentaire = commentaireElement.getText();
         }
 
@@ -91,7 +91,15 @@ public class DatabaseParser {
             lng = Double.parseDouble(((Element) lieu).getText().split("|")[1]);
             lieus.add(new LatLng(lat, lng));
         }
+        double[] tailles = new double[2];
+        if (taille.split("|").length == 2) {
+            tailles[Dino.LONGUEUR] = Double.parseDouble(taille.split("|")[Dino.LONGUEUR]);
+            tailles[Dino.HAUTEUR] = Double.parseDouble(taille.split("|")[Dino.HAUTEUR]);
+        } else {
+            tailles[Dino.LONGUEUR] = Integer.parseInt(taille);
+            tailles[Dino.HAUTEUR] = -1;
+        }
 
-        return new Dino(nomCom, nomCom, taille, poids, epoque, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
+        return new Dino(nomCom, nomCom, tailles, Double.parseDouble(poids), epoque, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
     }
 }
