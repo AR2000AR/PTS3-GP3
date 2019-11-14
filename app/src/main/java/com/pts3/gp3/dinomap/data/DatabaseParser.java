@@ -14,6 +14,8 @@ import java.util.List;
 
 public class DatabaseParser {
 
+    public static final int NOM_COMMUN = 0;
+    public static final int NOM_SCIENTIFIQUE = 1;
 
     private static Document database = null;
 
