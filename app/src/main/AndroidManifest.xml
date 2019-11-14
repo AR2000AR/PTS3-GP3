@@ -28,18 +28,27 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="sensorPortrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".MapActivity" />
+        <activity
+            android:name=".QuizActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".MapActivity"
+            android:screenOrientation="sensorPortrait" />
 
-        <activity android:name=".encyclopedia.EncyclopediaActivity" />
-        <activity android:name=".encyclopedia.EncyclopediaMenu"></activity>
+        <activity
+            android:name=".encyclopedia.EncyclopediaActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".encyclopedia.EncyclopediaMenu"
+            android:screenOrientation="sensorPortrait" />
     </application>
 
 </manifest>
