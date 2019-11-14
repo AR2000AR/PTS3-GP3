@@ -100,7 +100,7 @@ public class DatabaseParser {
             tailles[Dino.LONGUEUR] = Double.parseDouble(taille.split(";")[Dino.LONGUEUR]);
             tailles[Dino.HAUTEUR] = Double.parseDouble(taille.split(";")[Dino.HAUTEUR]);
         } else {
-            tailles[Dino.LONGUEUR] = Integer.parseInt(taille);
+            tailles[Dino.LONGUEUR] = Double.parseDouble(taille);
             tailles[Dino.HAUTEUR] = -1;
         }
 
