@@ -33,7 +33,9 @@
                                 maxOccurs="1"
                                 minOccurs="1">
                                 <simpleType>
-                                    <restriction base="float" />
+                                    <restriction base="string">
+                                        <pattern value="-?\d+\.\d+(\|-?\d+\.\d+)?" />
+                                    </restriction>
                                 </simpleType>
                             </element>
                             <element
