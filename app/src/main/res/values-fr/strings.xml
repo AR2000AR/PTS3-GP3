@@ -9,4 +9,6 @@
     <string name="mesozoique">MÉSOZOÏQUE</string>
     <string name="paleozoique">PALÉOZOÏQUE</string>
     <string name="title_encyclo_menu">Encyclopedie</string>
+    <string name="content_description_return_button">Boutton retour</string>
+    <string name="title_activity_maps">Carte</string>
 </resources>

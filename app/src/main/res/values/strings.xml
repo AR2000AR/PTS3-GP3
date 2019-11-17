@@ -14,8 +14,9 @@
     <string name="cretace">CRETACE</string>
     <string name="paleozoique">PALEOZOIQUE</string>
     <string name="mesozoique">MESOZOIQUE</string>
-    <string name="title_activity_maps" translatable="false">Map</string>
+    <string name="title_activity_maps">Map</string>
     <string name="placeholder_name_sc" translatable="false">Nom Scientifique</string>
     <string name="placeholder_name_com" translatable="false">Nom commun</string>
     <string name="title_encyclo_menu">Encyclopedia</string>
+    <string name="content_description_return_button">Return button</string>
 </resources>
