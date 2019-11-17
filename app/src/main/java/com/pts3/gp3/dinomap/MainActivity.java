@@ -5,12 +5,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.encyclopedia.EncyclopediaMenu;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView texteNbPiece;
+    static int nbPiece = 0;
+
+    public static void gagnerNbPiece(int pieceGagner) {
+        nbPiece += pieceGagner;
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton mapIcone = findViewById(R.id.mapIcone);
         ImageButton encycloIcone = findViewById(R.id.encycloIcone);
         ImageButton quizIcone = findViewById(R.id.quizIcone);
-
+        texteNbPiece = findViewById(R.id.texteNbPiece);
 
         View.OnClickListener mapClickListener = new View.OnClickListener() {
             @Override
@@ -58,5 +67,11 @@ public class MainActivity extends AppCompatActivity {
         quizIcone.setOnClickListener(quizClickListener);
 
 
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        texteNbPiece.setText(""+nbPiece);
     }
 }

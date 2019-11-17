@@ -23,13 +23,13 @@
             app:srcCompat="@android:drawable/ic_menu_revert" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textQuestionActuelle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Question N°"
             android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
