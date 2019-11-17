@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.R;
-import com.pts3.gp3.dinomap.data.DatabaseParser;
 import com.pts3.gp3.dinomap.data.Dino;
+import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 
 import org.jdom.JDOMException;
 
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class EncyclopediaMenu extends AppCompatActivity {
 
-    private DatabaseParser database;
+    private DinoDatabaseParser database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class EncyclopediaMenu extends AppCompatActivity {
 
         InputStream inputStream = getResources().openRawResource(R.raw.dino);
         try {
-            database = new DatabaseParser(inputStream);
+            database = new DinoDatabaseParser(inputStream);
             List<String[]> dinos = database.getDinoNameListe();
             for (String[] names: dinos) {
                 Log.d("DINO",String.format("Com : %s | Sc : %s",names[0],names[1]));
@@ -57,7 +57,7 @@ public class EncyclopediaMenu extends AppCompatActivity {
         }
 
         for (String[] nom : database.getDinoNameListe()) {
-            listLayout.addView(new DinoNameView(this, background[c++ % 2], nom[DatabaseParser.NOM_SCIENTIFIQUE], nom[DatabaseParser.NOM_COMMUN]));
+            listLayout.addView(new DinoNameView(this, background[c++ % 2], nom[DinoDatabaseParser.NOM_SCIENTIFIQUE], nom[DinoDatabaseParser.NOM_COMMUN]));
         }
     }
 

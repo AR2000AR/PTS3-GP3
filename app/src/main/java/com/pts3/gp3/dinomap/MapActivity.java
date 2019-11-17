@@ -14,8 +14,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.pts3.gp3.dinomap.data.DatabaseParser;
 import com.pts3.gp3.dinomap.data.Dino;
+import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 
 import org.jdom.JDOMException;
 
@@ -51,7 +51,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
          * rempli la liste avec des dino
          */
         try {
-            DatabaseParser database = new DatabaseParser(getResources().openRawResource(R.raw.dino));
+            DinoDatabaseParser database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
             for (String[] curentDino : database.getDinoNameListe()) {
                 dino.add(database.getDino(curentDino));
             }

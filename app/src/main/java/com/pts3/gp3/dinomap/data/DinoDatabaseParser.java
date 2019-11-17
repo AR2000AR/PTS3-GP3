@@ -12,21 +12,21 @@ import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
-public class DatabaseParser {
+public class DinoDatabaseParser {
 
     public static final int NOM_COMMUN = 0;
     public static final int NOM_SCIENTIFIQUE = 1;
 
     private static Document database = null;
 
-    public DatabaseParser(InputStream inputStream) throws JDOMException, IOException {
+    public DinoDatabaseParser(InputStream inputStream) throws JDOMException, IOException {
         if (database == null) {
             SAXBuilder databaseBuilder = new SAXBuilder();
             database = databaseBuilder.build(inputStream);
         }
     }
 
-    public DatabaseParser() throws NoDatabaseException {
+    public DinoDatabaseParser() throws NoDatabaseException {
         if (database == null) {
             throw new NoDatabaseException();
         }
