@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Dino {
 
-    public static int LONGUEUR = 0;
-    public static int HAUTEUR = 1;
+    public static final int LONGUEUR = 0;
+    public static final int HAUTEUR = 1;
 
     private String nomCommun,nomScientifique;
     private double[] taille;

@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
+            android:contentDescription="@string/content_description_return_button"
             app:srcCompat="@android:drawable/ic_menu_revert" />
 
         <TextView
@@ -24,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView"
+            android:text="@string/title_encyclo_menu"
             android:textSize="36sp" />
 
     </LinearLayout>

@@ -8,8 +8,13 @@ import android.widget.TextView;
 import com.pts3.gp3.dinomap.R;
 
 public class DinoNameView extends LinearLayout {
-    TextView nomCommunView;
-    TextView nomScientifiqueView;
+    private TextView nomCommunView;
+    private TextView nomScientifiqueView;
+
+    public DinoNameView(Context context, int background, String nomScientifique, String nomCommun) {
+        this(context, nomScientifique, nomCommun);
+        this.setBackgroundColor(background);
+    }
 
     public DinoNameView(Context context, String nomScientifique, String nomCommun) {
         super(context);
