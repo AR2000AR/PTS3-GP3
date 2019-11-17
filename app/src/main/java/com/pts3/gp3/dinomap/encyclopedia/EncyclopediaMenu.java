@@ -53,11 +53,14 @@ public class EncyclopediaMenu extends AppCompatActivity {
         Dino dino = database.getDino(database.getDinoNameListe().get(0));
         Log.d("PAUSE","PAUSE");
 
-        /*for (int i = 0; i < 20; i++) {
-            listLayout.addView(new DinoNameView(this, getString(R.string.placeholder_name_sc), getString(R.string.placeholder_name_com)));
-        }*/
+        int c = 0;
+        int[] background = {getColor(R.color.dinoNameView1), getColor(R.color.dinoNameView2)};
+        for (int i = 0; i < 20; i++) {
+            listLayout.addView(new DinoNameView(this, background[c++ % 2], getString(R.string.placeholder_name_sc), getString(R.string.placeholder_name_com)));
+        }
+
         for (String[] nom : database.getDinoNameListe()) {
-            listLayout.addView(new DinoNameView(this, nom[DatabaseParser.NOM_SCIENTIFIQUE], nom[DatabaseParser.NOM_COMMUN]));
+            listLayout.addView(new DinoNameView(this, background[c++ % 2], nom[DatabaseParser.NOM_SCIENTIFIQUE], nom[DatabaseParser.NOM_COMMUN]));
         }
     }
 
