@@ -1,14 +1,13 @@
 package com.pts3.gp3.dinomap;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.pts3.gp3.dinomap.encyclopedia.EncyclopediaActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.pts3.gp3.dinomap.encyclopedia.EncyclopediaMenu;
 
 public class MainActivity extends AppCompatActivity {

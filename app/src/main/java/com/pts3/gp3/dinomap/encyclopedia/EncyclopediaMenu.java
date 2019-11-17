@@ -20,7 +20,6 @@ import java.util.List;
 
 public class EncyclopediaMenu extends AppCompatActivity {
 
-    private LinearLayout listLayout;
     private DatabaseParser database;
 
     @Override
@@ -36,7 +35,7 @@ public class EncyclopediaMenu extends AppCompatActivity {
             }
         });
 
-        listLayout = (LinearLayout) findViewById(R.id.listeLayout);
+        LinearLayout listLayout = findViewById(R.id.listeLayout);
 
         InputStream inputStream = getResources().openRawResource(R.raw.dino);
         try {
@@ -45,9 +44,7 @@ public class EncyclopediaMenu extends AppCompatActivity {
             for (String[] names: dinos) {
                 Log.d("DINO",String.format("Com : %s | Sc : %s",names[0],names[1]));
             }
-        } catch (JDOMException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (JDOMException | IOException e) {
             e.printStackTrace();
         }
         Dino dino = database.getDino(database.getDinoNameListe().get(0));

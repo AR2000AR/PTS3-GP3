@@ -19,12 +19,12 @@
                                         <element
                                             name="NomCommun"
                                             maxOccurs="1"
-                                            type="string"></element>
+                                            type="string" />
                                         <element
                                             name="NomScientifique"
                                             maxOccurs="1"
                                             minOccurs="1"
-                                            type="string"></element>
+                                            type="string" />
                                     </sequence>
                                 </complexType>
                             </element>
@@ -52,7 +52,7 @@
                                 minOccurs="1">
                                 <simpleType>
                                     <restriction base="string">
-                                        <pattern value="[A-Z]([a-z])+"></pattern>
+                                        <pattern value="[A-Z]([a-z])+" />
                                     </restriction>
                                 </simpleType>
                             </element>
@@ -77,7 +77,7 @@
                                 minOccurs="1">
                                 <simpleType>
                                     <restriction base="string">
-                                        <pattern value="Herbivore|Carnivore|Omnivore"></pattern>
+                                        <pattern value="Herbivore|Carnivore|Omnivore" />
                                     </restriction>
                                 </simpleType>
                             </element>
@@ -91,15 +91,15 @@
                                             name="ModeDeVie"
                                             maxOccurs="1"
                                             minOccurs="1"
-                                            type="string"></element>
+                                            type="string" />
                                         <element
                                             name="ModeAlimentation"
                                             maxOccurs="1"
                                             minOccurs="1"
-                                            type="string"></element>
+                                            type="string" />
                                         <element
                                             name="Commentaire"
-                                            type="string"></element>
+                                            type="string" />
 
                                     </sequence>
                                 </complexType>

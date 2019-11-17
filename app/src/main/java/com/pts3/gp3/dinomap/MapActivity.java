@@ -17,11 +17,11 @@ import com.google.android.gms.maps.model.Marker;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
-    GoogleMap googleMap;
-    SeekBar seekBar;
-    int state;
+    private GoogleMap googleMap;
+    private SeekBar seekBar;
+    private int state;
     Toast toast;
-    TextView epoqueView;
+    private TextView epoqueView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
