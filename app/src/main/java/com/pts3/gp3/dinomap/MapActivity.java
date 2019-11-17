@@ -3,7 +3,6 @@ package com.pts3.gp3.dinomap;
 import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
@@ -14,14 +13,19 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.pts3.gp3.dinomap.data.Dino;
+
+import java.util.List;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap googleMap;
     private SeekBar seekBar;
     private int state;
-    Toast toast;
     private TextView epoqueView;
+    private List<Dino> dino;
+    private String epoque;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,49 +40,18 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         seekBar = findViewById(R.id.seekBarEpoque);
         epoqueView = findViewById(R.id.epoqueView);
+        List<Dino> dino = null;
+
+        state=seekBar.getProgress();
+        epoque=epoqueChoice();
+
+        afficherMarqueur(dino,epoque);
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 state = progress;
-                switch (state) {
-                    case 0:
-                        epoqueView.setText(R.string.cambrien);
-                        Toast.makeText(getApplicationContext(), R.string.cambrien, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 1:
-                        epoqueView.setText(R.string.ordovicien);
-                        Toast.makeText(getApplicationContext(), R.string.ordovicien, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 2:
-                        epoqueView.setText(R.string.silurien);
-                        Toast.makeText(getApplicationContext(), R.string.silurien, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 3:
-                        epoqueView.setText(R.string.devonien);
-                        Toast.makeText(getApplicationContext(), R.string.devonien, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 4:
-                        epoqueView.setText(R.string.carbonifere);
-                        Toast.makeText(getApplicationContext(), R.string.carbonifere, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 5:
-                        epoqueView.setText(R.string.permien);
-                        Toast.makeText(getApplicationContext(), R.string.permien, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 6:
-                        epoqueView.setText(R.string.trias);
-                        Toast.makeText(getApplicationContext(), R.string.trias, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 7:
-                        epoqueView.setText(R.string.jurassique);
-                        Toast.makeText(getApplicationContext(), R.string.jurassique, Toast.LENGTH_SHORT).show();
-                        break;
-                    case 8:
-                        epoqueView.setText(R.string.cretace);
-                        Toast.makeText(getApplicationContext(), R.string.cretace, Toast.LENGTH_SHORT).show();
-                        break;
-                }
+                epoque=epoqueChoice();
             }
 
             @Override
@@ -88,9 +61,55 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
+                afficherMarqueur(getDino(),epoque);
             }
         });
+    }
+
+    private String epoqueChoice() {
+        switch (state) {
+            case 0:
+                epoqueView.setText(R.string.cambrien);
+                return ""+ R.string.cambrien;
+            case 1:
+                epoqueView.setText(R.string.ordovicien);
+                return ""+ R.string.ordovicien;
+            case 2:
+                epoqueView.setText(R.string.silurien);
+                return ""+ R.string.silurien;
+            case 3:
+                epoqueView.setText(R.string.devonien);
+                return ""+ R.string.devonien;
+            case 4:
+                epoqueView.setText(R.string.carbonifere);
+                return ""+ R.string.carbonifere;
+            case 5:
+                epoqueView.setText(R.string.permien);
+                return ""+ R.string.permien;
+            case 6:
+                epoqueView.setText(R.string.trias);
+                return ""+ R.string.trias;
+            case 7:
+                epoqueView.setText(R.string.jurassique);
+                return ""+ R.string.jurassique;
+            case 8:
+                epoqueView.setText(R.string.cretace);
+                return ""+ R.string.cretace;
+        }
+        return null;
+    }
+
+    private void afficherMarqueur(List<Dino> list, String epoque){
+        for (Dino d: list) {
+            if(epoque == d.getEpoque()){
+                for(LatLng l : d.getLieuDeDecouverte()) {
+                    googleMap.addMarker(new MarkerOptions().position(l).title(""));
+                }
+            }
+        }
+
+
+
     }
 
 
@@ -105,5 +124,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         LatLng center = new LatLng(46.603354, 1.8883335);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(center));
+    }
+
+    public List<Dino> getDino() {
+        return dino;
     }
 }

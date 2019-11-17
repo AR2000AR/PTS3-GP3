@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.encyclopedia.EncyclopediaMenu;
+import com.pts3.gp3.dinomap.quizz.QuizzActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener quizClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lauchIntent = new Intent(getBaseContext(),QuizActivity.class);
+                Intent lauchIntent = new Intent(getBaseContext(), QuizzActivity.class);
                 startActivity(lauchIntent);
             }
         };
