@@ -14,8 +14,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.pts3.gp3.dinomap.data.DatabaseParser;
 import com.pts3.gp3.dinomap.data.Dino;
 
+import org.jdom.JDOMException;
+
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
@@ -40,7 +45,19 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         seekBar = findViewById(R.id.seekBarEpoque);
         epoqueView = findViewById(R.id.epoqueView);
-        List<Dino> dino = null;
+        List<Dino> dino = new ArrayList<>();
+
+        /**
+         * rempli la liste avec des dino
+         */
+        try {
+            DatabaseParser database = new DatabaseParser(getResources().openRawResource(R.raw.dino));
+            for (String[] curentDino : database.getDinoNameListe()) {
+                dino.add(database.getDino(curentDino));
+            }
+        } catch (JDOMException | IOException e) {
+            e.printStackTrace();
+        }
 
         state=seekBar.getProgress();
         epoque=epoqueChoice();
