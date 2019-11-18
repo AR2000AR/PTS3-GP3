@@ -46,7 +46,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         seekBar = findViewById(R.id.seekBarEpoque);
         epoqueView = findViewById(R.id.epoqueView);
         dino = new ArrayList<>();
-
         /**
          * rempli la liste avec des dino
          */
@@ -54,6 +53,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             DinoDatabaseParser database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
             for (String[] curentDino : database.getDinoNameListe()) {
                 dino.add(database.getDino(curentDino));
+
             }
         } catch (JDOMException | IOException e) {
             e.printStackTrace();
@@ -115,10 +115,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     }
 
     private void afficherMarqueur(List<Dino> list, String epoque){
+        googleMap.clear();
         for (Dino d: list) {
             if (epoque.equals(d.getEpoque())) {
                 for(LatLng l : d.getLieuDeDecouverte()) {
                     googleMap.addMarker(new MarkerOptions().position(l).title(""));
+
                 }
             }
         }
