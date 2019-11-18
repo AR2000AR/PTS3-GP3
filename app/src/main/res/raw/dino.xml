@@ -6,9 +6,9 @@
         </Nom>
         <Taille>1.0</Taille>
         <Poids>2.0</Poids>
-        <Epoque>Never</Epoque>
+        <Epoque>ORDOVICIEN</Epoque>
         <LieuDecouverteFossile>
-            <Lieu>0.0;0.0</Lieu>
+            <Lieu>48.0177428;-0.8330643</Lieu>
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
         <DescriptionDetaillee>
