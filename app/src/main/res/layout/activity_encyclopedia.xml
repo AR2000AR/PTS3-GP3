@@ -31,7 +31,7 @@
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:text="Nom du dinosaure"
-            android:textColor="#FD0F0C0C"
+            android:textColor="@color/colorBlack"
             android:textSize="30sp" />
 
     </LinearLayout>
