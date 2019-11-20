@@ -104,6 +104,10 @@ public class DinoDatabaseParser {
             tailles[Dino.HAUTEUR] = -1;
         }
 
+        if (poids.equals("")) {
+            poids = "-1";
+        }
+
         return new Dino(nomCom, nomSc, tailles, Double.parseDouble(poids), epoque, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
     }
 }
