@@ -6,7 +6,7 @@
         </Nom>
         <Taille>6.0</Taille>
         <Poids />
-        <Epoque>Crétacé</Epoque>
+        <Epoque>CRETACE</Epoque>
         <LieuDecouverteFossile>
             <Lieu>43.410605;5.995296</Lieu>
         </LieuDecouverteFossile>
@@ -24,9 +24,9 @@
         </Nom>
         <Taille />
         <Poids />
-        <Epoque>Jurassique</Epoque>
+        <Epoque>JURASSIQUE</Epoque>
         <LieuDecouverteFossile>
-            <Lieu>49.159738 ; -0.251258 </Lieu>
+            <Lieu>49.159738;-0.251258</Lieu>
             <Lieu>52.110339;7.569100</Lieu>
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
@@ -43,22 +43,22 @@
         </Nom>
         <Taille>17.0</Taille>
         <Poids />
-        <Epoque>Crétacé</Epoque>
+        <Epoque>CRETACE</Epoque>
         <LieuDecouverteFossile>
             <Lieu>51.136185;0.186889</Lieu>
-            <Lieu>51.136185 ;0.186889</Lieu>
-            <Lieu>50.256056 ;1.833001</Lieu>
+            <Lieu>51.136185;0.186889</Lieu>
+            <Lieu>50.256056;1.833001</Lieu>
             <Lieu>50.043371;2.641259</Lieu>
             <Lieu>49.887423;2.139601</Lieu>
             <Lieu>45.103193;11.303209</Lieu>
-            <Lieu>44.791410 ;11.663387</Lieu>
+            <Lieu>44.791410;11.663387</Lieu>
             <Lieu>46.274854;10.825280</Lieu>
             <Lieu>33.005536;-6.745795</Lieu>
             <Lieu>15.439372;5.373761</Lieu>
             <Lieu>-4.281672;20.395269</Lieu>
             <Lieu>-4.281672;20.395269</Lieu>
-            <Lieu>-16.395485 ;11.851390</Lieu>
-            <Lieu>32.372053 ;35.880815</Lieu>
+            <Lieu>-16.395485;11.851390</Lieu>
+            <Lieu>32.372053;35.880815</Lieu>
             <Lieu>34.402906;37.136606</Lieu>
             <Lieu>34.402906;37.136606</Lieu>
             <Lieu>56.375727;8.398499</Lieu>
@@ -75,15 +75,15 @@
             <Lieu>43.903017;-99.910004</Lieu>
             <Lieu>31.537213;-97.177948</Lieu>
             <Lieu>30.112281;-98.423852</Lieu>
-            <Lieu>36.814517; -90.212456</Lieu>
+            <Lieu>36.814517;-90.212456</Lieu>
             <Lieu>35.272976;-88.867508</Lieu>
             <Lieu>32.978466;-88.807950</Lieu>
             <Lieu>34.236999;-78.493155</Lieu>
             <Lieu>32.740844;-80.414452</Lieu>
             <Lieu>39.561113;-75.661195</Lieu>
             <Lieu>39.736262;-75.324254</Lieu>
-            <Lieu>39.802821 ;-75.136134</Lieu>
-            <Lieu>39.898183;-74.892986 </Lieu>
+            <Lieu>39.802821;-75.136134</Lieu>
+            <Lieu>39.898183;-74.892986</Lieu>
             <Lieu>-37.689092;175.912381</Lieu>
             <Lieu>-45.345225;169.249394</Lieu>
         </LieuDecouverteFossile>
@@ -101,14 +101,14 @@
         </Nom>
         <Taille>15.5</Taille>
         <Poids>11.0</Poids>
-        <Epoque>Jurassique</Epoque>
+        <Epoque>JURASSIQUE</Epoque>
         <LieuDecouverteFossile>
             <Lieu>41.123809;1.139417</Lieu>
             <Lieu>49.662144;5.208064</Lieu>
             <Lieu>51.143311;0.344446</Lieu>
             <Lieu>51.177725;-0.093004</Lieu>
             <Lieu>51.177725;-0.093004</Lieu>
-            <Lieu>51.020352;-1.183978 </Lieu>
+            <Lieu>51.020352;-1.183978</Lieu>
             <Lieu>51.398103;-0.775551</Lieu>
             <Lieu>51.524698;-0.370783</Lieu>
         </LieuDecouverteFossile>
@@ -126,7 +126,7 @@
         </Nom>
         <Taille>14.0;6.0</Taille>
         <Poids>9.0</Poids>
-        <Epoque>Crétacé</Epoque>
+        <Epoque>CRETACE</Epoque>
         <LieuDecouverteFossile>
             <Lieu>-44.742595;-71.074146</Lieu>
             <Lieu>-44.65366;-70.372076</Lieu>
@@ -146,7 +146,7 @@
         </Nom>
         <Taille>3.0</Taille>
         <Poids>0.35</Poids>
-        <Epoque>Trias</Epoque>
+        <Epoque>TRIAS</Epoque>
         <LieuDecouverteFossile>
             <Lieu>-28.583602;-69.320595</Lieu>
             <Lieu>-28.002643;-68.812089</Lieu>
@@ -167,7 +167,7 @@
         </Nom>
         <Taille />
         <Poids />
-        <Epoque>Trias</Epoque>
+        <Epoque>TRIAS</Epoque>
         <LieuDecouverteFossile>
             <Lieu>80.515889;59.997039</Lieu>
         </LieuDecouverteFossile>
@@ -185,7 +185,7 @@
         </Nom>
         <Taille>12.0;1.8</Taille>
         <Poids>3.5</Poids>
-        <Epoque>Trias</Epoque>
+        <Epoque>TRIAS</Epoque>
         <LieuDecouverteFossile>
             <Lieu>16.806984;101.712916</Lieu>
         </LieuDecouverteFossile>
@@ -203,11 +203,11 @@
         </Nom>
         <Taille>5.0;2.5</Taille>
         <Poids>0.3</Poids>
-        <Epoque>Trias</Epoque>
+        <Epoque>TRIAS</Epoque>
         <LieuDecouverteFossile>
             <Lieu>47.407256;7.603603</Lieu>
             <Lieu>48.009540;8.009708</Lieu>
-            <Lieu>50.738141 ;10.411450</Lieu>
+            <Lieu>50.738141;10.411450</Lieu>
             <Lieu>49.959664;10.743156</Lieu>
             <Lieu>49.959664;10.743156</Lieu>
         </LieuDecouverteFossile>
@@ -225,7 +225,7 @@
         </Nom>
         <Taille>4.3</Taille>
         <Poids>0.11</Poids>
-        <Epoque>Jurassique</Epoque>
+        <Epoque>JURASSIQUE</Epoque>
         <LieuDecouverteFossile>
             <Lieu>36.183035;-111.391282</Lieu>
             <Lieu>36.310179;-111.053415</Lieu>
