@@ -19,4 +19,11 @@
     <string name="placeholder_name_com" translatable="false">Nom commun</string>
     <string name="title_encyclo_menu">Encyclopedia</string>
     <string name="content_description_return_button">Return button</string>
+
+    <string name="encyclopedia_taille">Taille :</string>
+    <string name="encyclopedia_poids">Poids :</string>
+    <string name="encyclopedia_epoque">Epoque :</string>
+    <string name="encyclopedia_lieu">Lieu \:</string>
+    <string name="encyclopedia_regime">Régime :</string>
+
 </resources>
