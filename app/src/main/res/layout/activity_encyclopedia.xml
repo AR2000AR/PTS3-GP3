@@ -11,28 +11,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/return_button"
-            android:layout_width="0dp"
+            android:layout_width="100dp"
             android:layout_height="75dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             app:srcCompat="@android:drawable/ic_menu_revert" />
 
-        <TextView
-            android:id="@+id/text_nom"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:text="Nom du dinosaure"
-            android:textColor="@color/colorBlack"
-            android:textSize="30sp" />
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/text_nomSDino"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:text="Nom du dinosaure"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/text_nomCDino"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="0.5"
+                android:text="TextView"
+                android:textColor="@color/colorBlack"
+                android:textSize="25sp" />
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -72,38 +88,43 @@
         app:layout_constraintVertical_bias="0.787">
 
         <TextView
-            android:id="@+id/text_taille"
+            android:id="@+id/text_tailleDino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Taille"
+            android:text="@string/encyclopedia_taille"
+            android:textColor="@color/colorBlack"
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/text_poids"
+            android:id="@+id/text_poidsDino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Poids"
+            android:text="@string/encyclopedia_poids"
+            android:textColor="@color/colorBlack"
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/text_epoque"
+            android:id="@+id/text_epoqueDino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Epoque"
+            android:text="@string/encyclopedia_epoque"
+            android:textColor="@color/colorBlack"
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/text_localisation"
+            android:id="@+id/text_localisationDino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lieu de découverte du fossile"
+            android:text="@string/encyclopedia_lieu"
+            android:textColor="@color/colorBlack"
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/text_regime"
+            android:id="@+id/text_regimeDino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Régime alimentaire"
+            android:text="@string/encyclopedia_regime"
+            android:textColor="@color/colorBlack"
             android:textSize="25sp" />
     </LinearLayout>
 

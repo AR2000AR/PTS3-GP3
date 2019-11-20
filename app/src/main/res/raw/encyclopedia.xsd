@@ -31,7 +31,7 @@
                             <element
                                 name="Taille"
                                 maxOccurs="1"
-                                minOccurs="1">
+                                minOccurs="0">
                                 <simpleType>
                                     <restriction base="string">
                                         <pattern value="-?\d+\.\d+(;-?\d+\.\d+)?" />
@@ -41,7 +41,7 @@
                             <element
                                 name="Poids"
                                 maxOccurs="1"
-                                minOccurs="1">
+                                minOccurs="0">
                                 <simpleType>
                                     <restriction base="float" />
                                 </simpleType>
@@ -95,7 +95,7 @@
                                         <element
                                             name="ModeAlimentation"
                                             maxOccurs="1"
-                                            minOccurs="1"
+                                            minOccurs="0"
                                             type="string" />
                                         <element
                                             name="Commentaire"

@@ -50,6 +50,7 @@ public class DinoNameView extends LinearLayout implements View.OnClickListener {
         nom[DinoDatabaseParser.NOM_COMMUN] = nomCommunView.getText().toString();
         nom[DinoDatabaseParser.NOM_SCIENTIFIQUE] = nomScientifiqueView.getText().toString();
         intent.putExtra("nomDino", nom);
+
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         getContext().startActivity(intent);
     }

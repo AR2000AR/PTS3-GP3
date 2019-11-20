@@ -2,13 +2,18 @@
 <resources>
     <string name="map">Carte</string>
     <string name="encyclopedia">Encyclopédie</string>
-    <string name="quiz">Quizz</string>
+    <string name="quiz">Quiz</string>
     <string name="carbonifere">CARBONIFÈRE</string>
     <string name="cretace">CRÉTACÉ</string>
     <string name="devonien">DÉVONIEN</string>
     <string name="mesozoique">MÉSOZOÏQUE</string>
     <string name="paleozoique">PALÉOZOÏQUE</string>
     <string name="title_encyclo_menu">Encyclopedie</string>
-    <string name="content_description_return_button">Boutton retour</string>
+    <string name="content_description_return_button">Bouton retour</string>
     <string name="title_activity_maps">Carte</string>
+    <string name="encyclopedia_taille">Taille :</string>
+    <string name="encyclopedia_poids">Poids :</string>
+    <string name="encyclopedia_epoque">Epoque :</string>
+    <string name="encyclopedia_lieu">Lieu \:</string>
+    <string name="encyclopedia_regime">Régime :</string>
 </resources>

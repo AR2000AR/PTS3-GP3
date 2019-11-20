@@ -11,7 +11,7 @@ public class Dino {
 
     private String nomCommun,nomScientifique;
     private double[] taille;
-    private double poid;
+    private double poids;
     private String epoque;
     private List<LatLng> lieuDeDecouverte;
     private String regimeAlimentaire;
@@ -19,11 +19,11 @@ public class Dino {
     private String modeAlimentaire;
     private String commentaire;
 
-    public Dino(String nomCommun, String nomScientifique, double[] taille, double poid, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire, String commentaire) {
+    public Dino(String nomCommun, String nomScientifique, double[] taille, double poids, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire, String commentaire) {
         this.nomCommun = nomCommun;
         this.nomScientifique = nomScientifique;
         this.taille = taille;
-        this.poid = poid;
+        this.poids = poids;
         this.epoque = epoque;
         this.lieuDeDecouverte = lieuDeDecouverte;
         this.regimeAlimentaire = regimeAlimentaire;
@@ -44,8 +44,8 @@ public class Dino {
         return taille;
     }
 
-    public double getPoid() {
-        return poid;
+    public double getPoids() {
+        return poids;
     }
 
     public String getEpoque() {
