@@ -91,8 +91,8 @@ public class DinoDatabaseParser {
             Element lieuElement = (Element) lieu;
             double lat;
             double lng;
-            lat = Double.parseDouble(((Element) lieu).getText().split(";")[0]);
-            lng = Double.parseDouble(((Element) lieu).getText().split(";")[1]);
+            lat = Double.parseDouble(lieuElement.getText().split(";")[0]);
+            lng = Double.parseDouble(lieuElement.getText().split(";")[1]);
             lieus.add(new LatLng(lat, lng));
         }
         double[] tailles = new double[2];
