@@ -12,14 +12,9 @@
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Arcovenator est un bipède pourvu d’un gros crâne et de petits bras à quatre
-                doigts.
-            </ModeDeVie>
-            <ModeAlimentation>Son importante taille faisait de lui un grand prédateur
-            </ModeAlimentation>
-            <Commentaire>qui le mène au sommet de la chaîne alimentaire. Il possédait un cou très
-                puissant
-            </Commentaire>
+            <ModeDeVie>Arcovenator est un bipède pourvu d’un gros crâne et de petits bras à quatre doigts.</ModeDeVie>
+            <ModeAlimentation>Son importante taille faisait de lui un grand prédateur</ModeAlimentation>
+            <Commentaire>qui le mène au sommet de la chaîne alimentaire. Il possédait un cou très puissant</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -36,8 +31,7 @@
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Loricatosaurus possède des épines fixées à la queue comme arme défense.
-            </ModeDeVie>
+            <ModeDeVie>Loricatosaurus possède des épines fixées à la queue comme arme défense.</ModeDeVie>
             <ModeAlimentation />
             <Commentaire />
         </DescriptionDetaillee>
@@ -95,12 +89,8 @@
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Mosasaurus est un reptile marin géant. Il est adapté à la vie marine et peut
-                respirer à l’air libre.
-            </ModeDeVie>
-            <ModeAlimentation>Il occupait le sommet des chaînes alimentaires. Il chassait des
-                tortues
-            </ModeAlimentation>
+            <ModeDeVie>Mosasaurus est un reptile marin géant. Il est adapté à la vie marine et peut respirer à l’air libre.</ModeDeVie>
+            <ModeAlimentation>Il occupait le sommet des chaînes alimentaires. Il chassait des tortues</ModeAlimentation>
             <Commentaire>des plésiosauridés</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
@@ -126,11 +116,7 @@
         <DescriptionDetaillee>
             <ModeDeVie>Le Cetiosaurus est un grand quadrupède avec un long cou.</ModeDeVie>
             <ModeAlimentation />
-            <Commentaire>Son nom est composé de deux mots grec ancien qui signifie  baleine  et
-                 lézard . Ce dinosaure a reçu ce nom marin parce que le paléontologue qui l’a
-                découvert pour la première fois pensait que sa colonne vertébrale géante ne pouvait
-                provenir que d’une baleine ancestrale.
-            </Commentaire>
+            <Commentaire>Son nom est composé de deux mots grec ancien qui signifie  baleine  et  lézard . Ce dinosaure a reçu ce nom marin parce que le paléontologue qui l’a découvert pour la première fois pensait que sa colonne vertébrale géante ne pouvait provenir que d’une baleine ancestrale.</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -148,14 +134,9 @@
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>C’est l’un des plus grands carnivores terrestres de tous les temps
-            </ModeDeVie>
-            <ModeAlimentation>d’une taille et d’une masse comparable voire supérieures à celles du
-                Tyrannosaurus (T-rex).
-            </ModeAlimentation>
-            <Commentaire>Ses fossiles ont été retrouvés près d’autres fossiles de Titanosaur et
-                d’autres grands dinosaures herbivores. Ainsi
-            </Commentaire>
+            <ModeDeVie>C’est l’un des plus grands carnivores terrestres de tous les temps</ModeDeVie>
+            <ModeAlimentation>d’une taille et d’une masse comparable voire supérieures à celles du Tyrannosaurus (T-rex).</ModeAlimentation>
+            <Commentaire>Ses fossiles ont été retrouvés près d’autres fossiles de Titanosaur et d’autres grands dinosaures herbivores. Ainsi</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -175,12 +156,8 @@
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
             <ModeDeVie>C’est un bipède</ModeDeVie>
-            <ModeAlimentation>possédant de puissantes mâchoires pourvues de dents incurvées. Les
-                trois griffes de ses pattes avant devaient aussi l’aider pour la chasse. De plus
-            </ModeAlimentation>
-            <Commentaire>ses membres se terminaient par des orteils griffus. Il cohabitait avec
-                d’autres prédateurs
-            </Commentaire>
+            <ModeAlimentation>possédant de puissantes mâchoires pourvues de dents incurvées. Les trois griffes de ses pattes avant devaient aussi l’aider pour la chasse. De plus</ModeAlimentation>
+            <Commentaire>ses membres se terminaient par des orteils griffus. Il cohabitait avec d’autres prédateurs</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -196,9 +173,7 @@
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Alexeyisaurus était un reptile marin. Il fait parti de l’ordre Plesiosauria
-                et la famille Elasmosauridae. Il fait parti des plesiosauriens au plus long cou.
-            </ModeDeVie>
+            <ModeDeVie>Alexeyisaurus était un reptile marin. Il fait parti de l’ordre Plesiosauria et la famille Elasmosauridae. Il fait parti des plesiosauriens au plus long cou.</ModeDeVie>
             <ModeAlimentation>C’est un piscivore</ModeAlimentation>
             <Commentaire>c’est-à-dire que c’est un animal se nourrissant de poissons.</Commentaire>
         </DescriptionDetaillee>
@@ -217,13 +192,8 @@
         <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
         <DescriptionDetaillee>
             <ModeDeVie>Il est parfois comparé une personne mesurant 1</ModeDeVie>
-            <ModeAlimentation>8 mètres. C’est un quadrupède. Le fossile qui a été retrouvé est
-                supposé être un jeune dinosaure. Ainsi
-            </ModeAlimentation>
-            <Commentaire>un tel dinosaure ayant atteint sa taille adulte devait probablement
-                beaucoup plus imposant. Il devait avoir une petite tête et de dents en forme de
-                cuillère pour trancher les feuilles.
-            </Commentaire>
+            <ModeAlimentation>8 mètres. C’est un quadrupède. Le fossile qui a été retrouvé est supposé être un jeune dinosaure. Ainsi</ModeAlimentation>
+            <Commentaire>un tel dinosaure ayant atteint sa taille adulte devait probablement beaucoup plus imposant. Il devait avoir une petite tête et de dents en forme de cuillère pour trancher les feuilles.</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -243,13 +213,9 @@
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Liliensternus est un bipède. Il possédait des os creux qui lui permettaient
-                de courir rapidement. Il avait une crête sur le crâne.
-            </ModeDeVie>
+            <ModeDeVie>Liliensternus est un bipède. Il possédait des os creux qui lui permettaient de courir rapidement. Il avait une crête sur le crâne.</ModeDeVie>
             <ModeAlimentation />
-            <Commentaire>C’est le plus grand dinosaure carnivore de son époque. Son nom fait hommage
-                à un paléontologue allemand.
-            </Commentaire>
+            <Commentaire>C’est le plus grand dinosaure carnivore de son époque. Son nom fait hommage à un paléontologue allemand.</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -267,10 +233,7 @@
         <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
             <ModeDeVie>Il possédait des mains de très grand taille et puissantes</ModeDeVie>
-            <ModeAlimentation>ce qui laisse penser qu’il était omnivore. Il est possible que le
-                dinosaure alternait entre des postures bipèdes et quadrupèdes en fonction des
-                activités qu’il devait réaliser.
-            </ModeAlimentation>
+            <ModeAlimentation>ce qui laisse penser qu’il était omnivore. Il est possible que le dinosaure alternait entre des postures bipèdes et quadrupèdes en fonction des activités qu’il devait réaliser.</ModeAlimentation>
             <Commentaire />
         </DescriptionDetaillee>
     </Dinosaure>
