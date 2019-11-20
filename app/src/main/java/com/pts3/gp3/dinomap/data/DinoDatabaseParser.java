@@ -100,7 +100,11 @@ public class DinoDatabaseParser {
             tailles[Dino.LONGUEUR] = Double.parseDouble(taille.split(";")[Dino.LONGUEUR]);
             tailles[Dino.HAUTEUR] = Double.parseDouble(taille.split(";")[Dino.HAUTEUR]);
         } else {
-            tailles[Dino.LONGUEUR] = Double.parseDouble(taille);
+            if (taille.equals("")) {
+                tailles[Dino.LONGUEUR] = -1;
+            } else {
+                tailles[Dino.LONGUEUR] = Double.parseDouble(taille);
+            }
             tailles[Dino.HAUTEUR] = -1;
         }
 
