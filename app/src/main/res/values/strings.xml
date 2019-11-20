@@ -6,14 +6,14 @@
     <string name="cambrien" translatable="false">CAMBRIEN</string>
     <string name="ordovicien" translatable="false">ORDOVICIEN</string>
     <string name="silurien" translatable="false">SILURIEN</string>
-    <string name="devonien">DEVONIEN</string>
-    <string name="carbonifere">CARBONIFERE</string>
+    <string name="devonien" translatable="false">DEVONIEN</string>
+    <string name="carbonifere" translatable="false">CARBONIFERE</string>
     <string name="permien" translatable="false">PERMIEN</string>
     <string name="trias" translatable="false">TRIAS</string>
     <string name="jurassique" translatable="false">JURASSIQUE</string>
-    <string name="cretace">CRETACE</string>
-    <string name="paleozoique">PALEOZOIQUE</string>
-    <string name="mesozoique">MESOZOIQUE</string>
+    <string name="cretace" translatable="false">CRETACE</string>
+    <string name="paleozoique" translatable="false">PALEOZOIQUE</string>
+    <string name="mesozoique" translatable="false">MESOZOIQUE</string>
     <string name="title_activity_maps">Map</string>
     <string name="placeholder_name_sc" translatable="false">Nom Scientifique</string>
     <string name="placeholder_name_com" translatable="false">Nom commun</string>
