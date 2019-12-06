@@ -28,13 +28,10 @@ public class MainActivity extends AppCompatActivity {
        // setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_main);
 
-        LinearLayout mapLayout = findViewById(R.id.mapLayout);
-        LinearLayout encycloLayout = findViewById(R.id.encycloLayout);
         LinearLayout quizLayout = findViewById(R.id.quizLayout);
         ImageButton mapIcone = findViewById(R.id.mapIcone);
         ImageButton encycloIcone = findViewById(R.id.encycloIcone);
         ImageButton quizIcone = findViewById(R.id.quizIcone);
-        texteNbPiece = findViewById(R.id.texteNbPiece);
 
         View.OnClickListener mapClickListener = new View.OnClickListener() {
             @Override
@@ -43,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(lauchIntent);
             }
         };
-        mapLayout.setOnClickListener(mapClickListener);
         mapIcone.setOnClickListener(mapClickListener);
 
         View.OnClickListener encycloClickListener = new View.OnClickListener() {
@@ -54,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-        encycloLayout.setOnClickListener(encycloClickListener);
         encycloIcone.setOnClickListener(encycloClickListener);
 
         View.OnClickListener quizClickListener = new View.OnClickListener() {
@@ -67,12 +62,11 @@ public class MainActivity extends AppCompatActivity {
         quizLayout.setOnClickListener(quizClickListener);
         quizIcone.setOnClickListener(quizClickListener);
 
-
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        texteNbPiece.setText(""+nbPiece);
+//        texteNbPiece.setText(""+nbPiece);
     }
 }
