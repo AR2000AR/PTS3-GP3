@@ -51,8 +51,19 @@ public class DinoDatabaseParser {
             Element nomElement = ((Element) dino).getChild("Nom");
             Element nomCom = nomElement.getChild("NomCommun");
             Element nomSc = nomElement.getChild("NomScientifique");
-            String[] nomDino = {nomCom.getText(), nomSc.getText()};
             if (nomCom.getText().equals(nom[0]) && nomSc.getText().equals(nom[1])) {
+                return makeDinoObject((Element) dino);
+            }
+        }
+        return null;
+    }
+
+    public Dino getDino(String nomScientifique) {
+        Element rootElement = database.getRootElement();
+        for (Object dino : rootElement.getChildren("Dinosaure")) {
+            Element nomElement = ((Element) dino).getChild("Nom");
+            Element nomSc = nomElement.getChild("NomScientifique");
+            if (nomSc.getText().equals(nomScientifique)) {
                 return makeDinoObject((Element) dino);
             }
         }
