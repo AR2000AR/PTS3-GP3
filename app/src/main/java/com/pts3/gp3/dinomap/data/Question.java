@@ -2,11 +2,11 @@ package com.pts3.gp3.dinomap.data;
 
 public class Question {
 
-    private String question,reponse;
-    private String mauvaiseReponse[] = {null,null,null};
+    private String question, reponse;
+    private String mauvaiseReponse[] = {null, null, null};
 
 
-    public Question(String question,String[]mauvaiseReponse,String reponse){
+    public Question(String question, String[] mauvaiseReponse, String reponse) {
 
         this.question = question;
         this.mauvaiseReponse = mauvaiseReponse;
