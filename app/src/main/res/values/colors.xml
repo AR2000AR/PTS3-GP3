@@ -6,4 +6,9 @@
     <color name="colorBlack">@android:color/black</color>
     <color name="dinoNameView1">#C8C8C8</color>
     <color name="dinoNameView2">#EBEBEB</color>
+    <color name="CGBleu">#23A0DF</color>
+    <color name="CGOrange">#D43D21</color>
+    <color name="CGBelge">#F7F1E6</color>
+    <color name="CGJaune">#FBE25F</color>
+
 </resources>
