@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.pts3.gp3.dinomap.encyclopedia.EncyclopediaMenu;
+import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieMenu;
 import com.pts3.gp3.dinomap.quizz.QuizzActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener mapClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lauchIntent = new Intent(getBaseContext(),MapActivity.class);
+                Intent lauchIntent = new Intent(getBaseContext(), MapActivity.class);
                 startActivity(lauchIntent);
             }
         };
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener encycloClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lauchIntent = new Intent(getBaseContext(), EncyclopediaMenu.class);
+                Intent lauchIntent = new Intent(getBaseContext(), EncyclopedieMenu.class);
                 startActivity(lauchIntent);
 
             }

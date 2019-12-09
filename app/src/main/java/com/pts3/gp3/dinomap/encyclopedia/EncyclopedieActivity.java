@@ -1,14 +1,11 @@
 package com.pts3.gp3.dinomap.encyclopedia;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,12 +16,10 @@ import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 
 import org.jdom.JDOMException;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
-public class EncyclopediaActivity extends AppCompatActivity {
+public class EncyclopedieActivity extends AppCompatActivity {
 
     private DinoDatabaseParser database;
 
@@ -46,7 +41,7 @@ public class EncyclopediaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_encyclopedia);
+        setContentView(R.layout.activity_encyclopedie);
 
         Bundle extras = getIntent().getExtras();
         String nom[] = null;

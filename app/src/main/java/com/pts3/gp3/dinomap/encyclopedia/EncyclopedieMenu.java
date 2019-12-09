@@ -18,14 +18,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class EncyclopediaMenu extends AppCompatActivity {
+public class EncyclopedieMenu extends AppCompatActivity {
 
     private DinoDatabaseParser database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_encyclopedia_menu);
+        setContentView(R.layout.activity_encyclopedie_menu);
 
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -57,11 +57,11 @@ public class EncyclopediaMenu extends AppCompatActivity {
         }*/
 
         for (String[] nom : database.getDinoNameListe()) {
-            listLayout.addView(new DinoNameView(this, background[c++ % 2], nom[DinoDatabaseParser.NOM_SCIENTIFIQUE], nom[DinoDatabaseParser.NOM_COMMUN]));
+            listLayout.addView(new ViewNomDino(this, background[c++ % 2], nom[DinoDatabaseParser.NOM_SCIENTIFIQUE], nom[DinoDatabaseParser.NOM_COMMUN]));
         }
     }
 
-    private DinoNameView makeViewFromDino(Dino dino) {
-        return new DinoNameView(this, dino.getNomScientifique(), dino.getNomCommun());
+    private ViewNomDino makeViewFromDino(Dino dino) {
+        return new ViewNomDino(this, dino.getNomScientifique(), dino.getNomCommun());
     }
 }

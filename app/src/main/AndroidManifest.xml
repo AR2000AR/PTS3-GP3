@@ -44,10 +44,10 @@
             android:screenOrientation="sensorPortrait" />
 
         <activity
-            android:name=".encyclopedia.EncyclopediaActivity"
+            android:name=".encyclopedia.EncyclopedieActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".encyclopedia.EncyclopediaMenu"
+            android:name=".encyclopedia.EncyclopedieMenu"
             android:screenOrientation="sensorPortrait" />
     </application>
 
