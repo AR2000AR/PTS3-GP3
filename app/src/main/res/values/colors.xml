@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBlack">@android:color/black</color>
-    <color name="dinoNameView1">#C8C8C8</color>
+    <color name="dinoNameView1">#FFC107</color>
     <color name="dinoNameView2">#EBEBEB</color>
     <color name="CGBleu">#23A0DF</color>
     <color name="CGOrange">#D43D21</color>

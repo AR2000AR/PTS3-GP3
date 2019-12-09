@@ -1,11 +1,14 @@
 package com.pts3.gp3.dinomap.encyclopedia;
 
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +40,9 @@ public class EncyclopediaActivity extends AppCompatActivity {
 
     private ImageView imageDino;
 
+    private LinearLayout descriptionDino;
+    private ImageButton boutonUnlock;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,10 +68,8 @@ public class EncyclopediaActivity extends AppCompatActivity {
         text_localisationDino = findViewById(R.id.text_localisationDino);
         text_RegimeDino = findViewById(R.id.text_regimeDino);
         imageDino = findViewById(R.id.img_dino);
-
-
-
-
+        descriptionDino = findViewById(R.id.descriptionDino);
+        boutonUnlock = findViewById(R.id.bouton_lock);
 
         InputStream inputStream = getResources().openRawResource(R.raw.dino);
         try {
@@ -136,6 +140,34 @@ public class EncyclopediaActivity extends AppCompatActivity {
             }
         });
 
+        boutonUnlock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView modeDeVie = new TextView(v.getContext());
+                TextView modeAlimentaire = new TextView(v.getContext());
+                TextView commentaire = new TextView(v.getContext());
+                if(!dino.getModeDeVie().equals("")){
+                    modeDeVie.setText("Mode de vie :\n" + dino.getModeDeVie());
+                }
+                if(!dino.getModeAlimentaire().equals("")){
+                    modeAlimentaire.setText("Mode d'alimentation :\n" + dino.getModeAlimentaire());
+                }
+                if(!dino.getCommentaire().equals("")){
+                    commentaire.setText("Commentaire :\n" + dino.getCommentaire());
+                }
 
+                descriptionDino.addView(textStyle(modeDeVie));
+                descriptionDino.addView(textStyle(modeAlimentaire));
+                descriptionDino.addView(textStyle(commentaire));
+                boutonUnlock.setVisibility(View.GONE);
+            }
+        });
+
+    }
+
+    public TextView textStyle(TextView view){
+        view.setTextColor(Color.BLACK);
+        view.setTextSize(25);
+        return view;
     }
 }
