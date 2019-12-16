@@ -26,4 +26,9 @@
     <string name="encyclopedia_lieu">Lieu \:</string>
     <string name="encyclopedia_regime">Régime :</string>
 
+    <string name="audrezet" translatable="false">Rémi\nAudrézet</string>
+    <string name="croq" translatable="false">Camille\nCroq</string>
+    <string name="baron" translatable="false">Alexandre\nBaron</string>
+    <string name="rouxel" translatable="false">Valentin\nRouxel</string>
+
 </resources>
