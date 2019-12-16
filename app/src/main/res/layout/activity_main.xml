@@ -12,6 +12,7 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="30dp"
         android:layout_weight="0.3"
         app:srcCompat="@drawable/iconedinomap" />
 
@@ -33,17 +34,17 @@
             app:srcCompat="@drawable/iconemap" />
 
         <LinearLayout
-            android:id="@+id/quizLayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_weight="0.2"
-            android:gravity="center">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/quizLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.2"
+                android:gravity="center">
 
                 <ImageButton
                     android:id="@+id/quizIcone"
@@ -52,24 +53,40 @@
                     android:background="@android:color/transparent"
                     android:paddingTop="5dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/iconequestionnaire" />
+                    app:srcCompat="@drawable/icoquizz" />
+
+                <ImageButton
+                    android:id="@+id/encycloIcone"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/iconeencyclopedie" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textNbPiece"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="00"
                     android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/iconepiece" />
             </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/encycloIcone"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="20dp"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/iconeencyclopedie" />
         </LinearLayout>
 
     </LinearLayout>
