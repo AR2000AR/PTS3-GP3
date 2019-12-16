@@ -12,20 +12,20 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.9"
+        android:layout_weight="0.95"
         tools:context=".MapsActivity" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.1"
+        android:layout_weight="0.05"
         android:orientation="vertical"
         android:weightSum="1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
             android:orientation="horizontal">
 
             <TextView
@@ -54,7 +54,7 @@
             android:id="@+id/t"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="0.3"
+            android:layout_weight="0.4"
             android:text=" "
             android:textSize="15sp" />
 
@@ -62,7 +62,9 @@
             android:id="@+id/seekBarEpoque"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.3"
             android:background="@drawable/border"
             android:max="8"
             android:progress="2" />
@@ -71,6 +73,7 @@
             android:id="@+id/epoqueView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0.2"
             android:text=""
             android:textAlignment="center" />
 

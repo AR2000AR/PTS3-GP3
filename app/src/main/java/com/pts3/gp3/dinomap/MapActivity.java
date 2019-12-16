@@ -13,6 +13,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -57,7 +59,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         dino = new ArrayList<>();
 
 
-       t = findViewById(R.id.t);
+        t = findViewById(R.id.t);
         t.setTextSize(15);
         t.setX(0);
 
@@ -77,14 +79,14 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             e.printStackTrace();
         }
 
-        state=seekBar.getProgress();
-        epoque=epoqueChoice();
+        state = seekBar.getProgress();
+        epoque = epoqueChoice();
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 state = progress;
-                epoque=epoqueChoice();
+                epoque = epoqueChoice();
             }
 
             @Override
@@ -94,8 +96,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                afficherMarqueur(getDino(),epoque);
-                t.setText("");
+                afficherMarqueur(getDino(), epoque);
             }
         });
 
@@ -103,14 +104,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
 
-                t.setX((float) (motionEvent.getX() - 0.5*(t.getWidth())));
+                if (motionEvent.getX() - t.getWidth() * 0.5 > 0) {
+                    t.setX((float) (motionEvent.getX() - 0.5 * (t.getWidth())));
+                }
                 return false;
             }
         });
     }
 
     private void mettreAJourTexteIndicateur(int progress) {
-
 
 
     }
@@ -157,17 +159,21 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         return null;
     }
 
-    private void afficherMarqueur(List<Dino> list, String epoque){
+    private void afficherMarqueur(List<Dino> list, String epoque) {
         googleMap.clear();
-        for (Dino d: list) {
+        for (Dino d : list) {
             if (epoque.equals(d.getEpoque())) {
-                for(LatLng l : d.getLieuDeDecouverte()) {
-                    googleMap.addMarker(new MarkerOptions().position(l).title(""));
+                for (LatLng l : d.getLieuDeDecouverte()) {
+                  // googleMap.addMarker(new MarkerOptions().position(l).title(""));
+
+                    MarkerOptions m = new MarkerOptions();
+                    m.position(l);
+                    m.title("")
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.icodinomapbitmap));
 
                 }
             }
         }
-
 
 
     }

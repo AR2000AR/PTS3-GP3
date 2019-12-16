@@ -9,23 +9,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
         android:orientation="horizontal">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/backButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:contentDescription="@string/content_description_return_button"
-            app:srcCompat="@android:drawable/ic_menu_revert" />
+            android:layout_weight="0.2"
+            app:srcCompat="@drawable/boutonretour" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.8"
             android:text="@string/title_encyclo_menu"
+            android:textAlignment="center"
             android:textSize="36sp" />
 
     </LinearLayout>
@@ -33,7 +34,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.9"
         android:scrollbars="vertical"
         android:verticalScrollbarPosition="defaultPosition">
 

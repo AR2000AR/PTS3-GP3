@@ -16,6 +16,8 @@ public class ViewNomDino extends LinearLayout implements View.OnClickListener {
 
     public ViewNomDino(Context context, int background, String nomScientifique, String nomCommun) {
         this(context, nomScientifique, nomCommun);
+
+        this.setBackground(getResources().getDrawable(R.drawable.contourbord));
         this.setBackgroundColor(background);
     }
 
