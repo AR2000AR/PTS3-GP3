@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static void gagnerNbPiece(int pieceGagner) {
         nbPiece += pieceGagner;
-
     }
 
     @Override
@@ -29,9 +29,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         LinearLayout quizLayout = findViewById(R.id.quizLayout);
-        ImageButton mapIcone = findViewById(R.id.mapIcone);
-        ImageButton encycloIcone = findViewById(R.id.encycloIcone);
-        ImageButton quizIcone = findViewById(R.id.quizIcone);
+        ImageView mapIcone = findViewById(R.id.mapIcone);
+        ImageView encycloIcone = findViewById(R.id.encycloIcone);
+        ImageView quizIcone = findViewById(R.id.quizIcone);
+        ImageView btnCredit = findViewById(R.id.btnCredit);
+
 
         View.OnClickListener mapClickListener = new View.OnClickListener() {
             @Override
@@ -61,6 +63,17 @@ public class MainActivity extends AppCompatActivity {
         };
         quizLayout.setOnClickListener(quizClickListener);
         quizIcone.setOnClickListener(quizClickListener);
+
+
+
+        btnCredit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent lauchIntent = new Intent(getBaseContext(), CreditActivity.class);
+                startActivity(lauchIntent);
+            }
+        });
+
 
     }
 
