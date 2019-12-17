@@ -1,6 +1,7 @@
 package com.pts3.gp3.dinomap.encyclopedia;
 
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -34,6 +35,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
     private TextView text_RegimeDino;
 
     private ImageView imageDino;
+    private ImageView returnButton;
 
     private LinearLayout descriptionDino;
     private ImageButton boutonUnlock;
@@ -127,7 +129,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
         //text_localisationDino.setText((CharSequence) dino.getLieuDeDecouverte());
         text_RegimeDino.setText(text_RegimeDino.getText() + " " + dino.getRegimeAlimentaire());
 
-        ImageButton returnButton = findViewById(R.id.return_button);
+        ImageView returnButton = findViewById(R.id.return_button);
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

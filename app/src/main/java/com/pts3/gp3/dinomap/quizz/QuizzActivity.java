@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ public class QuizzActivity extends AppCompatActivity {
     private String mauvaiseReponse2[] = {null, null, null};
     private String mauvaiseReponse3[] = {null, null, null};
     private String mauvaiseReponse4[] = {null, null, null};
-    private String mauvaiseReponse5[] = {null, null, null};
+
     private int pieceGagner = 0;
 
     TextView t;
@@ -39,7 +40,7 @@ public class QuizzActivity extends AppCompatActivity {
         // setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_quizz);
 
-        ImageButton backButton = findViewById(R.id.backButton);
+        ImageView backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,26 +55,25 @@ public class QuizzActivity extends AppCompatActivity {
         btnRep1 = findViewById(R.id.btnRep1);
         btnRep2 = findViewById(R.id.btnRep2);
         btnRep3 = findViewById(R.id.btnRep3);
-        btnRep4 = findViewById(R.id.btnRep4);
 
         t = findViewById(R.id.textQuestionActuelle);
 
         btnRep1.setText("");
         btnRep2.setText("");
         btnRep3.setText("");
-        btnRep4.setText("");
+//        btnRep4.setText(""); // a enlever
 
         listeBtn[0] = btnRep1;
         listeBtn[1] = btnRep2;
         listeBtn[2] = btnRep3;
-        listeBtn[3] = btnRep4;
+
 
 
         initialisationQuizz();
         genererPropositionReponse();
 
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             listeBtn[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -86,7 +86,7 @@ public class QuizzActivity extends AppCompatActivity {
     private void testerLaProposition(View view) {
 
         boolean test = false;
-        for (int i = 0; i < 4 && !test; i++) {
+        for (int i = 0; i < 3 && !test; i++) {
             if (view == listeBtn[i]) {
                 if (listeBtn[i].getText() == listeDeQuestion[numQuestionActuel].getReponse()) {
                     test = true;
@@ -186,7 +186,7 @@ public class QuizzActivity extends AppCompatActivity {
             textQuestion.setText(listeDeQuestion[numQuestionActuel].getQuestion());
 
 
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < 3; j++) {
                 if (listeBtn[j].getText() != listeDeQuestion[numQuestionActuel].getReponse()) {
                     listeBtn[j].setText(listeDeQuestion[numQuestionActuel].getMauvaiseReponse()[p]);
                     p++;
