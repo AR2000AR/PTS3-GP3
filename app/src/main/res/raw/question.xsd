@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+    targetNamespace="Question.xsd"
+    xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="note">
+        <complexType>
+            <sequence>
+                <element name="intituleQuestion" type="string"/>
+                <element name="bonneReponse" type="string"/>
+                <element name="mauvaiseReponse1" type="string"/>
+                <element name="mauvaiseReponse2" type="string"/>
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
