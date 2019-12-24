@@ -1,5 +1,7 @@
 package com.pts3.gp3.dinomap.data;
 
+import android.util.Log;
+
 import com.google.android.gms.maps.model.LatLng;
 
 import org.jdom.Document;
@@ -59,6 +61,7 @@ public class DinoDatabaseParser {
     }
 
     public Dino getDino(String nomScientifique) {
+        Log.d("DinoDatabaseParser", nomScientifique);
         Element rootElement = database.getRootElement();
         for (Object dino : rootElement.getChildren("Dinosaure")) {
             Element nomElement = ((Element) dino).getChild("Nom");
@@ -106,6 +109,15 @@ public class DinoDatabaseParser {
             lng = Double.parseDouble(lieuElement.getText().split(";")[1]);
             lieus.add(new LatLng(lat, lng));
         }
+
+        List<Epoque> epoques = new LinkedList<>();
+        Log.d("DinoDatabaseParser", "Epoques " + nomSc + "===========");
+        Log.d("DinoDatabaseParser", epoque);
+        for (String epoqueStr : epoque.split(";")) {
+            epoques.add(Epoque.valueOf(epoqueStr.toUpperCase()));
+            Log.d("DinoDatabaseParser", Epoque.valueOf(epoqueStr.toUpperCase()).name());
+        }
+
         double[] tailles = new double[2];
         if (taille.split(";").length == 2) {
             tailles[Dino.LONGUEUR] = Double.parseDouble(taille.split(";")[Dino.LONGUEUR]);
@@ -123,6 +135,6 @@ public class DinoDatabaseParser {
             poids = "-1";
         }
 
-        return new Dino(nomCom, nomSc, tailles, Double.parseDouble(poids), epoque, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
+        return new Dino(nomCom, nomSc, tailles, Double.parseDouble(poids), epoques, lieus, regimeAlimentaire, modeDeVie, modeAliementation, commentaire);
     }
 }

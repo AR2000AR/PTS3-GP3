@@ -9,27 +9,31 @@ public class Dino {
     public static final int LONGUEUR = 0;
     public static final int HAUTEUR = 1;
 
-    private String nomCommun,nomScientifique;
+    private String nomCommun, nomScientifique;
     private double[] taille;
     private double poids;
-    private String epoque;
+    private List<Epoque> epoques;
     private List<LatLng> lieuDeDecouverte;
     private String regimeAlimentaire;
     private String modeDeVie;
     private String modeAlimentaire;
     private String commentaire;
 
-    public Dino(String nomCommun, String nomScientifique, double[] taille, double poids, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire, String commentaire) {
+    public Dino(String nomCommun, String nomScientifique, double[] taille, double poids, List<Epoque> epoques, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire, String commentaire) {
         this.nomCommun = nomCommun;
         this.nomScientifique = nomScientifique;
         this.taille = taille;
         this.poids = poids;
-        this.epoque = epoque;
+        this.epoques = epoques;
         this.lieuDeDecouverte = lieuDeDecouverte;
         this.regimeAlimentaire = regimeAlimentaire;
         this.modeDeVie = modeDeVie;
         this.modeAlimentaire = modeAlimentaire;
         this.commentaire = commentaire;
+    }
+
+    public Dino(String nomCommun, String nomScientifique, double[] taille, double poid, List<Epoque> epoques, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire) {
+        this(nomCommun, nomScientifique, taille, poid, epoques, lieuDeDecouverte, regimeAlimentaire, modeDeVie, modeAlimentaire, null);
     }
 
     public String getNomCommun() {
@@ -48,8 +52,8 @@ public class Dino {
         return poids;
     }
 
-    public String getEpoque() {
-        return epoque;
+    public List<Epoque> getEpoques() {
+        return epoques;
     }
 
     public List<LatLng> getLieuDeDecouverte() {
@@ -70,9 +74,5 @@ public class Dino {
 
     public String getCommentaire() {
         return commentaire;
-    }
-
-    public Dino(String nomCommun, String nomScientifique, double[] taille, double poid, String epoque, List<LatLng> lieuDeDecouverte, String regimeAlimentaire, String modeDeVie, String modeAlimentaire) {
-        this(nomCommun,nomScientifique,taille,poid,epoque,lieuDeDecouverte,regimeAlimentaire,modeDeVie,modeAlimentaire,null);
     }
 }

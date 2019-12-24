@@ -13,13 +13,12 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.pts3.gp3.dinomap.data.Dino;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
+import com.pts3.gp3.dinomap.data.Epoque;
 
 import org.jdom.JDOMException;
 
@@ -34,7 +33,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private int state;
     private TextView epoqueView;
     private List<Dino> dino;
-    private String epoque;
+    private Epoque epoque;
 
     private TextView t;
 
@@ -96,7 +95,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                afficherMarqueur(getDino(), epoque);
+                afficherMarqueur(getDino());
             }
         });
 
@@ -117,65 +116,63 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     }
 
-    private String epoqueChoice() {
+    private Epoque epoqueChoice() {
         switch (state) {
             case 0:
                 epoqueView.setText(R.string.cambrien);
                 t.setText("-540M à \n -500M");
-                return getString(R.string.cambrien);
+                return Epoque.CAMBRIEN;
             case 1:
                 epoqueView.setText(R.string.ordovicien);
                 t.setText("-500M à \n -440M");
-                return getString(R.string.ordovicien);
+                return Epoque.ORDOVICIEN;
             case 2:
                 epoqueView.setText(R.string.silurien);
                 t.setText("-440M à \n -410M");
-                return getString(R.string.silurien);
+                return Epoque.SILURIEN;
             case 3:
                 epoqueView.setText(R.string.devonien);
                 t.setText("-410M à \n -355M");
-                return getString(R.string.devonien);
+                return Epoque.DEVONIEN;
             case 4:
                 epoqueView.setText(R.string.carbonifere);
                 t.setText("-355M à \n -295M");
-                return getString(R.string.carbonifere);
+                return Epoque.CARBONIFERE;
             case 5:
                 epoqueView.setText(R.string.permien);
                 t.setText("-295M à \n -250M");
-                return getString(R.string.permien);
+                return Epoque.PERMIEN;
             case 6:
                 epoqueView.setText(R.string.trias);
                 t.setText("-250M à \n -200M");
-                return getString(R.string.trias);
+                return Epoque.TRIAS;
             case 7:
                 epoqueView.setText(R.string.jurassique);
                 t.setText("-200M à \n -135M");
-                return getString(R.string.jurassique);
+                return Epoque.JURASSIQUE;
             case 8:
                 epoqueView.setText(R.string.cretace);
                 t.setText("-135M à \n -65M");
-                return getString(R.string.cretace);
+                return Epoque.CRETACE;
         }
         return null;
     }
 
-    private void afficherMarqueur(List<Dino> list, String epoque) {
+    private void afficherMarqueur(List<Dino> list) {
         googleMap.clear();
         for (Dino d : list) {
-            if (epoque.equals(d.getEpoque())) {
+            if (d.getEpoques().contains(this.epoque)) {
                 for (LatLng l : d.getLieuDeDecouverte()) {
-                  // googleMap.addMarker(new MarkerOptions().position(l).title(""));
+                    googleMap.addMarker(new MarkerOptions().position(l).title(""));
 
-                    MarkerOptions m = new MarkerOptions();
+                    /*MarkerOptions m = new MarkerOptions();
                     m.position(l);
                     m.title("")
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.icodinomapbitmap));
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.icodinomapbitmap));*/
 
                 }
             }
         }
-
-
     }
 
 
@@ -191,7 +188,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         LatLng center = new LatLng(46.603354, 1.8883335);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(center));
 
-        afficherMarqueur(dino, epoque);
+        afficherMarqueur(dino);
     }
 
     public List<Dino> getDino() {
