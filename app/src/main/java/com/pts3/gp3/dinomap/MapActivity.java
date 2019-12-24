@@ -1,5 +1,6 @@
 package com.pts3.gp3.dinomap;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.pts3.gp3.dinomap.data.Dino;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 import com.pts3.gp3.dinomap.data.Epoque;
+import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieActivity;
 
 import org.jdom.JDOMException;
 
@@ -34,6 +36,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private TextView epoqueView;
     private List<Dino> dino;
     private Epoque epoque;
+    private DinoDatabaseParser database;
 
     private TextView t;
 
@@ -165,6 +168,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                 for (LatLng l : d.getLieuDeDecouverte()) {
                     googleMap.addMarker(new MarkerOptions().position(l).title(""));
 
+                    MarkerOptions m = new MarkerOptions().position(l).title(d.getNomCommun()).snippet(d.getNomScientifique());
+
                     /*MarkerOptions m = new MarkerOptions();
                     m.position(l);
                     m.title("")
@@ -178,7 +183,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onInfoWindowClick(Marker marker) {
+        Dino d = database.getDino(marker.getSnippet());
+        Intent intent = new Intent(this, EncyclopedieActivity.class);
+        String[] nom = new String[2];
+        nom[DinoDatabaseParser.NOM_COMMUN] = d.getNomCommun();
+        nom[DinoDatabaseParser.NOM_SCIENTIFIQUE] = d.getNomScientifique();
+        intent.putExtra("nomDino", nom);
 
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
     }
 
     @Override
@@ -187,6 +200,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         LatLng center = new LatLng(46.603354, 1.8883335);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(center));
+
+        googleMap.setOnInfoWindowClickListener(this);
 
         afficherMarqueur(dino);
     }
