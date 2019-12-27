@@ -111,6 +111,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
             imageDino.setBackgroundResource(imagesDino[9]);
         }
 
+
         if(dino.getTaille()[0] == -1 && dino.getTaille()[1] == -1){
             text_TailleDino.setText("Aucune donnée");
         }else if(dino.getTaille()[0] == -1){
