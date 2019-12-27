@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Quiz" xmlns:tns="http://www.example.org/Quiz" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/Quiz"
+	elementFormDefault="qualified">
 	<element name="Quiz">
 		<complexType>
 			<sequence>
