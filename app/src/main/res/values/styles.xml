@@ -19,4 +19,8 @@
 
     </style>
 
+    <style name="police">
+        <item name="android:fontFamily">@font/trebuc</item>
+    </style>
+
 </resources>

@@ -3,14 +3,13 @@ package com.pts3.gp3.dinomap;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieMenu;
+import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieMenuActivity;
 import com.pts3.gp3.dinomap.quizz.QuizzActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener encycloClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lauchIntent = new Intent(getBaseContext(), EncyclopedieMenu.class);
+                Intent lauchIntent = new Intent(getBaseContext(), EncyclopedieMenuActivity.class);
                 startActivity(lauchIntent);
 
             }

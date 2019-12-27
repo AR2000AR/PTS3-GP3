@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@color/test3"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/test1"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +29,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
+            android:fontFamily="@font/trebucbd"
+            android:gravity="clip_vertical|left"
+            android:paddingStart="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="Question N°"
-            android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textAlignment="gravity"
+            android:textColor="#000000"
+            android:textSize="34sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,9 +56,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
+            android:fontFamily="@font/trebuc"
             android:text="Quel est ce dino ?"
             android:textAlignment="center"
-            android:textSize="36sp" />
+            android:textColor="#000000"
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -69,7 +79,8 @@
             android:layout_marginRight="50dp"
             android:layout_weight="0.1"
             android:background="@drawable/fondproposition"
-            android:text="Button" />
+            android:text="Button"
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/btnRep2"
@@ -80,7 +91,8 @@
             android:layout_marginRight="50dp"
             android:layout_weight="0.1"
             android:background="@drawable/fondproposition"
-            android:text="Button" />
+            android:text="Button"
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/btnRep3"
@@ -91,7 +103,8 @@
             android:layout_marginRight="50dp"
             android:layout_weight="0.1"
             android:background="@drawable/fondproposition"
-            android:text="Button" />
+            android:text="Button"
+            android:textColor="#000000" />
 
     </LinearLayout>
 

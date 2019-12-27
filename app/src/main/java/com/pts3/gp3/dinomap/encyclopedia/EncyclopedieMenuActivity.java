@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class EncyclopedieMenu extends AppCompatActivity {
+public class EncyclopedieMenuActivity extends AppCompatActivity {
 
     private DinoDatabaseParser database;
 
@@ -52,7 +52,7 @@ public class EncyclopedieMenu extends AppCompatActivity {
         Log.d("PAUSE","PAUSE");
 
         int c = 0;
-        int[] background = {getColor(R.color.dinoNameView1), getColor(R.color.dinoNameView2)};
+        int[] background = {getColor(R.color.test3), getColor(R.color.test2)};
         /*for (int i = 0; i < 20; i++) {
             listLayout.addView(new DinoNameView(this, background[c++ % 2], getString(R.string.placeholder_name_sc), getString(R.string.placeholder_name_com)));
         }*/

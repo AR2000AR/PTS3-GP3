@@ -1,7 +1,8 @@
 package com.pts3.gp3.dinomap.encyclopedia;
 
 import android.graphics.Color;
-import android.media.Image;
+import android.graphics.Typeface;
+import android.graphics.fonts.FontFamily;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.pts3.gp3.dinomap.R;
 import com.pts3.gp3.dinomap.data.Dino;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
+import com.pts3.gp3.dinomap.data.Epoque;
 
 import org.jdom.JDOMException;
 
@@ -31,7 +33,6 @@ public class EncyclopedieActivity extends AppCompatActivity {
     private TextView text_TailleDino;
     private TextView text_PoidsDino;
     private TextView text_EpoqueDino;
-    private TextView text_localisationDino;
     private TextView text_RegimeDino;
 
     private ImageView imageDino;
@@ -62,7 +63,6 @@ public class EncyclopedieActivity extends AppCompatActivity {
         text_TailleDino = findViewById(R.id.text_tailleDino);
         text_PoidsDino = findViewById(R.id.text_poidsDino);
         text_EpoqueDino = findViewById(R.id.text_epoqueDino);
-        text_localisationDino = findViewById(R.id.text_localisationDino);
         text_RegimeDino = findViewById(R.id.text_regimeDino);
         imageDino = findViewById(R.id.img_dino);
         descriptionDino = findViewById(R.id.descriptionDino);
@@ -112,22 +112,28 @@ public class EncyclopedieActivity extends AppCompatActivity {
         }
 
         if(dino.getTaille()[0] == -1 && dino.getTaille()[1] == -1){
-            text_TailleDino.setText(text_TailleDino.getText() + " Aucune donnée");
+            text_TailleDino.setText("Aucune donnée");
         }else if(dino.getTaille()[0] == -1){
-            text_TailleDino.setText(text_TailleDino.getText() + " " + dino.getTaille()[1] + "m de haut");
+            text_TailleDino.setText(dino.getTaille()[1] + "m de haut");
         }else if(dino.getTaille()[1] == -1){
-            text_TailleDino.setText(text_TailleDino.getText() + " " + dino.getTaille()[0] + "m de long");
+            text_TailleDino.setText(dino.getTaille()[0] + "m de long");
         }else{
-            text_TailleDino.setText(text_TailleDino.getText() + " " + dino.getTaille()[0] + "m de long, " + " " + dino.getTaille()[1] + "m de haut");
+            text_TailleDino.setText(dino.getTaille()[0] + "m de long, " + " " + dino.getTaille()[1] + "m de haut");
         }
         if(dino.getPoids() == -1){
-            text_PoidsDino.setText(text_PoidsDino.getText() + " Aucune donnée");
+            text_PoidsDino.setText("Aucune donnée");
         }else{
-            text_PoidsDino.setText(text_PoidsDino.getText() + " " + dino.getPoids() + " tonne(s)");
+            text_PoidsDino.setText(dino.getPoids() + " tonne(s)");
         }
-        text_EpoqueDino.setText(text_EpoqueDino.getText() + " " + dino.getEpoque());
-        //text_localisationDino.setText((CharSequence) dino.getLieuDeDecouverte());
-        text_RegimeDino.setText(text_RegimeDino.getText() + " " + dino.getRegimeAlimentaire());
+        for(Epoque epoque : dino.getEpoques()){
+            if(text_EpoqueDino.getText() == ""){
+                text_EpoqueDino.setText(epoque.name());
+            }else {
+                text_EpoqueDino.setText(text_EpoqueDino.getText() + ", " + epoque.name());
+            }
+        }
+
+        text_RegimeDino.setText(dino.getRegimeAlimentaire());
 
         ImageView returnButton = findViewById(R.id.return_button);
         returnButton.setOnClickListener(new View.OnClickListener() {
@@ -144,27 +150,39 @@ public class EncyclopedieActivity extends AppCompatActivity {
                 TextView modeAlimentaire = new TextView(v.getContext());
                 TextView commentaire = new TextView(v.getContext());
                 if(!dino.getModeDeVie().equals("")){
-                    modeDeVie.setText("Mode de vie :\n" + dino.getModeDeVie());
+                    modeDeVie.setText(dino.getModeDeVie());
+                    descriptionDino.addView(nouveauTitre("Mode de vie :"));
+                    descriptionDino.addView(textStyle(modeDeVie));
                 }
                 if(!dino.getModeAlimentaire().equals("")){
-                    modeAlimentaire.setText("Mode d'alimentation :\n" + dino.getModeAlimentaire());
+                    modeAlimentaire.setText(dino.getModeAlimentaire());
+                    descriptionDino.addView(nouveauTitre("Mode d'alimentation :"));
+                    descriptionDino.addView(textStyle(modeAlimentaire));
                 }
                 if(!dino.getCommentaire().equals("")){
-                    commentaire.setText("Commentaire :\n" + dino.getCommentaire());
+                    commentaire.setText(dino.getCommentaire());
+                    descriptionDino.addView(nouveauTitre("Commentaire :"));
+                    descriptionDino.addView(textStyle(commentaire));
                 }
-
-                descriptionDino.addView(textStyle(modeDeVie));
-                descriptionDino.addView(textStyle(modeAlimentaire));
-                descriptionDino.addView(textStyle(commentaire));
                 boutonUnlock.setVisibility(View.GONE);
             }
         });
 
     }
 
+    public TextView nouveauTitre(String text){
+        TextView titre = new TextView(this);
+        titre.setText(text);
+        titre.setTextColor(Color.BLACK);
+        titre.setTextSize(22);
+        titre.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebucbd.ttf"));
+        return titre;
+    }
+
     public TextView textStyle(TextView view){
-        view.setTextColor(Color.BLACK);
-        view.setTextSize(25);
+        //view.setTextColor(Color.BLACK);
+        view.setTextSize(20);
+        view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebuc.ttf"));
         return view;
     }
 }

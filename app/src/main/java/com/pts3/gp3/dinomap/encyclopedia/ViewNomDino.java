@@ -2,6 +2,7 @@ package com.pts3.gp3.dinomap.encyclopedia;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -31,8 +32,12 @@ public class ViewNomDino extends LinearLayout implements View.OnClickListener {
 
         nomScientifiqueView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
         nomCommunView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+
         nomScientifiqueView.setTextColor(context.getColor(R.color.colorBlack));
         nomCommunView.setTextColor(context.getColor(R.color.colorBlack));
+
+        nomCommunView.setTypeface(Typeface.createFromAsset(this.getContext().getAssets(), "fonts/trebuc.ttf"));
+        nomScientifiqueView.setTypeface(Typeface.createFromAsset(this.getContext().getAssets(), "fonts/trebuc.ttf"));
 
         this.addView(nomScientifiqueView);
         this.addView(nomCommunView);

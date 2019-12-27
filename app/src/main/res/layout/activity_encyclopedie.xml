@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/test3">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/test1"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -15,23 +18,25 @@
 
         <ImageView
             android:id="@+id/return_button"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
+            android:layout_weight="0.2"
             app:srcCompat="@drawable/boutonretour" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:orientation="vertical">
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="5dp">
 
             <TextView
                 android:id="@+id/text_nomSDino"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_weight="0.5"
+                android:fontFamily="@font/trebucbd"
                 android:text="Nom du dinosaure"
                 android:textColor="@color/colorBlack"
                 android:textSize="30sp" />
@@ -39,12 +44,12 @@
             <TextView
                 android:id="@+id/text_nomCDino"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_weight="0.5"
+                android:fontFamily="@font/trebuc"
                 android:text="TextView"
                 android:textColor="@color/colorBlack"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -53,7 +58,12 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:measureAllChildren="false"
+        android:nestedScrollingEnabled="false"
         android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         android:scrollbars="vertical"
         android:verticalScrollbarPosition="defaultPosition"
         app:layout_constraintBottom_toTopOf="@+id/bouton_lock"
@@ -65,56 +75,128 @@
             android:id="@+id/descriptionDino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:isScrollContainer="true"
-            android:orientation="vertical">
+            android:clipToPadding="false"
+            android:isScrollContainer="false"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
 
             <ImageView
                 android:id="@+id/img_dino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="0.2"
                 android:adjustViewBounds="true"
-                android:scaleType="fitCenter" />
+                android:cropToPadding="false"
+                android:scaleType="centerInside" />
 
-            <TextView
-                android:id="@+id/text_tailleDino"
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/encyclopedia_taille"
-                android:textColor="@color/colorBlack"
-                android:textSize="25sp" />
+                android:clipChildren="false"
+                android:clipToPadding="false">
 
-            <TextView
-                android:id="@+id/text_poidsDino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/encyclopedia_poids"
-                android:textColor="@color/colorBlack"
-                android:textSize="25sp" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/text_epoqueDino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/encyclopedia_epoque"
-                android:textColor="@color/colorBlack"
-                android:textSize="25sp" />
+                    <TextView
+                        android:id="@+id/tailleDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/trebucbd"
+                        android:text="@string/encyclopedia_taille"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="22sp" />
 
-            <TextView
-                android:id="@+id/text_localisationDino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/encyclopedia_lieu"
-                android:textColor="@color/colorBlack"
-                android:textSize="25sp" />
+                    <TextView
+                        android:id="@+id/text_tailleDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/trebuc"
+                        android:gravity="end"
+                        android:text="TextView"
+                        android:textSize="20sp" />
+                </TableRow>
 
-            <TextView
-                android:id="@+id/text_regimeDino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/encyclopedia_regime"
-                android:textColor="@color/colorBlack"
-                android:textSize="25sp" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/poidsDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/trebucbd"
+                        android:text="@string/encyclopedia_poids"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_poidsDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/trebuc"
+                        android:gravity="end"
+                        android:text="TextView"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/regimeDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/trebucbd"
+                        android:text="@string/encyclopedia_regime"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_regimeDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/trebuc"
+                        android:gravity="end"
+                        android:text="TextView"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/epoqueDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/trebucbd"
+                        android:text="@string/encyclopedia_epoque"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/text_epoqueDino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/trebuc"
+                        android:gravity="end"
+                        android:textSize="20sp" />
+                </TableRow>
+            </TableLayout>
+
         </LinearLayout>
     </ScrollView>
 
@@ -122,6 +204,7 @@
         android:id="@+id/bouton_lock"
         android:layout_width="0dp"
         android:layout_height="55dp"
+        android:background="@color/test1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

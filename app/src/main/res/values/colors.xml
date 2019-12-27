@@ -10,5 +10,9 @@
     <color name="CGJaune">#FBE25F</color>
     <color name="dinoNameView1">@color/CGBelge</color>
     <color name="dinoNameView2">@color/CGJaune</color>
+    <color name="test1">#F8E5DD</color>
+    <color name="test2">#F8D4C0</color>
+    <color name="test3">#FCF2F2</color>
+
 
 </resources>

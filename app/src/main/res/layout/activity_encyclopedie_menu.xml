@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".encyclopedia.EncyclopedieMenu">
+    tools:context=".encyclopedia.EncyclopedieMenuActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
+        android:background="@color/test1"
         android:orientation="horizontal">
 
         <ImageView
@@ -25,9 +26,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.8"
+            android:fontFamily="@font/trebucbd"
+            android:gravity="left|center_vertical"
+            android:paddingStart="5dp"
             android:text="@string/title_encyclo_menu"
-            android:textAlignment="center"
-            android:textSize="36sp" />
+            android:textAlignment="gravity"
+            android:textColor="#000000"
+            android:textSize="34sp" />
 
     </LinearLayout>
 

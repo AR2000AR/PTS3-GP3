@@ -40,7 +40,7 @@
             android:name=".encyclopedia.EncyclopedieActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".encyclopedia.EncyclopedieMenu"
+            android:name=".encyclopedia.EncyclopedieMenuActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
             android:name=".CreditActivity"
