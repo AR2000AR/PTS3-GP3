@@ -76,7 +76,7 @@ public class DinoDatabaseParser {
     private Dino makeDinoObject(Element dino) {
         Element nomElement = dino.getChild("Nom");
         Element nomCommunElement = nomElement.getChild("NomCommun");
-        Element nomScientifique = nomElement.getChild("NomScientifique");
+        Element nomScientifiqueElement = nomElement.getChild("NomScientifique");
         Element tailleElement = dino.getChild("Taille");
         Element poidsElement = dino.getChild("Poids");
         Element epoqueElement = dino.getChild("Epoque");
@@ -88,7 +88,7 @@ public class DinoDatabaseParser {
         Element commentaireElement = descriptionDetailleeElement.getChild("Commentaire");
 
         String nomCom = nomCommunElement.getText();
-        String nomSc = nomCommunElement.getText();
+        String nomSc = nomScientifiqueElement.getText();
         String taille = tailleElement.getText();
         String poids = poidsElement.getText();
         String epoque = epoqueElement.getText();

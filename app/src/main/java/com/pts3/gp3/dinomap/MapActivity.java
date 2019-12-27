@@ -2,6 +2,7 @@ package com.pts3.gp3.dinomap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.SeekBar;
@@ -72,7 +73,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
          * rempli la liste avec des dino
          */
         try {
-            DinoDatabaseParser database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
+          database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
             for (String[] curentDino : database.getDinoNameListe()) {
                 dino.add(database.getDino(curentDino));
 
@@ -166,9 +167,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         for (Dino d : list) {
             if (d.getEpoques().contains(this.epoque)) {
                 for (LatLng l : d.getLieuDeDecouverte()) {
-                    googleMap.addMarker(new MarkerOptions().position(l).title(""));
+                    //googleMap.addMarker(new MarkerOptions().position(l).title(""));
 
-                    MarkerOptions m = new MarkerOptions().position(l).title(d.getNomCommun()).snippet(d.getNomScientifique());
+                    //MarkerOptions m = new MarkerOptions().position(l).title(d.getNomCommun()).snippet(d.getNomScientifique());
+
+                    Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()));
 
                     /*MarkerOptions m = new MarkerOptions();
                     m.position(l);
@@ -183,7 +186,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Dino d = database.getDino(marker.getSnippet());
+        Dino d = database.getDino(marker.getTitle());
         Intent intent = new Intent(this, EncyclopedieActivity.class);
         String[] nom = new String[2];
         nom[DinoDatabaseParser.NOM_COMMUN] = d.getNomCommun();
@@ -203,7 +206,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         googleMap.setOnInfoWindowClickListener(this);
 
-        afficherMarqueur(dino);
+        afficherMarqueur(getDino());
     }
 
     public List<Dino> getDino() {
