@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Quiz" xmlns:tns="http://www.example.org/Quiz" elementFormDefault="qualified">
+	<element name="Quiz">
+		<complexType>
+			<sequence>
+				<element name="Question" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="Titre" maxOccurs="1" minOccurs="1" type="string"></element>
+							<element name="bonneReponse" maxOccurs="1" minOccurs="1" type="string"/>
+              				<element name="mauvaiseReponse" maxOccurs="2" minOccurs="2" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>    
+</schema>
