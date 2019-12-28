@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            app:srcCompat="@drawable/boutonretour" />
+            android:background="@drawable/boutonretour" />
 
         <TextView
             android:id="@+id/map_titre"
@@ -62,8 +62,9 @@
                 android:layout_weight="0.7"
                 android:background="@drawable/border"
                 android:fontFamily="@font/trebuc"
+                android:gravity="center"
                 android:text="@string/paleozoique"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="#000000"
                 android:textStyle="bold" />
 
@@ -74,8 +75,9 @@
                 android:layout_weight="0.4"
                 android:background="@drawable/border"
                 android:fontFamily="@font/trebuc"
+                android:gravity="center"
                 android:text="@string/mesozoique"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="#000000"
                 android:textStyle="bold" />
 
@@ -108,8 +110,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
+            android:gravity="center"
             android:text=""
-            android:textAlignment="center" />
+            android:textAlignment="gravity" />
 
     </LinearLayout>
 
