@@ -11,4 +11,7 @@
     <string name="encyclopedia_epoque">Epoque :</string>
     <string name="encyclopedia_lieu">Lieu \:</string>
     <string name="encyclopedia_regime">Régime :</string>
+
+    <string name="map_titre">Carte des dinosaures</string>
+
 </resources>
