@@ -1,9 +1,14 @@
 package com.pts3.gp3.dinomap.encyclopedia;
 
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.fonts.FontFamily;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -12,6 +17,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.pts3.gp3.dinomap.R;
 import com.pts3.gp3.dinomap.data.Dino;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
@@ -41,6 +47,9 @@ public class EncyclopedieActivity extends AppCompatActivity {
     private LinearLayout descriptionDino;
     private ImageButton boutonUnlock;
 
+    private AssetManager assetManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +78,9 @@ public class EncyclopedieActivity extends AppCompatActivity {
         boutonUnlock = findViewById(R.id.bouton_lock);
 
         InputStream inputStream = getResources().openRawResource(R.raw.dino);
+
+        assetManager = getAssets();
+
         try {
             database = new DinoDatabaseParser(inputStream);
             dino = database.getDino(nom);
@@ -76,7 +88,17 @@ public class EncyclopedieActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    if(!findImage(nom[1])){
+        try {
+            InputStream is = assetManager.open("images/icodinomap.png");
+            Bitmap bm = BitmapFactory.decodeStream(is);
+            imageDino.setImageBitmap(bm);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+        /*
         int[] imagesDino =  {R.drawable.alexeyisaurus, R.drawable.arcovenator, R.drawable.cetiosaurus, R.drawable.giganotosaurus, R.drawable.herrerasaurus, R.drawable.isanosaurus, R.drawable.liliensternus, R.drawable.loricatosaurus, R.drawable.mosasaurus, R.drawable.sarahsaurus};
 
         if(nom[1].equals("Alexeyisaurus")){
@@ -110,7 +132,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
         if(nom[1].equals("Sarahsaurus")){
             imageDino.setBackgroundResource(imagesDino[9]);
         }
-
+        */
 
         if(dino.getTaille()[0] == -1 && dino.getTaille()[1] == -1){
             text_TailleDino.setText("Aucune donnée");
@@ -119,7 +141,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
         }else if(dino.getTaille()[1] == -1){
             text_TailleDino.setText(dino.getTaille()[0] + "m de long");
         }else{
-            text_TailleDino.setText(dino.getTaille()[0] + "m de long, " + " " + dino.getTaille()[1] + "m de haut");
+            text_TailleDino.setText(dino.getTaille()[0] + "m de long,\n" + " " + dino.getTaille()[1] + "m de haut");
         }
         if(dino.getPoids() == -1){
             text_PoidsDino.setText("Aucune donnée");
@@ -130,7 +152,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
             if(text_EpoqueDino.getText() == ""){
                 text_EpoqueDino.setText(epoque.name());
             }else {
-                text_EpoqueDino.setText(text_EpoqueDino.getText() + ", " + epoque.name());
+                text_EpoqueDino.setText(text_EpoqueDino.getText() + ",\n" + epoque.name());
             }
         }
 
@@ -169,6 +191,27 @@ public class EncyclopedieActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public boolean findImage(String nomDino){
+        try {
+            String[] imgPath = assetManager.list("images");
+
+            for(String img : imgPath){
+                Log.e("path img", img);
+
+                if(img.equals(nomDino.toLowerCase() + ".jpg")){
+                    InputStream is = assetManager.open("images/" + img);
+                    Log.e("path img", img);
+                    Bitmap bm = BitmapFactory.decodeStream(is);
+                    imageDino.setImageBitmap(bm);
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public TextView nouveauTitre(String text){
