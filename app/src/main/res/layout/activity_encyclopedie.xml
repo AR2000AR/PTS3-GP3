@@ -81,121 +81,133 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp">
 
-            <ImageView
-                android:id="@+id/img_dino"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_weight="0.2"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:scaleType="centerInside" />
-
-            <TableLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contimg"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipChildren="false"
-                android:clipToPadding="false">
+                android:layout_height="wrap_content">
 
-                <TableRow
+                <ImageView
+                    android:id="@+id/img_dino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:adjustViewBounds="false"
+                    android:cropToPadding="false"
+                    android:scaleType="centerInside"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TableLayout
+                    android:id="@+id/info"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_dino">
 
-                    <TextView
-                        android:id="@+id/tailleDino"
+                    <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/trebucbd"
-                        android:text="@string/encyclopedia_taille"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="22sp" />
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/text_tailleDino"
+                        <TextView
+                            android:id="@+id/tailleDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/trebucbd"
+                            android:text="@string/encyclopedia_taille"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/text_tailleDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/trebuc"
+                            android:gravity="end"
+                            android:text="TextView"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/trebuc"
-                        android:gravity="end"
-                        android:text="TextView"
-                        android:textSize="20sp" />
-                </TableRow>
+                        android:layout_height="wrap_content">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/poidsDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/trebucbd"
+                            android:text="@string/encyclopedia_poids"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="22sp" />
 
-                    <TextView
-                        android:id="@+id/poidsDino"
+                        <TextView
+                            android:id="@+id/text_poidsDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/trebuc"
+                            android:gravity="end"
+                            android:text="TextView"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/trebucbd"
-                        android:text="@string/encyclopedia_poids"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="22sp" />
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/text_poidsDino"
+                        <TextView
+                            android:id="@+id/regimeDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/trebucbd"
+                            android:text="@string/encyclopedia_regime"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/text_regimeDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/trebuc"
+                            android:gravity="end"
+                            android:text="TextView"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/trebuc"
-                        android:gravity="end"
-                        android:text="TextView"
-                        android:textSize="20sp" />
-                </TableRow>
+                        android:layout_height="wrap_content">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/epoqueDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/trebucbd"
+                            android:text="@string/encyclopedia_epoque"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="22sp" />
 
-                    <TextView
-                        android:id="@+id/regimeDino"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/trebucbd"
-                        android:text="@string/encyclopedia_regime"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="22sp" />
-
-                    <TextView
-                        android:id="@+id/text_regimeDino"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/trebuc"
-                        android:gravity="end"
-                        android:text="TextView"
-                        android:textSize="20sp" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/epoqueDino"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/trebucbd"
-                        android:text="@string/encyclopedia_epoque"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="22sp" />
-
-                    <TextView
-                        android:id="@+id/text_epoqueDino"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/trebuc"
-                        android:gravity="end"
-                        android:textSize="20sp" />
-                </TableRow>
-            </TableLayout>
+                        <TextView
+                            android:id="@+id/text_epoqueDino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/trebuc"
+                            android:gravity="end"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>

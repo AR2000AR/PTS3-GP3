@@ -1,9 +1,15 @@
 package com.pts3.gp3.dinomap;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -14,6 +20,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -60,19 +68,30 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         epoqueView = findViewById(R.id.epoqueView);
         dino = new ArrayList<>();
 
+        epoqueView.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebucbd.ttf"));
+        epoqueView.setTextColor(Color.BLACK);
 
         t = findViewById(R.id.t);
-        t.setTextSize(15);
+        t.setTextSize(12);
+        t.setTextColor(Color.BLACK);
+        t.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebuc.ttf"));
         t.setX(0);
 
 
+        ImageView returnButton = findViewById(R.id.return_button);
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         //layoutSeekBar.addView(t);
 
         /**
          * rempli la liste avec des dino
          */
         try {
-            DinoDatabaseParser database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
+          database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
             for (String[] curentDino : database.getDinoNameListe()) {
                 dino.add(database.getDino(curentDino));
 
@@ -166,9 +185,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         for (Dino d : list) {
             if (d.getEpoques().contains(this.epoque)) {
                 for (LatLng l : d.getLieuDeDecouverte()) {
-                    googleMap.addMarker(new MarkerOptions().position(l).title(""));
+                    //googleMap.addMarker(new MarkerOptions().position(l).title(""));
 
-                    MarkerOptions m = new MarkerOptions().position(l).title(d.getNomCommun()).snippet(d.getNomScientifique());
+                    //MarkerOptions m = new MarkerOptions().position(l).title(d.getNomCommun()).snippet(d.getNomScientifique());
+
+                    Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("icodinomap"))));
 
                     /*MarkerOptions m = new MarkerOptions();
                     m.position(l);
@@ -183,7 +204,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Dino d = database.getDino(marker.getSnippet());
+        Dino d = database.getDino(marker.getTitle());
         Intent intent = new Intent(this, EncyclopedieActivity.class);
         String[] nom = new String[2];
         nom[DinoDatabaseParser.NOM_COMMUN] = d.getNomCommun();
@@ -203,7 +224,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         googleMap.setOnInfoWindowClickListener(this);
 
-        afficherMarqueur(dino);
+        afficherMarqueur(getDino());
+    }
+
+
+    // permet de redimensionner la taille des markers
+    public Bitmap resizeMapIcons(String iconName){
+        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, imageBitmap.getWidth()/10, imageBitmap.getHeight()/10, false);
+        return resizedBitmap;
     }
 
     public List<Dino> getDino() {

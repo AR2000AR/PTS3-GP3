@@ -31,4 +31,6 @@
     <string name="baron" translatable="false">Alexandre\nBaron</string>
     <string name="rouxel" translatable="false">Valentin\nRouxel</string>
 
+    <string name="map_titre">Dinosaures map</string>
+
 </resources>
