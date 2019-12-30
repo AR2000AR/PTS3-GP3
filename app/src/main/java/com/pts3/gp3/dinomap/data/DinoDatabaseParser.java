@@ -7,14 +7,13 @@ import com.google.android.gms.maps.model.LatLng;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
-public class DinoDatabaseParser {
+public class DinoDatabaseParser extends Parser {
 
     public static final int NOM_COMMUN = 0;
     public static final int NOM_SCIENTIFIQUE = 1;
@@ -22,16 +21,11 @@ public class DinoDatabaseParser {
     private static Document database = null;
 
     public DinoDatabaseParser(InputStream inputStream) throws JDOMException, IOException {
-        if (database == null) {
-            SAXBuilder databaseBuilder = new SAXBuilder();
-            database = databaseBuilder.build(inputStream);
-        }
+        super(inputStream);
     }
 
     public DinoDatabaseParser() throws NoDatabaseException {
-        if (database == null) {
-            throw new NoDatabaseException();
-        }
+        super();
     }
 
     public List<String[]> getDinoNameListe() {
