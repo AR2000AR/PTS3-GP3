@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 
-import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 
@@ -17,8 +16,6 @@ public class DinoDatabaseParser extends Parser {
 
     public static final int NOM_COMMUN = 0;
     public static final int NOM_SCIENTIFIQUE = 1;
-
-    private static Document database = null;
 
     public DinoDatabaseParser(InputStream inputStream) throws JDOMException, IOException {
         super(inputStream);
