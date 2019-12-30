@@ -14,7 +14,7 @@
         <DescriptionDetaillee>
             <ModeDeVie>Arcovenator est un bipède pourvu d’un gros crâne et de petits bras à quatre doigts.</ModeDeVie>
             <ModeAlimentation>Son importante taille faisait de lui un grand prédateur, qui le mène au sommet de la chaîne alimentaire. Il possédait un cou très puissant, il chassait donc activement ses proies en les mordant à plusieurs reprises afin de l’affaiblir.</ModeAlimentation>
-            <Commentaire>Son nom fait référence au cours d’eau de l’Arc (près du lieu de découverte) et au latin venator qui signifie  chasseur .</Commentaire>
+            <Commentaire>Son nom fait référence au cours d’eau de l’Arc (près du lieu de découverte) et au latin venator qui signifie « chasseur ».</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -38,7 +38,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun> Lézard de la Meuse </NomCommun>
+            <NomCommun>« Lézard de la Meuse »</NomCommun>
             <NomScientifique>Mosasaurus</NomScientifique>
         </Nom>
         <Taille>17.0</Taille>
@@ -116,12 +116,12 @@
         <DescriptionDetaillee>
             <ModeDeVie>Le Cetiosaurus est un grand quadrupède avec un long cou.</ModeDeVie>
             <ModeAlimentation />
-            <Commentaire>Son nom est composé de deux mots grec ancien qui signifie  baleine  et  lézard . Ce dinosaure a reçu ce nom marin parce que le paléontologue qui l’a découvert pour la première fois pensait que sa colonne vertébrale géante ne pouvait provenir que d’une baleine ancestrale.</Commentaire>
+            <Commentaire>Son nom est composé de deux mots grec ancien qui signifie « baleine » et « lézard ». Ce dinosaure a reçu ce nom marin parce que le paléontologue qui l’a découvert pour la première fois pensait que sa colonne vertébrale géante ne pouvait provenir que d’une baleine ancestrale.</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun> Lézard géant du sud </NomCommun>
+            <NomCommun>« Lézard géant du sud »</NomCommun>
             <NomScientifique>Giganotosaurus</NomScientifique>
         </Nom>
         <Taille>14.0;6.0</Taille>
@@ -180,7 +180,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun> Reptile d’Isan </NomCommun>
+            <NomCommun>« Reptile d’Isan »</NomCommun>
             <NomScientifique>Isanosaurus</NomScientifique>
         </Nom>
         <Taille>12.0;1.8</Taille>
@@ -198,7 +198,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun> Reptile de Lilienstern </NomCommun>
+            <NomCommun>« Reptile de Lilienstern »</NomCommun>
             <NomScientifique>Liliensternus</NomScientifique>
         </Nom>
         <Taille>5.0;2.5</Taille>
@@ -220,7 +220,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun> Lézard de Sarah Ernest Bulter </NomCommun>
+            <NomCommun>« Lézard de Sarah Ernest Bulter »</NomCommun>
             <NomScientifique>Sarahsaurus</NomScientifique>
         </Nom>
         <Taille>4.3</Taille>
@@ -335,7 +335,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>Voleur de l'aube</NomCommun>
+            <NomCommun>« Voleur de l'aube »</NomCommun>
             <NomScientifique>Eoraptor</NomScientifique>
         </Nom>
         <Taille>1.0;0.40</Taille>
@@ -353,7 +353,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>Titanosaure</NomCommun>
+            <NomCommun>« Titanosaure »</NomCommun>
             <NomScientifique>Titanosauria</NomScientifique>
         </Nom>
         <Taille>37.0</Taille>
@@ -377,7 +377,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>Lézard rigide</NomCommun>
+            <NomCommun>« Lézard rigide »</NomCommun>
             <NomScientifique>Ankylosaurus</NomScientifique>
         </Nom>
         <Taille>10.0;1.7</Taille>
@@ -396,7 +396,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>Lézard robuste</NomCommun>
+            <NomCommun>« Lézard robuste »</NomCommun>
             <NomScientifique>Hadrosaurus</NomScientifique>
         </Nom>
         <Taille>9.0</Taille>
@@ -416,7 +416,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>T-rex,  Roi des lézards tyrans </NomCommun>
+            <NomCommun>T-rex, « Roi des lézards tyrans »</NomCommun>
             <NomScientifique>Tyrannosaurus rex</NomScientifique>
         </Nom>
         <Taille>13.2</Taille>
@@ -443,7 +443,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>Lézard au crâne épais</NomCommun>
+            <NomCommun>« Lézard au crâne épais »</NomCommun>
             <NomScientifique>Pachycephalosaurus</NomScientifique>
         </Nom>
         <Taille>5.0;1.5</Taille>
@@ -480,7 +480,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun> Voleur rapide </NomCommun>
+            <NomCommun>« Voleur rapide »</NomCommun>
             <NomScientifique>Velociraptor</NomScientifique>
         </Nom>
         <Taille>2;0.75</Taille>
@@ -554,12 +554,12 @@
         <DescriptionDetaillee>
             <ModeDeVie>C’était sûrement un quadrupède.</ModeDeVie>
             <ModeAlimentation />
-            <Commentaire>Chromogisaurus provient du grec chroma signifiant  couleur  et de gè signifiant  terre .</Commentaire>
+            <Commentaire>Chromogisaurus provient du grec chroma signifiant « couleur » et de gè signifiant « terre ».</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>lézard faucheur</NomCommun>
+            <NomCommun>« lézard faucheur »</NomCommun>
             <NomScientifique>Therizinosaurus</NomScientifique>
         </Nom>
         <Taille>9.0;5.0</Taille>
