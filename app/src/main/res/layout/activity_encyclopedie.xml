@@ -121,6 +121,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/trebucbd"
+                            android:gravity="fill"
                             android:text="@string/encyclopedia_taille"
                             android:textColor="@color/colorBlack"
                             android:textSize="22sp" />

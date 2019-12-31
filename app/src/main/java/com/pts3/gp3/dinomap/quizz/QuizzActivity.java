@@ -3,6 +3,7 @@ package com.pts3.gp3.dinomap.quizz;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,29 +15,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.MainActivity;
 import com.pts3.gp3.dinomap.R;
+import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 import com.pts3.gp3.dinomap.data.Question;
+import com.pts3.gp3.dinomap.data.QuestionParser;
+
+import org.jdom.JDOMException;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuizzActivity extends AppCompatActivity {
 
+    private QuestionParser database;
+    private List<Question> questions = new ArrayList<>();
 
-    private Button btnRep1, btnRep2, btnRep3, btnRep4;
-    private Button[] listeBtn = {null, null, null, null};
-    private Question[] listeDeQuestion = {null, null, null, null, null};  //Ma liste de uestion formant le quizz
-    private String[] mauvaiseReponse1 = {null, null, null};
-    private String[] mauvaiseReponse2 = {null, null, null};
-    private String[] mauvaiseReponse3 = {null, null, null};
-    private String[] mauvaiseReponse4 = {null, null, null};
+    private Button[] boutons = new Button[3];
 
-    private int pieceGagner = 0;
+    private int piecesGagnees = 0;
 
     private TextView t;
-    private int numQuestionActuel = 0;
+    private int numQuestionActuelle = 1;
     private TextView textQuestion;
+    private int idQuestion = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_quizz);
 
         ImageView backButton = findViewById(R.id.backButton);
@@ -47,64 +53,62 @@ public class QuizzActivity extends AppCompatActivity {
             }
         });
 
-
         textQuestion = findViewById(R.id.textQuestion);
 
         //Initialisation des différents bouton de réponse
-        btnRep1 = findViewById(R.id.btnRep1);
-        btnRep2 = findViewById(R.id.btnRep2);
-        btnRep3 = findViewById(R.id.btnRep3);
 
-        t = findViewById(R.id.textQuestionActuelle);
-
-        btnRep1.setText("");
-        btnRep2.setText("");
-        btnRep3.setText("");
-//        btnRep4.setText(""); // a enlever
-
-        listeBtn[0] = btnRep1;
-        listeBtn[1] = btnRep2;
-        listeBtn[2] = btnRep3;
-
-
-
-        initialisationQuizz();
-        genererPropositionReponse();
-
-
-        for (int i = 0; i < 3; i++) {
-            listeBtn[i].setOnClickListener(new View.OnClickListener() {
+        boutons[0] = findViewById(R.id.btnRep1);
+        boutons[1] = findViewById(R.id.btnRep2);
+        boutons[2] = findViewById(R.id.btnRep3);
+        for(Button b : boutons){
+            b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    testerLaProposition(view);
+                    afficherStatutReponse(view);
                 }
             });
         }
+
+        t = findViewById(R.id.textQuestionActuelle);
+
+        InputStream inputStream = getResources().openRawResource(R.raw.quiz);
+
+        try {
+            database = new QuestionParser(inputStream);
+            questions = database.getAllQuestions();
+            Log.i("", "onCreate: " + questions.size());
+        } catch (JDOMException | IOException e) {
+            e.printStackTrace();
+        }
+
+        idQuestion = genererPropositionReponse();
     }
 
-    private void testerLaProposition(View view) {
-
-        boolean test = false;
-        for (int i = 0; i < 3 && !test; i++) {
-            if (view == listeBtn[i]) {
-                if (listeBtn[i].getText() == listeDeQuestion[numQuestionActuel].getReponse()) {
-                    test = true;
+    public boolean testerLaProposition(View v){
+        for (int i = 0; i < 3; i++) {
+            if (v == boutons[i]) {
+                if (boutons[i].getText() == questions.get(idQuestion).getReponse()) {
+                    piecesGagnees += 10;
+                    return true;
                 }
             }
         }
-        String result;
-        if (test) {
-            result = "Réponse correct vous avez gagné 10 pièces";
-            pieceGagner += 10;
-        } else {
-            result = "Réponse incorrect la réponse était " + listeDeQuestion[numQuestionActuel].getReponse();
+        return false;
+    }
 
+    private void afficherStatutReponse(View v) {
+        String result = "";
+        Log.i("", "afficherStatutReponse: " + testerLaProposition(v));
+        if(testerLaProposition(v)){
+            result = "Réponse correct vous avez gagné 10 pièces";
+        }else {
+            result = "Réponse incorrect la réponse était " + questions.get(idQuestion).getReponse();
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle(result);
-        LinearLayout linearLayout = new LinearLayout(this);
+       // LinearLayout linearLayout = new LinearLayout(this);
 
 
         builder.setPositiveButton("Question suivante", new DialogInterface.OnClickListener() {
@@ -115,83 +119,50 @@ public class QuizzActivity extends AppCompatActivity {
         });
 
         builder.create().show();
-
-
     }
 
 
     private void quetionSuivante() {
-        numQuestionActuel++;
+        numQuestionActuelle++;
         genererPropositionReponse();
     }
 
-    private void initialisationQuizz() {
-        mauvaiseReponse1[0] = " 8 mètres";
-        mauvaiseReponse1[1] = " 12 mètres";
-        mauvaiseReponse1[2] = " 5 mètres";
 
-        listeDeQuestion[0] = new Question("Le T-Rex mesurait combien de mètre de hauteur ?", mauvaiseReponse1, " 4 mètres ");
+    private int genererPropositionReponse() {
 
-
-        mauvaiseReponse2[0] = " 1 mètres";
-        mauvaiseReponse2[1] = " 1.25 mètres";
-        mauvaiseReponse2[2] = " 0.95 mètres";
-
-        listeDeQuestion[1] = new Question("Le Vélociraptor mesurait combien de mètre de hauteur ?", mauvaiseReponse2, " 0.75 mètres ");
-
-        mauvaiseReponse3[0] = " 4 mètres";
-        mauvaiseReponse3[1] = " 4.5 mètres";
-        mauvaiseReponse3[2] = " 2.5 mètres";
-
-        listeDeQuestion[2] = new Question("Le Tricératops mesurait combien de mètre de hauteur ?", mauvaiseReponse3, " 3 mètres ");
-
-
-        mauvaiseReponse4[0] = " 1.8 mètres";
-        mauvaiseReponse4[1] = " 1.6 mètres";
-        mauvaiseReponse4[2] = " 1.5 mètres";
-
-        listeDeQuestion[3] = new Question("L' Ankylosaurus mesurait combien de mètre de hauteur ?", mauvaiseReponse4, "  1.7 mètres ");
-
-
-    }
-
-
-    private void genererPropositionReponse() {
-
-        t.setText("Question N° " + (numQuestionActuel + 1));
         //Test de fin de quizz
-        if (numQuestionActuel == listeDeQuestion.length - 1) {
-
+        if (numQuestionActuelle == questions.size() - 1) {
             /*
             Creation de la boite de dialogue de fin
              */
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setPositiveButton("Vous avez gagné " + pieceGagner + " pièce(s)", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("Vous avez gagné " + piecesGagnees + " pièce(s)", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    MainActivity.gagnerNbPiece(pieceGagner);
+                    MainActivity.gagnerNbPiece(piecesGagnees);
                     startActivity(new Intent(QuizzActivity.this, MainActivity.class));
                 }
             });
 
             builder.create().show();
+            return -1;
         } else {
-
-            int i = (int) Math.round(Math.random() * 3); // Inidice du bouton qui a la bonne réponse
+            t.setText("Question n°" + numQuestionActuelle);
+            int i = (int) Math.round(Math.random() * 33); // Indice du bouton qui a la bonne réponse
             int p = 0;
-            listeBtn[i].setText(listeDeQuestion[numQuestionActuel].getReponse());
-
-            textQuestion.setText(listeDeQuestion[numQuestionActuel].getQuestion());
+            int val = (int) Math.round(Math.random() * 2);
+            boutons[val].setText(questions.get(i).getReponse());
+            textQuestion.setText(questions.get(i).getQuestion());
 
 
             for (int j = 0; j < 3; j++) {
-                if (listeBtn[j].getText() != listeDeQuestion[numQuestionActuel].getReponse()) {
-                    listeBtn[j].setText(listeDeQuestion[numQuestionActuel].getMauvaiseReponse()[p]);
+                if (boutons[j].getText() != questions.get(i).getReponse()) {
+                    boutons[j].setText(questions.get(i).getMauvaiseReponse()[p]);
                     p++;
                 }
 
             }
-
+            return i;
         }
     }
 

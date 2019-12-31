@@ -26,6 +26,8 @@ import org.jdom.JDOMException;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+
 public class EncyclopedieActivity extends AppCompatActivity {
 
     private DinoDatabaseParser database;
@@ -94,41 +96,6 @@ public class EncyclopedieActivity extends AppCompatActivity {
         }
     }
 
-        /*
-        int[] imagesDino =  {R.drawable.alexeyisaurus, R.drawable.arcovenator, R.drawable.cetiosaurus, R.drawable.giganotosaurus, R.drawable.herrerasaurus, R.drawable.isanosaurus, R.drawable.liliensternus, R.drawable.loricatosaurus, R.drawable.mosasaurus, R.drawable.sarahsaurus};
-
-        if(nom[1].equals("Alexeyisaurus")){
-            imageDino.setBackgroundResource(imagesDino[0]);
-        }
-
-        if(nom[1].equals("Arcovenator")){
-            imageDino.setBackgroundResource(imagesDino[1]);
-        }
-        if(nom[1].equals("Cetiosaurus")){
-            imageDino.setBackgroundResource(imagesDino[2]);
-        }
-        if(nom[1].equals("Giganotosaurus")){
-            imageDino.setBackgroundResource(imagesDino[3]);
-        }
-        if(nom[1].equals("Herrerasaurus")){
-            imageDino.setBackgroundResource(imagesDino[4]);
-        }
-        if(nom[1].equals("Isanosaurus")){
-            imageDino.setBackgroundResource(imagesDino[5]);
-        }
-        if(nom[1].equals("Liliensternus")){
-            imageDino.setBackgroundResource(imagesDino[6]);
-        }
-        if(nom[1].equals("Loricatosaurus")){
-            imageDino.setBackgroundResource(imagesDino[7]);
-        }
-        if(nom[1].equals("Mosasaurus")){
-            imageDino.setBackgroundResource(imagesDino[8]);
-        }
-        if(nom[1].equals("Sarahsaurus")){
-            imageDino.setBackgroundResource(imagesDino[9]);
-        }
-        */
 
         if(dino.getTaille()[0] == -1 && dino.getTaille()[1] == -1){
             text_TailleDino.setText("Aucune donnée");
@@ -222,7 +189,6 @@ public class EncyclopedieActivity extends AppCompatActivity {
     public TextView textStyle(TextView view){
         //view.setTextColor(Color.BLACK);
         view.setTextSize(20);
-        view.setGravity(Gravity.FILL);
         view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebuc.ttf"));
         return view;
     }
