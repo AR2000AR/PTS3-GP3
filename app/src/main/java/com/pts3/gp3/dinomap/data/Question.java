@@ -3,7 +3,7 @@ package com.pts3.gp3.dinomap.data;
 public class Question {
 
     private String question, reponse;
-    private String mauvaiseReponse[] = null;
+    private String[] mauvaiseReponse;
 
 
     public Question(String question, String[] mauvaiseReponse, String reponse) {

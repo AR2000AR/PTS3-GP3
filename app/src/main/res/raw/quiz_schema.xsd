@@ -8,7 +8,11 @@
 				<element name="Question" maxOccurs="unbounded">
 					<complexType>
 						<sequence>
-							<element name="Titre" maxOccurs="1" minOccurs="1" type="string"></element>
+                            <element
+                                name="Titre"
+                                maxOccurs="1"
+                                minOccurs="1"
+                                type="string" />
 							<element name="bonneReponse" maxOccurs="1" minOccurs="1" type="string"/>
               				<element name="mauvaiseReponse" maxOccurs="2" minOccurs="2" type="string"/>
 						</sequence>

@@ -15,7 +15,7 @@ import com.pts3.gp3.dinomap.quizz.QuizzActivity;
 public class MainActivity extends AppCompatActivity {
 
     TextView texteNbPiece;
-    static int nbPiece = 0;
+    private static int nbPiece = 0;
 
     public static void gagnerNbPiece(int pieceGagner) {
         nbPiece += pieceGagner;
