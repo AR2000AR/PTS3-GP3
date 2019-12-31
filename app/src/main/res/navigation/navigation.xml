@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/mainActivity">
+
+    <activity
+        android:id="@+id/creditActivity"
+        android:name="com.pts3.gp3.dinomap.CreditActivity"
+        android:label="activity_credit"
+        tools:layout="@layout/activity_credit" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.pts3.gp3.dinomap.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_creditActivity"
+            app:destination="@id/creditActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_encyclopedieMenuActivity"
+            app:destination="@id/encyclopedieMenuActivity" >
+            <action
+                android:id="@+id/action_action_mainActivity_to_encyclopedieMenuActivity_to_mapActivity"
+                app:destination="@id/mapActivity" />
+        </action>
+        <action
+            android:id="@+id/action_mainActivity_to_mapActivity"
+            app:destination="@id/mapActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_quizzActivity"
+            app:destination="@id/quizzActivity" />
+    </activity>
+    <activity
+        android:id="@+id/mapActivity"
+        android:name="com.pts3.gp3.dinomap.MapActivity"
+        android:label="activity_map"
+        tools:layout="@layout/activity_map" />
+    <activity
+        android:id="@+id/encyclopedieActivity"
+        android:name="com.pts3.gp3.dinomap.encyclopedia.EncyclopedieActivity"
+        android:label="activity_encyclopedie"
+        tools:layout="@layout/activity_encyclopedie" />
+    <activity
+        android:id="@+id/quizzActivity"
+        android:name="com.pts3.gp3.dinomap.quizz.QuizzActivity"
+        android:label="activity_quizz"
+        tools:layout="@layout/activity_quizz" />
+    <activity
+        android:id="@+id/encyclopedieMenuActivity"
+        android:name="com.pts3.gp3.dinomap.encyclopedia.EncyclopedieMenuActivity"
+        android:label="activity_encyclopedie_menu"
+        tools:layout="@layout/activity_encyclopedie_menu" >
+        <action
+            android:id="@+id/action_encyclopedieMenuActivity_to_encyclopedieActivity"
+            app:destination="@id/encyclopedieActivity" />
+    </activity>
+</navigation>

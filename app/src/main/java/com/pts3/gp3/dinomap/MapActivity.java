@@ -42,7 +42,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private SeekBar seekBar;
     private int state;
     private TextView epoqueView;
-    private List<Dino> dino;
+    private List<Dino> dinos;
     private Epoque epoque;
     private DinoDatabaseParser database;
 
@@ -66,7 +66,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         seekBar = findViewById(R.id.seekBarEpoque);
         epoqueView = findViewById(R.id.epoqueView);
-        dino = new ArrayList<>();
+        dinos = new ArrayList<>();
 
         epoqueView.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebucbd.ttf"));
         epoqueView.setTextColor(Color.BLACK);
@@ -93,7 +93,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         try {
           database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
             for (String[] curentDino : database.getDinoNameListe()) {
-                dino.add(database.getDino(curentDino));
+                dinos.add(database.getDino(curentDino));
 
             }
         } catch (JDOMException | IOException e) {
@@ -236,6 +236,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     }
 
     public List<Dino> getDino() {
-        return dino;
+        return dinos;
     }
 }

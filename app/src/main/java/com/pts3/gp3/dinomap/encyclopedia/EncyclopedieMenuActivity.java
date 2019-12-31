@@ -3,7 +3,6 @@ package com.pts3.gp3.dinomap.encyclopedia;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -48,7 +47,7 @@ public class EncyclopedieMenuActivity extends AppCompatActivity {
         } catch (JDOMException | IOException e) {
             e.printStackTrace();
         }
-        Dino dino = database.getDino(database.getDinoNameListe().get(0));
+        //Dino dino = database.getDino(database.getDinoNameListe().get(0));
         Log.d("PAUSE","PAUSE");
 
         int c = 0;

@@ -9,6 +9,7 @@ import android.graphics.Typeface;
 import android.graphics.fonts.FontFamily;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -42,8 +43,6 @@ public class EncyclopedieActivity extends AppCompatActivity {
     private TextView text_RegimeDino;
 
     private ImageView imageDino;
-    private ImageView returnButton;
-
     private LinearLayout descriptionDino;
     private ImageButton boutonUnlock;
 
@@ -88,7 +87,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-    if(!findImage(nom[1])){
+    if(!trouverImage(nom[1])){
         try {
             InputStream is = assetManager.open("images/icodinomap.png");
             Bitmap bm = BitmapFactory.decodeStream(is);
@@ -193,7 +192,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
 
     }
 
-    public boolean findImage(String nomDino){
+    public boolean trouverImage(String nomDino){
         try {
             String[] imgPath = assetManager.list("images");
 
@@ -226,6 +225,7 @@ public class EncyclopedieActivity extends AppCompatActivity {
     public TextView textStyle(TextView view){
         //view.setTextColor(Color.BLACK);
         view.setTextSize(20);
+        view.setGravity(Gravity.FILL);
         view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebuc.ttf"));
         return view;
     }
