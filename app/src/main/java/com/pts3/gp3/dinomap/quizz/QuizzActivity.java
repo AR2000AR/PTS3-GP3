@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,16 +20,16 @@ public class QuizzActivity extends AppCompatActivity {
 
 
     private Button btnRep1, btnRep2, btnRep3, btnRep4;
-    private Button listeBtn[] = {null, null, null, null};
-    private Question listeDeQuestion[] = {null, null, null, null, null};  //Ma liste de uestion formant le quizz
-    private String mauvaiseReponse1[] = {null, null, null};
-    private String mauvaiseReponse2[] = {null, null, null};
-    private String mauvaiseReponse3[] = {null, null, null};
-    private String mauvaiseReponse4[] = {null, null, null};
+    private Button[] listeBtn = {null, null, null, null};
+    private Question[] listeDeQuestion = {null, null, null, null, null};  //Ma liste de uestion formant le quizz
+    private String[] mauvaiseReponse1 = {null, null, null};
+    private String[] mauvaiseReponse2 = {null, null, null};
+    private String[] mauvaiseReponse3 = {null, null, null};
+    private String[] mauvaiseReponse4 = {null, null, null};
 
     private int pieceGagner = 0;
 
-    TextView t;
+    private TextView t;
     private int numQuestionActuel = 0;
     private TextView textQuestion;
 
@@ -92,7 +91,6 @@ public class QuizzActivity extends AppCompatActivity {
                     test = true;
                 }
             }
-            ;
         }
         String result;
         if (test) {
