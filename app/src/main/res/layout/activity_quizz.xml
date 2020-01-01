@@ -34,7 +34,7 @@
             android:paddingStart="5dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Question N°"
+            android:text="Question n°"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textSize="34sp" />
@@ -57,18 +57,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
             android:fontFamily="@font/trebuc"
+            android:gravity="center"
             android:text="Quel est ce dino ?"
-            android:textAlignment="center"
+            android:textAlignment="gravity"
             android:textColor="#000000"
             android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
             android:layout_weight="0.5"
-            app:srcCompat="@android:drawable/ic_menu_report_image"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icodinomap" />
 
         <Button
             android:id="@+id/btnRep1"
