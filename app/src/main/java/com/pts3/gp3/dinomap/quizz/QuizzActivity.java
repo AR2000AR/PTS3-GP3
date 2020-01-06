@@ -81,7 +81,7 @@ public class QuizzActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        idQuestion = genererPropositionReponse();
+        idQuestion = genererReponse();
     }
 
     public boolean testerLaProposition(View v){
@@ -124,11 +124,11 @@ public class QuizzActivity extends AppCompatActivity {
 
     private void quetionSuivante() {
         numQuestionActuelle++;
-        genererPropositionReponse();
+        idQuestion = genererReponse();
     }
 
 
-    private int genererPropositionReponse() {
+    private int genererReponse() {
 
         //Test de fin de quizz
         if (numQuestionActuelle == questions.size() - 1) {
@@ -148,7 +148,7 @@ public class QuizzActivity extends AppCompatActivity {
             return -1;
         } else {
             t.setText("Question n°" + numQuestionActuelle);
-            int i = (int) Math.round(Math.random() * 33); // Indice du bouton qui a la bonne réponse
+            int i = (int) Math.round(Math.random() * 30); // Indice du bouton qui a la bonne réponse
             int p = 0;
             int val = (int) Math.round(Math.random() * 2);
             boutons[val].setText(questions.get(i).getReponse());

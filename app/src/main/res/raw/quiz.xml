@@ -133,8 +133,8 @@
     </Question>
     <Question>
         <Titre>Quel est le nom commun du Giganotosaurus ?</Titre>
-        <bonneReponse>Lézard géant du sudGéant de l’est</bonneReponse>
-        <mauvaiseReponse />
+        <bonneReponse>Lézard géant du sud</bonneReponse>
+        <mauvaiseReponse>Géant de l’est</mauvaiseReponse>
         <mauvaiseReponse>Reptile géant du sud</mauvaiseReponse>
     </Question>
     <Question>
