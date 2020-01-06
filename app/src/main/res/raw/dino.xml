@@ -1,6 +1,61 @@
 <Encyclopedia>
     <Dinosaure>
         <Nom>
+            <NomCommun>Agnosphitys</NomCommun>
+            <NomScientifique>Agnosphitys</NomScientifique>
+        </Nom>
+        <Taille>0.6;0.15</Taille>
+        <Poids>0.003</Poids>
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>51.674463;-2.335845</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Agnosphitys était un petit dinosaure.</ModeDeVie>
+            <ModeAlimentation>Il se nourrissait d’insectes et de petits animaux.</ModeAlimentation>
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Alexeyisaurus</NomCommun>
+            <NomScientifique>Alexeyisaurus</NomScientifique>
+        </Nom>
+        <Taille />
+        <Poids />
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>80.515889;59.997039</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Alexeyisaurus était un reptile marin. Il fait parti de l’ordre Plesiosauria et la famille Elasmosauridae. Il fait parti des plesiosauriens au plus long cou.</ModeDeVie>
+            <ModeAlimentation>C’est un piscivore, c’est-à-dire que c’est un animal se nourrissant de poissons.</ModeAlimentation>
+            <Commentaire>Alexeyisaurus a été nommé en hommage au paléontologiste Aleksei Savvich Arkhangelsky.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Lézard rigide »</NomCommun>
+            <NomScientifique>Ankylosaurus</NomScientifique>
+        </Nom>
+        <Taille>10.0;1.7</Taille>
+        <Poids>4.0</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>36.3339;-108.0828</Lieu>
+            <Lieu>51.8773;-113.0054</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Il était quadrupède. Les os du crâne et d'autres parties du corps ont fusionné afin d'augmenter leur résistance. Il possédait une queue massive qui possédait une force massive capable de briser les os de ses assaillant.</ModeDeVie>
+            <ModeAlimentation>Il était muni de peu de dents ce qui indique une faible mastication.</ModeAlimentation>
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
             <NomCommun>Arcovenator</NomCommun>
             <NomScientifique>Arcovenator</NomScientifique>
         </Nom>
@@ -15,6 +70,228 @@
             <ModeDeVie>Arcovenator est un bipède pourvu d’un gros crâne et de petits bras à quatre doigts.</ModeDeVie>
             <ModeAlimentation>Son importante taille faisait de lui un grand prédateur, qui le mène au sommet de la chaîne alimentaire. Il possédait un cou très puissant, il chassait donc activement ses proies en les mordant à plusieurs reprises afin de l’affaiblir.</ModeAlimentation>
             <Commentaire>Son nom fait référence au cours d’eau de l’Arc (près du lieu de découverte) et au latin venator qui signifie « chasseur ».</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Cetiosaurus</NomCommun>
+            <NomScientifique>Cetiosaurus</NomScientifique>
+        </Nom>
+        <Taille>15.5</Taille>
+        <Poids>11.0</Poids>
+        <Epoque>JURASSIQUE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>41.123809;1.139417</Lieu>
+            <Lieu>49.662144;5.208064</Lieu>
+            <Lieu>51.143311;0.344446</Lieu>
+            <Lieu>51.177725;-0.093004</Lieu>
+            <Lieu>51.177725;-0.093004</Lieu>
+            <Lieu>51.020352;-1.183978</Lieu>
+            <Lieu>51.398103;-0.775551</Lieu>
+            <Lieu>51.524698;-0.370783</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Le Cetiosaurus est un grand quadrupède avec un long cou.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire>Son nom est composé de deux mots grec ancien qui signifie « baleine » et « lézard ». Ce dinosaure a reçu ce nom marin parce que le paléontologue qui l’a découvert pour la première fois pensait que sa colonne vertébrale géante ne pouvait provenir que d’une baleine ancestrale.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Chromogisaurus</NomCommun>
+            <NomScientifique>Chromogisaurus</NomScientifique>
+        </Nom>
+        <Taille>2.0</Taille>
+        <Poids>0.010</Poids>
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>-27.994460;-68.865848</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>C’était sûrement un quadrupède.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire>Chromogisaurus provient du grec chroma signifiant « couleur » et de gè signifiant « terre ».</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Concavenator</NomCommun>
+            <NomScientifique>Concavenator</NomScientifique>
+        </Nom>
+        <Taille>6.0;2.5</Taille>
+        <Poids>2.0</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>40.0645;-1.8808</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Cette espèce de dinosaure est un prédateur carnivore doté d’une étrange bosse sur le dos.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Voleur de l'aube »</NomCommun>
+            <NomScientifique>Eoraptor</NomScientifique>
+        </Nom>
+        <Taille>1.0;0.40</Taille>
+        <Poids>0.009</Poids>
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>-31.1011;-68.905</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Ses membres antérieurs mesuraient la moitié de ses pattes, et ses mains possédaient chacune cinq doigts.</ModeDeVie>
+            <ModeAlimentation>Les trois plus doigt étaient terminés par de grandes griffes dont il se servait pour maintenir sa proie et attraper des végétaux.</ModeAlimentation>
+            <Commentaire>Il était l'un des plus anciens dinosaures connus.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Lézard géant du sud »</NomCommun>
+            <NomScientifique>Giganotosaurus</NomScientifique>
+        </Nom>
+        <Taille>14.0;6.0</Taille>
+        <Poids>9.0</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>-44.742595;-71.074146</Lieu>
+            <Lieu>-44.65366;-70.372076</Lieu>
+            <Lieu>-44.697593;-71.009862</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>C’est l’un des plus grands carnivores terrestres de tous les temps, d’une taille et d’une masse comparable voire supérieures à celles du Tyrannosaurus (T-rex).</ModeDeVie>
+            <ModeAlimentation>Ses fossiles ont été retrouvés près d’autres fossiles de Titanosaur et d’autres grands dinosaures herbivores. Ainsi, des chercheurs ont émis l’hypothèse que le Giganotosaurus chassait ce genre de créatures.</ModeAlimentation>
+            <Commentaire>Le nom Giganotosaurus vient du grec gigas ("géant"), notos ("vent du sud") et sauros ("lézard").</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Lézard robuste »</NomCommun>
+            <NomScientifique>Hadrosaurus</NomScientifique>
+        </Nom>
+        <Taille>9.0</Taille>
+        <Poids>7.5</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>49;-110.5497</Lieu>
+            <Lieu>39.9094;-75.0281</Lieu>
+            <Lieu>33.4833;-88.4167</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Toute leur partie avant du crâne est aplatie et élargie en forme de bec.</ModeDeVie>
+            <ModeAlimentation>Leur bec est idéal pour la collecte des feuilles et pousses des forêts tropicales d'Asie, d'Europe et d'Amérique du Nord. Le fond de la gueule contient des milliers de petites dents aptes à déchiqueter la nourriture avant de l'avaler</ModeAlimentation>
+            <Commentaire>La forme de leur bec rappelle celle des canards.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Helcionelloida</NomCommun>
+            <NomScientifique>Helcionelloida</NomScientifique>
+        </Nom>
+        <Taille />
+        <Poids />
+        <Epoque>CAMBRIEN</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>39.9286;-76.8508</Lieu>
+            <Lieu>31.2089;-7.8811</Lieu>
+            <Lieu>-13.8833;131.15</Lieu>
+            <Lieu>25.6425;103.0686</Lieu>
+            <Lieu>82.25;-29.75</Lieu>
+            <Lieu>82.25;-29.75</Lieu>
+            <Lieu>57.1667;132</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>C'était des mollusques.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Herrerasaurus</NomCommun>
+            <NomScientifique>Herrerasaurus</NomScientifique>
+        </Nom>
+        <Taille>3.0</Taille>
+        <Poids>0.35</Poids>
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>-28.583602;-69.320595</Lieu>
+            <Lieu>-28.002643;-68.812089</Lieu>
+            <Lieu>-27.821061;-69.139825</Lieu>
+            <Lieu>-28.406232;-68.992175</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>C’est un bipède, possédant de puissantes mâchoires pourvues de dents incurvées. Les trois griffes de ses pattes avant devaient aussi l’aider pour la chasse. De plus, ses membres se terminaient par des orteils griffus. Il cohabitait avec d’autres prédateurs, dans des vallées fluviales sous un climat sec et saisonnier.</ModeDeVie>
+            <ModeAlimentation>Herrerasaurus était un prédateur pouvant attaquer à la plupart des vertébrés de son écosystème tels que certains herbivores et omnivores.</ModeAlimentation>
+            <Commentaire>Il fait parti des plus anciens dinosaures connus. Il précède le Tyrannosaurus de 160 millions d’années.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Reptile d’Isan »</NomCommun>
+            <NomScientifique>Isanosaurus</NomScientifique>
+        </Nom>
+        <Taille>12.0;1.8</Taille>
+        <Poids>3.5</Poids>
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>16.806984;101.712916</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Il est parfois comparé une personne mesurant 1,8 mètres. C’est un quadrupède. Le fossile qui a été retrouvé est supposé être un jeune dinosaure. Ainsi, un tel dinosaure ayant atteint sa taille adulte devait probablement beaucoup plus imposant. Il devait avoir une petite tête et de dents en forme de cuillère pour trancher les feuilles.</ModeDeVie>
+            <ModeAlimentation>Il devait probablement se nourrir de feuilles provenant de branches d’arbres plutôt basses du fait de sa petite taille. Pour atteindre les hautes branches, il devait sûrement se dresser sur membres postérieures.</ModeAlimentation>
+            <Commentaire>Son nom fait référence à la région Isan du Nord-Est de la Thaïlande.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Jaklapallisaurus</NomCommun>
+            <NomScientifique>Jaklapallisaurus</NomScientifique>
+        </Nom>
+        <Taille>2.5;1.5</Taille>
+        <Poids>0.25</Poids>
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>18.909099;79.497955</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie />
+            <ModeAlimentation />
+            <Commentaire>Deux fossiles furent découverts en Inde en 2011.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Reptile de Lilienstern »</NomCommun>
+            <NomScientifique>Liliensternus</NomScientifique>
+        </Nom>
+        <Taille>5.0;2.5</Taille>
+        <Poids>0.3</Poids>
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>47.407256;7.603603</Lieu>
+            <Lieu>48.009540;8.009708</Lieu>
+            <Lieu>50.738141;10.411450</Lieu>
+            <Lieu>49.959664;10.743156</Lieu>
+            <Lieu>49.959664;10.743156</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Liliensternus est un bipède. Il possédait des os creux qui lui permettaient de courir rapidement. Il avait une crête sur le crâne.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire />
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -96,145 +373,44 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>Cetiosaurus</NomCommun>
-            <NomScientifique>Cetiosaurus</NomScientifique>
-        </Nom>
-        <Taille>15.5</Taille>
-        <Poids>11.0</Poids>
-        <Epoque>JURASSIQUE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>41.123809;1.139417</Lieu>
-            <Lieu>49.662144;5.208064</Lieu>
-            <Lieu>51.143311;0.344446</Lieu>
-            <Lieu>51.177725;-0.093004</Lieu>
-            <Lieu>51.177725;-0.093004</Lieu>
-            <Lieu>51.020352;-1.183978</Lieu>
-            <Lieu>51.398103;-0.775551</Lieu>
-            <Lieu>51.524698;-0.370783</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Le Cetiosaurus est un grand quadrupède avec un long cou.</ModeDeVie>
-            <ModeAlimentation />
-            <Commentaire>Son nom est composé de deux mots grec ancien qui signifie « baleine » et « lézard ». Ce dinosaure a reçu ce nom marin parce que le paléontologue qui l’a découvert pour la première fois pensait que sa colonne vertébrale géante ne pouvait provenir que d’une baleine ancestrale.</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>« Lézard géant du sud »</NomCommun>
-            <NomScientifique>Giganotosaurus</NomScientifique>
-        </Nom>
-        <Taille>14.0;6.0</Taille>
-        <Poids>9.0</Poids>
-        <Epoque>CRETACE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>-44.742595;-71.074146</Lieu>
-            <Lieu>-44.65366;-70.372076</Lieu>
-            <Lieu>-44.697593;-71.009862</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>C’est l’un des plus grands carnivores terrestres de tous les temps, d’une taille et d’une masse comparable voire supérieures à celles du Tyrannosaurus (T-rex).</ModeDeVie>
-            <ModeAlimentation>Ses fossiles ont été retrouvés près d’autres fossiles de Titanosaur et d’autres grands dinosaures herbivores. Ainsi, des chercheurs ont émis l’hypothèse que le Giganotosaurus chassait ce genre de créatures.</ModeAlimentation>
-            <Commentaire>Le nom Giganotosaurus vient du grec gigas ("géant"), notos ("vent du sud") et sauros ("lézard").</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Herrerasaurus</NomCommun>
-            <NomScientifique>Herrerasaurus</NomScientifique>
-        </Nom>
-        <Taille>3.0</Taille>
-        <Poids>0.35</Poids>
-        <Epoque>TRIAS</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>-28.583602;-69.320595</Lieu>
-            <Lieu>-28.002643;-68.812089</Lieu>
-            <Lieu>-27.821061;-69.139825</Lieu>
-            <Lieu>-28.406232;-68.992175</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>C’est un bipède, possédant de puissantes mâchoires pourvues de dents incurvées. Les trois griffes de ses pattes avant devaient aussi l’aider pour la chasse. De plus, ses membres se terminaient par des orteils griffus. Il cohabitait avec d’autres prédateurs, dans des vallées fluviales sous un climat sec et saisonnier.</ModeDeVie>
-            <ModeAlimentation>Herrerasaurus était un prédateur pouvant attaquer à la plupart des vertébrés de son écosystème tels que certains herbivores et omnivores.</ModeAlimentation>
-            <Commentaire>Il fait parti des plus anciens dinosaures connus. Il précède le Tyrannosaurus de 160 millions d’années.</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Alexeyisaurus</NomCommun>
-            <NomScientifique>Alexeyisaurus</NomScientifique>
+            <NomCommun>Orthocerida</NomCommun>
+            <NomScientifique>Orthocerida</NomScientifique>
         </Nom>
         <Taille />
         <Poids />
-        <Epoque>TRIAS</Epoque>
+        <Epoque>ORDOVICIEN;SILURIEN;DEVONIEN;CARBONIFERE;PERMIEN;TRIAS</Epoque>
         <LieuDecouverteFossile>
-            <Lieu>80.515889;59.997039</Lieu>
+            <Lieu>37.9144;-84.2631</Lieu>
+            <Lieu>29;109</Lieu>
+            <Lieu>53.1333;-1.5333</Lieu>
+            <Lieu>-8.8;125.5833</Lieu>
+            <Lieu>47.562;13.626</Lieu>
+            <Lieu>33.5;-5.5</Lieu>
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Alexeyisaurus était un reptile marin. Il fait parti de l’ordre Plesiosauria et la famille Elasmosauridae. Il fait parti des plesiosauriens au plus long cou.</ModeDeVie>
-            <ModeAlimentation>C’est un piscivore, c’est-à-dire que c’est un animal se nourrissant de poissons.</ModeAlimentation>
-            <Commentaire>Alexeyisaurus a été nommé en hommage au paléontologiste Aleksei Savvich Arkhangelsky.</Commentaire>
+            <ModeDeVie />
+            <ModeAlimentation>Ils se sont probablement nourris de trilobites et de petits arthropodes</ModeAlimentation>
+            <Commentaire />
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>« Reptile d’Isan »</NomCommun>
-            <NomScientifique>Isanosaurus</NomScientifique>
+            <NomCommun>« Lézard au crâne épais »</NomCommun>
+            <NomScientifique>Pachycephalosaurus</NomScientifique>
         </Nom>
-        <Taille>12.0;1.8</Taille>
-        <Poids>3.5</Poids>
-        <Epoque>TRIAS</Epoque>
+        <Taille>5.0;1.5</Taille>
+        <Poids>0.5</Poids>
+        <Epoque>CRETACE</Epoque>
         <LieuDecouverteFossile>
-            <Lieu>16.806984;101.712916</Lieu>
+            <Lieu>50.7413;-111.5759</Lieu>
+            <Lieu>43.4418;-104.4116</Lieu>
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Il est parfois comparé une personne mesurant 1,8 mètres. C’est un quadrupède. Le fossile qui a été retrouvé est supposé être un jeune dinosaure. Ainsi, un tel dinosaure ayant atteint sa taille adulte devait probablement beaucoup plus imposant. Il devait avoir une petite tête et de dents en forme de cuillère pour trancher les feuilles.</ModeDeVie>
-            <ModeAlimentation>Il devait probablement se nourrir de feuilles provenant de branches d’arbres plutôt basses du fait de sa petite taille. Pour atteindre les hautes branches, il devait sûrement se dresser sur membres postérieures.</ModeAlimentation>
-            <Commentaire>Son nom fait référence à la région Isan du Nord-Est de la Thaïlande.</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>« Reptile de Lilienstern »</NomCommun>
-            <NomScientifique>Liliensternus</NomScientifique>
-        </Nom>
-        <Taille>5.0;2.5</Taille>
-        <Poids>0.3</Poids>
-        <Epoque>TRIAS</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>47.407256;7.603603</Lieu>
-            <Lieu>48.009540;8.009708</Lieu>
-            <Lieu>50.738141;10.411450</Lieu>
-            <Lieu>49.959664;10.743156</Lieu>
-            <Lieu>49.959664;10.743156</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Liliensternus est un bipède. Il possédait des os creux qui lui permettaient de courir rapidement. Il avait une crête sur le crâne.</ModeDeVie>
-            <ModeAlimentation />
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>« Lézard de Sarah Ernest Bulter »</NomCommun>
-            <NomScientifique>Sarahsaurus</NomScientifique>
-        </Nom>
-        <Taille>4.3</Taille>
-        <Poids>0.11</Poids>
-        <Epoque>JURASSIQUE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>36.183035;-111.391282</Lieu>
-            <Lieu>36.310179;-111.053415</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Il possédait des mains de très grand taille et puissantes, ce qui laisse penser qu’il était omnivore. Il est possible que le dinosaure alternait entre des postures bipèdes et quadrupèdes en fonction des activités qu’il devait réaliser.</ModeDeVie>
-            <ModeAlimentation />
-            <Commentaire />
+            <ModeDeVie>Ils avaient de très petites dents striées, et une bosse au dessus de leur crane qui ne servait pas à combattre mais il avait une couronne de cornes qui elle servait pour combattre</ModeDeVie>
+            <ModeAlimentation>Ils mangeaient un mélange de feuille, graine et fruit.</ModeAlimentation>
+            <Commentaire>Les dernières recherches prouvent que les vélociraptors avaient des plumes. Cependant, ces plumes n'étaient pas suffisantes pour leur permettre de voler, les membres antérieurs étant notamment trop petits.</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -266,53 +442,6 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>Helcionelloida</NomCommun>
-            <NomScientifique>Helcionelloida</NomScientifique>
-        </Nom>
-        <Taille />
-        <Poids />
-        <Epoque>CAMBRIEN</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>39.9286;-76.8508</Lieu>
-            <Lieu>31.2089;-7.8811</Lieu>
-            <Lieu>-13.8833;131.15</Lieu>
-            <Lieu>25.6425;103.0686</Lieu>
-            <Lieu>82.25;-29.75</Lieu>
-            <Lieu>82.25;-29.75</Lieu>
-            <Lieu>57.1667;132</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>C'était des mollusques.</ModeDeVie>
-            <ModeAlimentation />
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Orthocerida</NomCommun>
-            <NomScientifique>Orthocerida</NomScientifique>
-        </Nom>
-        <Taille />
-        <Poids />
-        <Epoque>ORDOVICIEN;SILURIEN;DEVONIEN;CARBONIFERE;PERMIEN;TRIAS</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>37.9144;-84.2631</Lieu>
-            <Lieu>29;109</Lieu>
-            <Lieu>53.1333;-1.5333</Lieu>
-            <Lieu>-8.8;125.5833</Lieu>
-            <Lieu>47.562;13.626</Lieu>
-            <Lieu>33.5;-5.5</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie />
-            <ModeAlimentation>Ils se sont probablement nourris de trilobites et de petits arthropodes</ModeAlimentation>
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
             <NomCommun>Rugosa</NomCommun>
             <NomScientifique>Rugosa</NomScientifique>
         </Nom>
@@ -335,20 +464,79 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>« Voleur de l'aube »</NomCommun>
-            <NomScientifique>Eoraptor</NomScientifique>
+            <NomCommun>« Lézard de Sarah Ernest Bulter »</NomCommun>
+            <NomScientifique>Sarahsaurus</NomScientifique>
         </Nom>
-        <Taille>1.0;0.40</Taille>
-        <Poids>0.009</Poids>
-        <Epoque>TRIAS</Epoque>
+        <Taille>4.3</Taille>
+        <Poids>0.11</Poids>
+        <Epoque>JURASSIQUE</Epoque>
         <LieuDecouverteFossile>
-            <Lieu>-31.1011;-68.905</Lieu>
+            <Lieu>36.183035;-111.391282</Lieu>
+            <Lieu>36.310179;-111.053415</Lieu>
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
-            <ModeDeVie>Ses membres antérieurs mesuraient la moitié de ses pattes, et ses mains possédaient chacune cinq doigts.</ModeDeVie>
-            <ModeAlimentation>Les trois plus doigt étaient terminés par de grandes griffes dont il se servait pour maintenir sa proie et attraper des végétaux.</ModeAlimentation>
-            <Commentaire>Il était l'un des plus anciens dinosaures connus.</Commentaire>
+            <ModeDeVie>Il possédait des mains de très grand taille et puissantes, ce qui laisse penser qu’il était omnivore. Il est possible que le dinosaure alternait entre des postures bipèdes et quadrupèdes en fonction des activités qu’il devait réaliser.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Spinosaurus</NomCommun>
+            <NomScientifique>Spinosaurus</NomScientifique>
+        </Nom>
+        <Taille>15.0</Taille>
+        <Poids>6.0</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>-2.4781;-44.4614</Lieu>
+            <Lieu>30.9;-3.9833</Lieu>
+            <Lieu>8.3451;14.7915</Lieu>
+            <Lieu>25.4931;29.5194</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Le spinosaurus est un animal au museau long et étroit portant une rangée de dents coniques, il possède un crâne crocodiliforme.</ModeDeVie>
+            <ModeAlimentation>Le spinosaurus furent des animaux au moins partiellement piscivore, capable de se nourrir également d'autres proies comme de jeunes dinosaures.</ModeAlimentation>
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Stegosaurus</NomCommun>
+            <NomScientifique>Stegosaurus</NomScientifique>
+        </Nom>
+        <Taille>9.0;4.0</Taille>
+        <Poids>3.0</Poids>
+        <Epoque>JURASSIQUE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>40.4559;-108.3916</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Ce quadrupède possède deux rangées de grandes plaques osseuses sur l'épine dorsale et sa queue présente deux paires de pointes défensives, Son crâne long et étroit était de petite taille par rapport au reste du corps.</ModeDeVie>
+            <ModeAlimentation>Le Stégosaure possédait un bec et de petites dents, triangulaires et plates situées à l'arrière de la gueule, cette disposition suggère que l'animal devait couper les plantes et conserver la nourriture dans sa bouche avant d'être mâchée</ModeAlimentation>
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« lézard faucheur »</NomCommun>
+            <NomScientifique>Therizinosaurus</NomScientifique>
+        </Nom>
+        <Taille>9.0;5.0</Taille>
+        <Poids>6.0</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>43.4747;99.8331</Lieu>
+            <Lieu>43.4917;101.275</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Les griffes de Therizinosaurus atteignaient 70 centimètres, les bras mesurant 2 mètres de long.</ModeDeVie>
+            <ModeAlimentation>il devait manger de petits lézards ou de petits mammifères</ModeAlimentation>
+            <Commentaire />
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -373,45 +561,6 @@
             <ModeDeVie>Les Titanosauria possédaient de petites têtes,ils possédaient tous des crêtes formées par ces os nasaux.Ils possèdent une mosaïque de petites écailles en forme de perles autour de plus grandes écailles.</ModeDeVie>
             <ModeAlimentation>Ils mangeaient des plantes telles que des cycadophytas, des conifère, des cycadophytes et plus encore.</ModeAlimentation>
             <Commentaire>Ils furent dénommés titanosaures en l'honneur des Titans de la mythologie grecques.</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>« Lézard rigide »</NomCommun>
-            <NomScientifique>Ankylosaurus</NomScientifique>
-        </Nom>
-        <Taille>10.0;1.7</Taille>
-        <Poids>4.0</Poids>
-        <Epoque>CRETACE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>36.3339;-108.0828</Lieu>
-            <Lieu>51.8773;-113.0054</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Il était quadrupède. Les os du crâne et d'autres parties du corps ont fusionné afin d'augmenter leur résistance. Il possédait une queue massive qui possédait une force massive capable de briser les os de ses assaillant.</ModeDeVie>
-            <ModeAlimentation>Il était muni de peu de dents ce qui indique une faible mastication.</ModeAlimentation>
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>« Lézard robuste »</NomCommun>
-            <NomScientifique>Hadrosaurus</NomScientifique>
-        </Nom>
-        <Taille>9.0</Taille>
-        <Poids>7.5</Poids>
-        <Epoque>CRETACE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>49;-110.5497</Lieu>
-            <Lieu>39.9094;-75.0281</Lieu>
-            <Lieu>33.4833;-88.4167</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Toute leur partie avant du crâne est aplatie et élargie en forme de bec.</ModeDeVie>
-            <ModeAlimentation>Leur bec est idéal pour la collecte des feuilles et pousses des forêts tropicales d'Asie, d'Europe et d'Amérique du Nord. Le fond de la gueule contient des milliers de petites dents aptes à déchiqueter la nourriture avant de l'avaler</ModeAlimentation>
-            <Commentaire>La forme de leur bec rappelle celle des canards.</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -443,43 +592,6 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>« Lézard au crâne épais »</NomCommun>
-            <NomScientifique>Pachycephalosaurus</NomScientifique>
-        </Nom>
-        <Taille>5.0;1.5</Taille>
-        <Poids>0.5</Poids>
-        <Epoque>CRETACE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>50.7413;-111.5759</Lieu>
-            <Lieu>43.4418;-104.4116</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Ils avaient de très petites dents striées, et une bosse au dessus de leur crane qui ne servait pas à combattre mais il avait une couronne de cornes qui elle servait pour combattre</ModeDeVie>
-            <ModeAlimentation>Ils mangeaient un mélange de feuille, graine et fruit.</ModeAlimentation>
-            <Commentaire>Les dernières recherches prouvent que les vélociraptors avaient des plumes. Cependant, ces plumes n'étaient pas suffisantes pour leur permettre de voler, les membres antérieurs étant notamment trop petits.</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Stegosaurus</NomCommun>
-            <NomScientifique>Stegosaurus</NomScientifique>
-        </Nom>
-        <Taille>9.0;4.0</Taille>
-        <Poids>3.0</Poids>
-        <Epoque>JURASSIQUE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>40.4559;-108.3916</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Ce quadrupède possède deux rangées de grandes plaques osseuses sur l'épine dorsale et sa queue présente deux paires de pointes défensives, Son crâne long et étroit était de petite taille par rapport au reste du corps.</ModeDeVie>
-            <ModeAlimentation>Le Stégosaure possédait un bec et de petites dents, triangulaires et plates situées à l'arrière de la gueule, cette disposition suggère que l'animal devait couper les plantes et conserver la nourriture dans sa bouche avant d'être mâchée</ModeAlimentation>
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
             <NomCommun>« Voleur rapide »</NomCommun>
             <NomScientifique>Velociraptor</NomScientifique>
         </Nom>
@@ -500,118 +612,6 @@
         <DescriptionDetaillee>
             <ModeDeVie>Le vélociraptor est un petit bipède. Le vélociraptor possède de puissantes mâchoires portant environ 80 dents acérées. Ses membres postérieurs sont pourvus d'une griffe rétractile, capable de se positionner presque à la verticale pour poignarder la peau de sa proie. Sa queue, rigidifiée par des tendons osseux, l'aide à s'équilibrer lorsqu'il se dresse pour harponner sa proie.</ModeDeVie>
             <ModeAlimentation>Le vélociraptor se nourrissait sans doute de tylocephales, d'oviraptors, de protocératops, de gallimimus et de petits mammifères.</ModeAlimentation>
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Agnosphitys</NomCommun>
-            <NomScientifique>Agnosphitys</NomScientifique>
-        </Nom>
-        <Taille>0.6;0.15</Taille>
-        <Poids>0.003</Poids>
-        <Epoque>TRIAS</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>51.674463;-2.335845</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Agnosphitys était un petit dinosaure.</ModeDeVie>
-            <ModeAlimentation>Il se nourrissait d’insectes et de petits animaux.</ModeAlimentation>
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Jaklapallisaurus</NomCommun>
-            <NomScientifique>Jaklapallisaurus</NomScientifique>
-        </Nom>
-        <Taille>2.5;1.5</Taille>
-        <Poids>0.25</Poids>
-        <Epoque>TRIAS</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>18.909099;79.497955</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie />
-            <ModeAlimentation />
-            <Commentaire>Deux fossiles furent découverts en Inde en 2011.</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Chromogisaurus</NomCommun>
-            <NomScientifique>Chromogisaurus</NomScientifique>
-        </Nom>
-        <Taille>2.0</Taille>
-        <Poids>0.010</Poids>
-        <Epoque>TRIAS</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>-27.994460;-68.865848</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>C’était sûrement un quadrupède.</ModeDeVie>
-            <ModeAlimentation />
-            <Commentaire>Chromogisaurus provient du grec chroma signifiant « couleur » et de gè signifiant « terre ».</Commentaire>
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>« lézard faucheur »</NomCommun>
-            <NomScientifique>Therizinosaurus</NomScientifique>
-        </Nom>
-        <Taille>9.0;5.0</Taille>
-        <Poids>6.0</Poids>
-        <Epoque>CRETACE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>43.4747;99.8331</Lieu>
-            <Lieu>43.4917;101.275</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Les griffes de Therizinosaurus atteignaient 70 centimètres, les bras mesurant 2 mètres de long.</ModeDeVie>
-            <ModeAlimentation>il devait manger de petits lézards ou de petits mammifères</ModeAlimentation>
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Spinosaurus</NomCommun>
-            <NomScientifique>Spinosaurus</NomScientifique>
-        </Nom>
-        <Taille>15.0</Taille>
-        <Poids>6.0</Poids>
-        <Epoque>CRETACE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>-2.4781;-44.4614</Lieu>
-            <Lieu>30.9;-3.9833</Lieu>
-            <Lieu>8.3451;14.7915</Lieu>
-            <Lieu>25.4931;29.5194</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Le spinosaurus est un animal au museau long et étroit portant une rangée de dents coniques, il possède un crâne crocodiliforme.</ModeDeVie>
-            <ModeAlimentation>Le spinosaurus furent des animaux au moins partiellement piscivore, capable de se nourrir également d'autres proies comme de jeunes dinosaures.</ModeAlimentation>
-            <Commentaire />
-        </DescriptionDetaillee>
-    </Dinosaure>
-    <Dinosaure>
-        <Nom>
-            <NomCommun>Concavenator</NomCommun>
-            <NomScientifique>Concavenator</NomScientifique>
-        </Nom>
-        <Taille>6.0;2.5</Taille>
-        <Poids>2.0</Poids>
-        <Epoque>CRETACE</Epoque>
-        <LieuDecouverteFossile>
-            <Lieu>40.0645;-1.8808</Lieu>
-        </LieuDecouverteFossile>
-        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
-        <DescriptionDetaillee>
-            <ModeDeVie>Cette espèce de dinosaure est un prédateur carnivore doté d’une étrange bosse sur le dos.</ModeDeVie>
-            <ModeAlimentation />
             <Commentaire />
         </DescriptionDetaillee>
     </Dinosaure>
