@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.pts3.gp3.dinomap.data.GestionaireDePiece;
 import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieMenuActivity;
 import com.pts3.gp3.dinomap.quizz.QuizzActivity;
 
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView encycloIcone = findViewById(R.id.encycloIcone);
         ImageView quizIcone = findViewById(R.id.quizIcone);
         ImageView btnCredit = findViewById(R.id.btnCredit);
-
 
         View.OnClickListener mapClickListener = new View.OnClickListener() {
             @Override
@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-//        texteNbPiece.setText(""+nbPiece);
+        TextView nbPiece = findViewById(R.id.pieces);
+        GestionaireDePiece gestionaireDePiece = new GestionaireDePiece(this);
+        nbPiece.setText(Integer.toString(gestionaireDePiece.getNbPiece()));
     }
 }
