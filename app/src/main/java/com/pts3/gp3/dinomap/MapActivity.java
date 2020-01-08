@@ -30,7 +30,6 @@ import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieActivity;
 import org.jdom.JDOMException;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -227,7 +226,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
 
                     String nomImg = "";
-//////
+
                     //int r = s[1].indexOf(d.getNomScientifique().toLowerCase());
 
 
@@ -237,9 +236,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
 
                     nomImg = "icdm" + i;
-////////
-
-                    InputStream is = null;
                   /*  try {
                         is = assetManager.open("iconeIcdm/" + nomImg);
                     } catch (IOException e) {
@@ -251,7 +247,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
                     MarkerOptions markerOptions = new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun());
                     markerOptions.icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(nomImg)));
-                    Marker m = googleMap.addMarker(markerOptions);
+                    googleMap.addMarker(markerOptions);
 
 
 
