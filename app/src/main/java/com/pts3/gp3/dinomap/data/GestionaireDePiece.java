@@ -2,14 +2,13 @@ package com.pts3.gp3.dinomap.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
-public class GestionaireDePiece {
-    public static final String PIECE = "piece";
-    SharedPreferences sp;
+public class GestionaireDePiece extends Gestionaire {
+
+    private static final String PIECE = "piece";
 
     public GestionaireDePiece(Context context) {
-        sp = PreferenceManager.getDefaultSharedPreferences(context);
+        super(context);
     }
 
     public int getNbPiece() {
