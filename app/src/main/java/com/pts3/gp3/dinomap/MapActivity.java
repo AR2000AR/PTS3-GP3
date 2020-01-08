@@ -33,6 +33,7 @@ import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieActivity;
 import org.jdom.JDOMException;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -245,17 +246,37 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
 
                     //Version avant ajout couleur icone
-                    Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("icodinomap"))));
+                  //  Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("icodinomap"))));
 
 
                     String nomImg="";
 //////
-                    int r = s[1].indexOf(d.getNomCommun().toLowerCase());
+                    //int r = s[1].indexOf(d.getNomScientifique().toLowerCase());
 
-                    nomImg = tableauIcdm[0][r];
+
+                    //Log.e("S[0][0] = ",tableauIcdm[0][0]);
+
+                    String[] nomDino = new String[2];
+                    nomDino[DinoDatabaseParser.NOM_COMMUN] = d.getNomCommun();
+                    nomDino[DinoDatabaseParser.NOM_SCIENTIFIQUE] = d.getNomScientifique();
+                    int i = list.indexOf(nomDino);
+
+
+                    nomImg = "icdm"+i;
 ////////
-                    Log.e("IMAGE =",nomImg);
-                 //   Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(nomImg))));
+
+                    InputStream is = null;
+                    try {
+                        is = assetManager.open("iconeIcdm/" + nomImg);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Log.e("path img", nomImg);
+                    Bitmap bm = BitmapFactory.decodeStream(is);
+
+
+
+                    Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(nomImg))));
 
 
 
@@ -299,7 +320,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     // permet de redimensionner la taille des markers
     private Bitmap resizeMapIcons(String iconName) {
         Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));
-        @SuppressWarnings("UnnecessaryLocalVariable") Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, imageBitmap.getWidth() / 10, imageBitmap.getHeight() / 10, false);
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, imageBitmap.getWidth() / 10, imageBitmap.getHeight() / 10, false);
         return resizedBitmap;
     }
 

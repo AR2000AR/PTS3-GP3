@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.pts3.gp3.dinomap.MainActivity;
 import com.pts3.gp3.dinomap.R;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
+import com.pts3.gp3.dinomap.data.GestionaireDePiece;
 import com.pts3.gp3.dinomap.data.Question;
 import com.pts3.gp3.dinomap.data.QuestionParser;
 
@@ -114,6 +115,8 @@ public class QuizzActivity extends AppCompatActivity {
         builder.setPositiveButton("Question suivante", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                GestionaireDePiece gp = new GestionaireDePiece(QuizzActivity.this);
+                gp.setNbPiece(gp.getNbPiece()+10);
                 quetionSuivante();
             }
         });
