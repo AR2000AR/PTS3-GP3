@@ -14,9 +14,6 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.FragmentActivity;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -36,6 +33,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
@@ -88,27 +88,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
          */
 
 
-
-
-        /*
-        Je definie un tableau qui pour chaque dino indique quelle icone sera attribuee
-         */
-        tableauIcdm = new String[2][s.length];
-
-        for(int i=0;i<s.length;i++){
-            int r = i+1;
-            tableauIcdm[1][i] = "icdm"+r;
-            String nom = s[i];
-            nom = nom.substring(0,nom.length()-4);
-
-            Log.e("NOM DINO ",nom);
-
-            tableauIcdm[0][i] = nom;
-        }
-
-
-
-
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -145,7 +124,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
          * rempli la liste avec des dino
          */
         try {
-          database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
+            database = new DinoDatabaseParser(getResources().openRawResource(R.raw.dino));
             for (String[] curentDino : database.getDinoNameListe()) {
                 dinos.add(database.getDino(curentDino));
 
@@ -243,40 +222,37 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
                     //MarkerOptions m = new MarkerOptions().position(l).title(d.getNomCommun()).snippet(d.getNomScientifique());
 
-
-
                     //Version avant ajout couleur icone
-                  //  Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("icodinomap"))));
+                    //  Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("icodinomap"))));
 
 
-                    String nomImg="";
+                    String nomImg = "";
 //////
                     //int r = s[1].indexOf(d.getNomScientifique().toLowerCase());
 
 
                     //Log.e("S[0][0] = ",tableauIcdm[0][0]);
 
-                    String[] nomDino = new String[2];
-                    nomDino[DinoDatabaseParser.NOM_COMMUN] = d.getNomCommun();
-                    nomDino[DinoDatabaseParser.NOM_SCIENTIFIQUE] = d.getNomScientifique();
-                    int i = list.indexOf(nomDino);
+                    int i = list.indexOf(d) + 1;
 
 
-                    nomImg = "icdm"+i;
+                    nomImg = "icdm" + i;
 ////////
 
                     InputStream is = null;
-                    try {
+                  /*  try {
                         is = assetManager.open("iconeIcdm/" + nomImg);
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }
-                    Log.e("path img", nomImg);
-                    Bitmap bm = BitmapFactory.decodeStream(is);
+                    }*/
+                    Log.d("path img", nomImg);
+                    // Bitmap bm = BitmapFactory.decodeStream(is);
 
 
+                    MarkerOptions markerOptions = new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun());
+                    markerOptions.icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(nomImg)));
+                    Marker m = googleMap.addMarker(markerOptions);
 
-                    Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(nomImg))));
 
 
 
@@ -319,7 +295,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     // permet de redimensionner la taille des markers
     private Bitmap resizeMapIcons(String iconName) {
-        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));
+        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(), getResources().getIdentifier(iconName, "drawable", getPackageName()));
         Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, imageBitmap.getWidth() / 10, imageBitmap.getHeight() / 10, false);
         return resizedBitmap;
     }
