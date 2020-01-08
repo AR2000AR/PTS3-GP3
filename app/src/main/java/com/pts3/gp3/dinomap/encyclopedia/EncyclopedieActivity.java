@@ -1,5 +1,6 @@
 package com.pts3.gp3.dinomap.encyclopedia;
 
+import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -7,28 +8,28 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.R;
 import com.pts3.gp3.dinomap.data.Dino;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 import com.pts3.gp3.dinomap.data.Epoque;
+import com.pts3.gp3.dinomap.data.GestionaireAchat;
+import com.pts3.gp3.dinomap.data.GestionaireDePiece;
 
 import org.jdom.JDOMException;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
-
-public class EncyclopedieActivity extends AppCompatActivity {
+public class EncyclopedieActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DinoDatabaseParser database;
 
@@ -86,6 +87,13 @@ public class EncyclopedieActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        GestionaireAchat gestionaireAchat = new GestionaireAchat(this);
+        if (gestionaireAchat.isUnlocked(dino)) {
+            boutonUnlock.setImageResource(R.drawable.cadenaouvert);
+        } else {
+            boutonUnlock.setImageResource(R.drawable.cadenafermee);
+        }
+
     if(!trouverImage(nom[1])){
         try {
             InputStream is = assetManager.open("images/icodinomap.png");
@@ -129,31 +137,70 @@ public class EncyclopedieActivity extends AppCompatActivity {
             }
         });
 
-        boutonUnlock.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView modeDeVie = new TextView(v.getContext());
-                TextView modeAlimentaire = new TextView(v.getContext());
-                TextView commentaire = new TextView(v.getContext());
-                if(!dino.getModeDeVie().equals("")){
-                    modeDeVie.setText(dino.getModeDeVie());
-                    descriptionDino.addView(nouveauTitre("Mode de vie :"));
-                    descriptionDino.addView(textStyle(modeDeVie));
-                }
-                if(!dino.getModeAlimentaire().equals("")){
-                    modeAlimentaire.setText(dino.getModeAlimentaire());
-                    descriptionDino.addView(nouveauTitre("Mode d'alimentation :"));
-                    descriptionDino.addView(textStyle(modeAlimentaire));
-                }
-                if(!dino.getCommentaire().equals("")){
-                    commentaire.setText(dino.getCommentaire());
-                    descriptionDino.addView(nouveauTitre("Commentaire :"));
-                    descriptionDino.addView(textStyle(commentaire));
-                }
-                boutonUnlock.setVisibility(View.GONE);
-            }
-        });
+        boutonUnlock.setOnClickListener(this);
 
+    }
+
+    public void onClick(View v) {
+
+        final GestionaireAchat gestionaireAchat = new GestionaireAchat(getBaseContext());
+        if (gestionaireAchat.isUnlocked(dino)) {
+            TextView modeDeVie = new TextView(v.getContext());
+            TextView modeAlimentaire = new TextView(v.getContext());
+            TextView commentaire = new TextView(v.getContext());
+            if (!dino.getModeDeVie().equals("")) {
+                modeDeVie.setText(dino.getModeDeVie());
+                descriptionDino.addView(nouveauTitre("Mode de vie :"));
+                descriptionDino.addView(textStyle(modeDeVie));
+            }
+            if (!dino.getModeAlimentaire().equals("")) {
+                modeAlimentaire.setText(dino.getModeAlimentaire());
+                descriptionDino.addView(nouveauTitre("Mode d'alimentation :"));
+                descriptionDino.addView(textStyle(modeAlimentaire));
+            }
+            if (!dino.getCommentaire().equals("")) {
+                commentaire.setText(dino.getCommentaire());
+                descriptionDino.addView(nouveauTitre("Commentaire :"));
+                descriptionDino.addView(textStyle(commentaire));
+            }
+            boutonUnlock.setVisibility(View.GONE);
+        } else {
+            AlertDialog.Builder alertB = new AlertDialog.Builder(this);
+            alertB.setTitle(getString(R.string.debloquerDinoTitre));
+            alertB.setCancelable(true);
+            int nbPiece = new GestionaireDePiece(this).getNbPiece();
+            StringBuilder message = new StringBuilder();
+            message.append(getString(R.string.debloquerDinoMessage));
+            message.append("\n");
+            DialogInterface.OnClickListener dicancel = new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //Do nothing
+                    dialog.dismiss();
+                }
+            };
+            if (nbPiece >= 10) {
+                message.append(getString(R.string.debloquerDinoMessageAchat, nbPiece));
+                alertB.setPositiveButton(R.string.oui, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        gestionaireAchat.setUnlocked(dino, true);
+                        GestionaireDePiece gestionaireDePiece = new GestionaireDePiece(EncyclopedieActivity.this);
+                        gestionaireDePiece.setNbPiece(gestionaireDePiece.getNbPiece() - 10);
+                        dialog.dismiss();
+                        boutonUnlock.callOnClick();
+                    }
+                });
+                alertB.setNegativeButton(R.string.non, dicancel);
+
+            } else {
+                message.append(getString(R.string.debloquerDinoMessageInsuffisant, 10 - nbPiece));
+                alertB.setNeutralButton(R.string.ok, dicancel);
+            }
+            alertB.setMessage(message.toString());
+            AlertDialog alert = alertB.show();
+        }
     }
 
     public boolean trouverImage(String nomDino){
