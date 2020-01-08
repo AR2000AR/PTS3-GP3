@@ -87,9 +87,9 @@ public class ViewNomDino extends ConstraintLayout implements View.OnClickListene
     public void setUnlocked(boolean unlocked) {
         ImageView img = innerLayout.findViewById(R.id.coin);
         if (unlocked) {
-            img.setImageResource(R.drawable.coin);
+            img.setImageResource(R.drawable.cadenaouvert);
         } else {
-            img.setImageResource(R.drawable.btninterrogation);
+            img.setImageResource(R.drawable.cadenafermee);
         }
     }
 }
