@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">DinoMap</string>
-    <string name="map">Map</string>
-    <string name="encyclopedia">Encyclopedia</string>
+    <string name="map">Carte</string>
+    <string name="encyclopedia">Encyclopédie</string>
     <string name="quiz">Quiz</string>
     <string name="cambrien" translatable="false">CAMBRIEN</string>
     <string name="ordovicien" translatable="false">ORDOVICIEN</string>
@@ -14,11 +14,11 @@
     <string name="cretace" translatable="false">CRETACE</string>
     <string name="paleozoique" translatable="false">PALEOZOIQUE</string>
     <string name="mesozoique" translatable="false">MESOZOIQUE</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Carte</string>
     <string name="placeholder_name_sc" translatable="false">Nom Scientifique</string>
     <string name="placeholder_name_com" translatable="false">Nom commun</string>
-    <string name="title_encyclo_menu">Encyclopedia</string>
-    <string name="content_description_return_button">Return button</string>
+    <string name="title_encyclo_menu">Encyclopedie</string>
+    <string name="content_description_return_button">Bouton retour</string>
 
     <string name="encyclopedia_taille">Taille :</string>
     <string name="encyclopedia_poids">Poids :</string>
@@ -31,6 +31,6 @@
     <string name="baron" translatable="false">Alexandre\nBaron</string>
     <string name="rouxel" translatable="false">Valentin\nRouxel</string>
 
-    <string name="map_titre">Dinosaures map</string>
+    <string name="map_titre">Carte des dinosaures</string>
 
 </resources>
