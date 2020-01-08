@@ -1,11 +1,13 @@
 package com.pts3.gp3.dinomap;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -44,13 +46,66 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private Epoque epoque;
     private DinoDatabaseParser database;
 
+    private String tableauIcdm[][];
+
     private TextView t;
+    private AssetManager assetManager;
+
+    private String[] s;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+
+
+        assetManager = getAssets();
+
+        try {
+            s = assetManager.list("images");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+        /*
+
+         String[] imgPath = assetManager.list("images");
+
+            for(String img : imgPath){
+                Log.e("path img", img);
+
+                if(img.equals(nomDino.toLowerCase() + ".jpg")){
+                    InputStream is = assetManager.open("images/" + img);
+                    Log.e("path img", img);
+                    Bitmap bm = BitmapFactory.decodeStream(is);
+                    imageDino.setImageBitmap(bm);
+                    return true;
+                }
+         */
+
+
+
+
+        /*
+        Je definie un tableau qui pour chaque dino indique quelle icone sera attribuee
+         */
+        tableauIcdm = new String[2][s.length];
+
+        for(int i=0;i<s.length;i++){
+            int r = i+1;
+            tableauIcdm[1][i] = "icdm"+r;
+            String nom = s[i];
+            nom = nom.substring(0,nom.length()-4);
+
+            Log.e("NOM DINO ",nom);
+
+            tableauIcdm[0][i] = nom;
+        }
+
+
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -187,7 +242,22 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
                     //MarkerOptions m = new MarkerOptions().position(l).title(d.getNomCommun()).snippet(d.getNomScientifique());
 
+
+
+                    //Version avant ajout couleur icone
                     Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("icodinomap"))));
+
+
+                    String nomImg="";
+//////
+                    int r = s[1].indexOf(d.getNomCommun().toLowerCase());
+
+                    nomImg = tableauIcdm[0][r];
+////////
+                    Log.e("IMAGE =",nomImg);
+                 //   Marker m = googleMap.addMarker(new MarkerOptions().position(l).title(d.getNomScientifique()).snippet(d.getNomCommun()).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(nomImg))));
+
+
 
                     /*MarkerOptions m = new MarkerOptions();
                     m.position(l);
