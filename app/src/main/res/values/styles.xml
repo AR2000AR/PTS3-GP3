@@ -23,4 +23,12 @@
         <item name="android:fontFamily">@font/trebuc</item>
     </style>
 
+    <style name="nomCommunDino">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="nomScientifiqueDino">
+        <item name="android:textSize">30sp</item>
+    </style>
+
 </resources>

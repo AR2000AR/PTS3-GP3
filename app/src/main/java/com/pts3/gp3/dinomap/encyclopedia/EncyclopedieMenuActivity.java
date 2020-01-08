@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.R;
-import com.pts3.gp3.dinomap.data.Dino;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
+import com.pts3.gp3.dinomap.data.GestionaireAchat;
 
 import org.jdom.JDOMException;
 
@@ -47,21 +47,17 @@ public class EncyclopedieMenuActivity extends AppCompatActivity {
         } catch (JDOMException | IOException e) {
             e.printStackTrace();
         }
-        //Dino dino = database.getDino(database.getDinoNameListe().get(0));
-        Log.d("PAUSE","PAUSE");
 
         int c = 0;
         int[] background = {getColor(R.color.test3), getColor(R.color.test2)};
-        /*for (int i = 0; i < 20; i++) {
-            listLayout.addView(new DinoNameView(this, background[c++ % 2], getString(R.string.placeholder_name_sc), getString(R.string.placeholder_name_com)));
-        }*/
+
+        GestionaireAchat gestionaireAchat = new GestionaireAchat(this);
 
         for (String[] nom : database.getDinoNameListe()) {
-            listLayout.addView(new ViewNomDino(this, background[c++ % 2], nom[DinoDatabaseParser.NOM_SCIENTIFIQUE], nom[DinoDatabaseParser.NOM_COMMUN]));
+            ViewNomDino dinoView = new ViewNomDino(this, background[c++ % 2], nom[DinoDatabaseParser.NOM_SCIENTIFIQUE], nom[DinoDatabaseParser.NOM_COMMUN]);
+            dinoView.setUnlocked(gestionaireAchat.isUnlocked(database.getDino(nom)));
+            listLayout.addView(dinoView);
         }
     }
 
-    private ViewNomDino makeViewFromDino(Dino dino) {
-        return new ViewNomDino(this, dino.getNomScientifique(), dino.getNomCommun());
-    }
 }
