@@ -102,6 +102,8 @@ public class QuizzActivity extends AppCompatActivity {
         Log.i("", "afficherStatutReponse: " + testerLaProposition(v));
         if(testerLaProposition(v)){
             result = "Réponse correct vous avez gagné 10 pièces";
+            GestionaireDePiece gp = new GestionaireDePiece(QuizzActivity.this);
+            gp.setNbPiece(gp.getNbPiece()+10);
         }else {
             result = "Réponse incorrect la réponse était " + questions.get(idQuestion).getReponse();
         }
@@ -111,12 +113,9 @@ public class QuizzActivity extends AppCompatActivity {
         builder.setTitle(result);
        // LinearLayout linearLayout = new LinearLayout(this);
 
-
         builder.setPositiveButton("Question suivante", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                GestionaireDePiece gp = new GestionaireDePiece(QuizzActivity.this);
-                gp.setNbPiece(gp.getNbPiece()+10);
                 quetionSuivante();
             }
         });
