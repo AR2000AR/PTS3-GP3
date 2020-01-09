@@ -16,7 +16,9 @@
     </style>
 
     <style name="titreAcitvite">
-
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/trebucbd</item>
     </style>
 
     <style name="police">

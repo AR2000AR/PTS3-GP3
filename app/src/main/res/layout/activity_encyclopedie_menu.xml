@@ -26,12 +26,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.8"
-            android:fontFamily="@font/trebucbd"
             android:gravity="left|center_vertical"
             android:paddingStart="5dp"
             android:text="@string/title_encyclo_menu"
             android:textAlignment="gravity"
-            android:textColor="#000000"
+            android:textAppearance="@style/titreAcitvite"
             android:textSize="34sp" />
 
     </LinearLayout>
