@@ -107,7 +107,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         t.setTextSize(12);
         t.setTextColor(Color.BLACK);
         t.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebuc.ttf"));
-        t.setX(0);
+        t.setX(seekBar.getWidth() / 3);
 
 
         ImageView returnButton = findViewById(R.id.return_button);
@@ -167,6 +167,14 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
     private void mettreAJourTexteIndicateur(int progress) {
 
+
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        t.setX(Math.round(seekBar.getWidth() / 4.5));
 
     }
 
