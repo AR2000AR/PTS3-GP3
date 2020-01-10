@@ -310,7 +310,6 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         sb.deleteCharAt(indexOfDecimal);
         sb.insert(indexOfDecimal + 1, ".");
         sb.append(0);
-        //if(sb.charAt(0)=='0') sb.deleteCharAt(0);
         return Double.parseDouble(sb.toString());
     }
 }
