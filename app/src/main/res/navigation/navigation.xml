@@ -9,7 +9,11 @@
         android:id="@+id/creditActivity"
         android:name="com.pts3.gp3.dinomap.CreditActivity"
         android:label="activity_credit"
-        tools:layout="@layout/activity_credit" />
+        tools:layout="@layout/activity_credit" >
+        <action
+            android:id="@+id/action_creditActivity_to_tutorielActivity"
+            app:destination="@id/tutorielActivity" />
+    </activity>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.pts3.gp3.dinomap.MainActivity"
@@ -60,4 +64,9 @@
             android:id="@+id/action_encyclopedieMenuActivity_to_encyclopedieActivity"
             app:destination="@id/encyclopedieActivity" />
     </activity>
+    <activity
+        android:id="@+id/tutorielActivity"
+        android:name="com.pts3.gp3.dinomap.TutorielActivity"
+        android:label="activity_tutoriel"
+        tools:layout="@layout/activity_tutoriel" />
 </navigation>

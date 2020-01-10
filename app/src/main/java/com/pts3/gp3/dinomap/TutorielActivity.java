@@ -46,8 +46,7 @@ public class TutorielActivity extends AppCompatActivity {
 
     private void miseAzero() {
         imgTuto.setImageResource(R.drawable.accueil);
-        textInstruction.setText("Vous avez le choix de choisir entre explorer la carte," +
-                " faire des quizs, explorer l’encyclopédie et savoir qui a fait l’application.");
+        textInstruction.setText("Vous avez le choix de choisir entre explorer la carte, faire des quiz, explorer l’encyclopédie et savoir qui a fait l’application.");
     }
 
 

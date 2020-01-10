@@ -10,22 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="465dp"
         android:layout_weight="0.60"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+        tools:srcCompat="@drawable/accueil" />
 
     <TextView
         android:id="@+id/textInstruction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.30"
+        android:layout_weight="0.35"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        tools:text="@string/tuto1" />
 
     <Button
         android:id="@+id/btnSuivant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.10"
+        android:layout_weight="0.05"
         android:background="@drawable/fondproposition"
         android:text="Suivant" />
 </LinearLayout>

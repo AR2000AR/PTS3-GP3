@@ -53,5 +53,6 @@
 
     <string name="plurielUnite">s</string>
 
-
+    <string name="tuto1">Vous avez le choix de choisir entre explorer la carte, faire des quiz, explorer l’encyclopédie et savoir qui a fait l’application.</string>
+    <string name="tuto2"></string>
 </resources>
