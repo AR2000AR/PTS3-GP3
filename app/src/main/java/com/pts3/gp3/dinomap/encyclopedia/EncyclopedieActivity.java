@@ -57,7 +57,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         Bundle extras = getIntent().getExtras();
         String nom[] = null;
 
-        if(extras.getStringArray("nomDino") != null){
+        if (extras.getStringArray("nomDino") != null) {
             nom = extras.getStringArray("nomDino");
         }
 
@@ -94,35 +94,36 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
             boutonUnlock.setImageResource(R.drawable.cadenafermee);
         }
 
-    if(!trouverImage(nom[1])){
-        try {
-            InputStream is = assetManager.open("images/icodinomap.png");
-            Bitmap bm = BitmapFactory.decodeStream(is);
-            imageDino.setImageBitmap(bm);
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        if (!trouverImage(nom[1])) {
+            try {
+                InputStream is = assetManager.open("images/icodinomap.png");
+                Bitmap bm = BitmapFactory.decodeStream(is);
+                imageDino.setImageBitmap(bm);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-    }
 
 
-        if(dino.getTaille()[0] == -1 && dino.getTaille()[1] == -1){
+        if (dino.getTaille()[0] == -1 && dino.getTaille()[1] == -1) {
             text_TailleDino.setText("Aucune donnée");
-        }else if(dino.getTaille()[0] == -1){
+        } else if (dino.getTaille()[0] == -1) {
             text_TailleDino.setText(dino.getTaille()[1] + "m de haut");
-        }else if(dino.getTaille()[1] == -1){
+        } else if (dino.getTaille()[1] == -1) {
             text_TailleDino.setText(dino.getTaille()[0] + "m de long");
-        }else{
+        } else {
             text_TailleDino.setText(dino.getTaille()[0] + "m de long,\n" + " " + dino.getTaille()[1] + "m de haut");
         }
-        if(dino.getPoids() == -1){
+        if (dino.getPoids() == -1) {
             text_PoidsDino.setText("Aucune donnée");
-        }else{
+        } else {
             text_PoidsDino.setText(dino.getPoids() + " tonne(s)");
         }
-        for(Epoque epoque : dino.getEpoques()){
-            if(text_EpoqueDino.getText() == ""){
+        for (Epoque epoque : dino.getEpoques()) {
+            if (text_EpoqueDino.getText() == "") {
                 text_EpoqueDino.setText(epoque.name());
-            }else {
+            } else {
                 text_EpoqueDino.setText(text_EpoqueDino.getText() + ",\n" + epoque.name());
             }
         }
@@ -138,6 +139,9 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         });
 
         boutonUnlock.setOnClickListener(this);
+        if (gestionaireAchat.isUnlocked(dino)) {
+            afficherInfo(boutonUnlock);
+        }
 
     }
 
@@ -145,25 +149,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
 
         final GestionaireAchat gestionaireAchat = new GestionaireAchat(getBaseContext());
         if (gestionaireAchat.isUnlocked(dino)) {
-            TextView modeDeVie = new TextView(v.getContext());
-            TextView modeAlimentaire = new TextView(v.getContext());
-            TextView commentaire = new TextView(v.getContext());
-            if (!dino.getModeDeVie().equals("")) {
-                modeDeVie.setText(dino.getModeDeVie());
-                descriptionDino.addView(nouveauTitre("Mode de vie :"));
-                descriptionDino.addView(textStyle(modeDeVie));
-            }
-            if (!dino.getModeAlimentaire().equals("")) {
-                modeAlimentaire.setText(dino.getModeAlimentaire());
-                descriptionDino.addView(nouveauTitre("Mode d'alimentation :"));
-                descriptionDino.addView(textStyle(modeAlimentaire));
-            }
-            if (!dino.getCommentaire().equals("")) {
-                commentaire.setText(dino.getCommentaire());
-                descriptionDino.addView(nouveauTitre("Commentaire :"));
-                descriptionDino.addView(textStyle(commentaire));
-            }
-            boutonUnlock.setVisibility(View.GONE);
+            afficherInfo(v);
         } else {
             AlertDialog.Builder alertB = new AlertDialog.Builder(this);
             alertB.setTitle(getString(R.string.debloquerDinoTitre));
@@ -203,14 +189,36 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
-    public boolean trouverImage(String nomDino){
+    private void afficherInfo(View v) {
+        TextView modeDeVie = new TextView(v.getContext());
+        TextView modeAlimentaire = new TextView(v.getContext());
+        TextView commentaire = new TextView(v.getContext());
+        if (!dino.getModeDeVie().equals("")) {
+            modeDeVie.setText(dino.getModeDeVie());
+            descriptionDino.addView(nouveauTitre("Mode de vie :"));
+            descriptionDino.addView(textStyle(modeDeVie));
+        }
+        if (!dino.getModeAlimentaire().equals("")) {
+            modeAlimentaire.setText(dino.getModeAlimentaire());
+            descriptionDino.addView(nouveauTitre("Mode d'alimentation :"));
+            descriptionDino.addView(textStyle(modeAlimentaire));
+        }
+        if (!dino.getCommentaire().equals("")) {
+            commentaire.setText(dino.getCommentaire());
+            descriptionDino.addView(nouveauTitre("Commentaire :"));
+            descriptionDino.addView(textStyle(commentaire));
+        }
+        boutonUnlock.setVisibility(View.GONE);
+    }
+
+    public boolean trouverImage(String nomDino) {
         try {
             String[] imgPath = assetManager.list("images");
 
-            for(String img : imgPath){
+            for (String img : imgPath) {
                 Log.e("path img", img);
 
-                if(img.equals(nomDino.toLowerCase() + ".jpg")){
+                if (img.equals(nomDino.toLowerCase() + ".jpg")) {
                     InputStream is = assetManager.open("images/" + img);
                     Log.e("path img", img);
                     Bitmap bm = BitmapFactory.decodeStream(is);
@@ -224,7 +232,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         return false;
     }
 
-    public TextView nouveauTitre(String text){
+    public TextView nouveauTitre(String text) {
         TextView titre = new TextView(this);
         titre.setText(text);
         titre.setTextColor(Color.BLACK);
@@ -233,7 +241,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         return titre;
     }
 
-    public TextView textStyle(TextView view){
+    public TextView textStyle(TextView view) {
         //view.setTextColor(Color.BLACK);
         view.setTextSize(20);
         view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebuc.ttf"));

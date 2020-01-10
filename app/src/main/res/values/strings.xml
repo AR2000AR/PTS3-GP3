@@ -33,10 +33,10 @@
 
     <string name="map_titre">Carte des dinosaures</string>
 
-    <string name="debloquerDinoTitre">Debloquer des informations</string>
-    <string name="debloquerDinoMessage">Debloquer un les informations coute 10 pieces.</string>
-    <string name="debloquerDinoMessageInsuffisant">Il vous en manque %d.</string>
-    <string name="debloquerDinoMessageAchat">Vous en avez %d.</string>
+    <string name="debloquerDinoTitre">Débloquer les informations complémentaires</string>
+    <string name="debloquerDinoMessage">Débloquer les informations coûtent 10 pièces.</string>
+    <string name="debloquerDinoMessageInsuffisant">Il vous manque %d pièces.</string>
+    <string name="debloquerDinoMessageAchat">Vous avez %d pièces.</string>
 
     <string name="oui">oui</string>
     <string name="non">non</string>
