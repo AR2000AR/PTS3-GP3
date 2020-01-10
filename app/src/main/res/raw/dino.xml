@@ -74,6 +74,46 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
+            <NomCommun>« Voleur géant d’Erlian »</NomCommun>
+            <NomScientifique>Atrociraptor</NomScientifique>
+        </Nom>
+        <Taille>1.5</Taille>
+        <Poids />
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>52.213589;-112.311737</Lieu>
+            <Lieu>56.06996;-116.534467</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Le crâne semble avoir été exceptionnellement court et haut. Les dents sont relativement simples, mais elles émergent de la mâchoire, ce qui entraîne une rangée de dents fortement inclinées. Il possédait donc une griffe rétractile au troisième orteil de chaque pied. On pense qu’il était de taille moyenne, qu’il était recouvert d’un duvet et de plumes.</ModeDeVie>
+            <ModeAlimentation>Ce petit carnivore devait chasser à la manière de ses cousins.</ModeAlimentation>
+            <Commentaire />
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Brachiosaure</NomCommun>
+            <NomScientifique>Brachiosaurus</NomScientifique>
+        </Nom>
+        <Taille>26;12</Taille>
+        <Poids>45</Poids>
+        <Epoque>JURASSIQUE;CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>44.957716;-110.107921</Lieu>
+            <Lieu>51.775795;4.499507</Lieu>
+            <Lieu>-15.461877;28.949985</Lieu>
+            <Lieu>-11.407683;40.253224</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Brachiosaurus est l’un des plus grands et des plus gros animaux terrestres qui aient jamais existé. Son cou mesurait 70cm. Brachiosaurus avait une tête épaisse en forme de dôme, avec un museau large et plat. Mais comparée à son corps, elle était minuscule. Ses mâchoires étaient caractérisée par des dents en forme de pieu.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire>C’était certaiment l’un des plus grands et des plus lourds qui ait jamais existé.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
             <NomCommun>Cetiosaurus</NomCommun>
             <NomScientifique>Cetiosaurus</NomScientifique>
         </Nom>
@@ -135,6 +175,46 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
+            <NomCommun>Diplodocus</NomCommun>
+            <NomScientifique>Diplodocus</NomScientifique>
+        </Nom>
+        <Taille>30.0;4.0</Taille>
+        <Poids>14.0</Poids>
+        <Epoque>JURASSIQUE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>46.100437;-107.014244</Lieu>
+            <Lieu>48.614267;-116.570327</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>C'est un très grand quadrupède au long cou, avec une longue queue en forme de fouet. Il avait une posture horizontale.</ModeDeVie>
+            <ModeAlimentation>Le diplodocus avait un mécanisme d'alimentation radicalement différent de celui des autres sauropodes. Il semble qu'il mordait les branches des arbres et que leurs dents servaient de râteau ou de pinces, et qu'il arrachait les feuilles en tirant la tête en arrière, ce qui expliquerait les traces d'usures inhabituelles (résultant du contact des dents avec les aliments).</ModeAlimentation>
+            <Commentaire>Diplodocus signifie « double poutre ».</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Lézard qui court »</NomCommun>
+            <NomScientifique>Dromaeosaurus</NomScientifique>
+        </Nom>
+        <Taille>2</Taille>
+        <Poids>0.0030</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>70.498493;-155.975741</Lieu>
+            <Lieu>46.519845;-108.805146</Lieu>
+            <Lieu>50.349532;-111.789408</Lieu>
+            <Lieu>48.534586;-105.724618</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie />
+            <ModeAlimentation />
+            <Commentaire>Dromaeosaurus signifie « lézard qui court ».</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
             <NomCommun>« Voleur de l'aube »</NomCommun>
             <NomScientifique>Eoraptor</NomScientifique>
         </Nom>
@@ -169,6 +249,24 @@
             <ModeDeVie>C’est l’un des plus grands carnivores terrestres de tous les temps, d’une taille et d’une masse comparable voire supérieures à celles du Tyrannosaurus (T-rex).</ModeDeVie>
             <ModeAlimentation>Ses fossiles ont été retrouvés près d’autres fossiles de Titanosaur et d’autres grands dinosaures herbivores. Ainsi, des chercheurs ont émis l’hypothèse que le Giganotosaurus chassait ce genre de créatures.</ModeAlimentation>
             <Commentaire>Le nom Giganotosaurus vient du grec gigas ("géant"), notos ("vent du sud") et sauros ("lézard").</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>Gigantoraptor</NomCommun>
+            <NomScientifique>Gigantoraptor</NomScientifique>
+        </Nom>
+        <Taille>8;4</Taille>
+        <Poids>2.0</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>43.939037;111.768792</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Omnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Gigantoraptor est, comme son nom l'indique, très grand. Il possède de grandes griffes et de longues pattes arrière dont les proportions indiquent qu'il devait être rapide et agile. Il devait certainement utiliser sa vitesse pour échapper aux prédateurs.</ModeDeVie>
+            <ModeAlimentation />
+            <Commentaire>Gigantoraptor signifie littéralement « voleur géant d’Erlian ». Erlian est bassin en Chine.</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
@@ -296,6 +394,24 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
+            <NomCommun>Lophostropheus</NomCommun>
+            <NomScientifique>Lophostropheus</NomScientifique>
+        </Nom>
+        <Taille>3.5</Taille>
+        <Poids />
+        <Epoque>TRIAS;JURASSIQUE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>49.535524;1.317407</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>C'était un prédateur rapide adapté à la course.</ModeDeVie>
+            <ModeAlimentation>Il devait probablement chasser des troupeaux de dinosaures plus petits.</ModeAlimentation>
+            <Commentaire>Lophos signifie « crête » en grec.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
             <NomCommun>Loricatosaurus</NomCommun>
             <NomScientifique>Loricatosaurus</NomScientifique>
         </Nom>
@@ -322,47 +438,22 @@
         <Poids />
         <Epoque>CRETACE</Epoque>
         <LieuDecouverteFossile>
-            <Lieu>51.136185;0.186889</Lieu>
-            <Lieu>51.136185;0.186889</Lieu>
-            <Lieu>50.256056;1.833001</Lieu>
-            <Lieu>50.043371;2.641259</Lieu>
-            <Lieu>49.887423;2.139601</Lieu>
-            <Lieu>45.103193;11.303209</Lieu>
-            <Lieu>44.791410;11.663387</Lieu>
-            <Lieu>46.274854;10.825280</Lieu>
-            <Lieu>33.005536;-6.745795</Lieu>
-            <Lieu>15.439372;5.373761</Lieu>
-            <Lieu>-4.281672;20.395269</Lieu>
-            <Lieu>-4.281672;20.395269</Lieu>
-            <Lieu>-16.395485;11.851390</Lieu>
-            <Lieu>32.372053;35.880815</Lieu>
-            <Lieu>34.402906;37.136606</Lieu>
-            <Lieu>34.402906;37.136606</Lieu>
-            <Lieu>56.375727;8.398499</Lieu>
-            <Lieu>56.308551;8.957316</Lieu>
-            <Lieu>54.788108;11.492448</Lieu>
-            <Lieu>55.262674;11.976031</Lieu>
-            <Lieu>50.201079;19.838776</Lieu>
-            <Lieu>50.944070;45.585503</Lieu>
-            <Lieu>51.185709;-111.481270</Lieu>
-            <Lieu>47.924780;-114.252969</Lieu>
-            <Lieu>45.577743;-98.145542</Lieu>
-            <Lieu>42.791919;-98.131572</Lieu>
-            <Lieu>43.413382;-103.697233</Lieu>
-            <Lieu>43.903017;-99.910004</Lieu>
-            <Lieu>31.537213;-97.177948</Lieu>
-            <Lieu>30.112281;-98.423852</Lieu>
-            <Lieu>36.814517;-90.212456</Lieu>
-            <Lieu>35.272976;-88.867508</Lieu>
-            <Lieu>32.978466;-88.807950</Lieu>
-            <Lieu>34.236999;-78.493155</Lieu>
-            <Lieu>32.740844;-80.414452</Lieu>
-            <Lieu>39.561113;-75.661195</Lieu>
-            <Lieu>39.736262;-75.324254</Lieu>
-            <Lieu>39.802821;-75.136134</Lieu>
-            <Lieu>39.898183;-74.892986</Lieu>
-            <Lieu>-37.689092;175.912381</Lieu>
-            <Lieu>-45.345225;169.249394</Lieu>
+            <Lieu>-43.24768;172.19236</Lieu>
+            <Lieu>-39.34398;175.85048</Lieu>
+            <Lieu>34.54955;-5.488171</Lieu>
+            <Lieu>42.775104;-4.388700</Lieu>
+            <Lieu>51.130568;0.747819</Lieu>
+            <Lieu>50.738600;2.037835</Lieu>
+            <Lieu>56.212957;8.603094</Lieu>
+            <Lieu>54.751153;11.805097</Lieu>
+            <Lieu>44.734366;11.524194</Lieu>
+            <Lieu>50.346777;20.794028</Lieu>
+            <Lieu>15.738175;4.914789</Lieu>
+            <Lieu>-15.067313;12.580532</Lieu>
+            <Lieu>46.639978;-103.201993</Lieu>
+            <Lieu>32.439393;-100.335604</Lieu>
+            <Lieu>32.675095;-80.760259</Lieu>
+            <Lieu>34.595764;-89.359428</Lieu>
         </LieuDecouverteFossile>
         <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
         <DescriptionDetaillee>
@@ -565,6 +656,28 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
+            <NomCommun>Tricératops</NomCommun>
+            <NomScientifique>Tricératops</NomScientifique>
+        </Nom>
+        <Taille>10;4</Taille>
+        <Poids>8</Poids>
+        <Epoque>CRETACE</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>50.226941;-105.776323</Lieu>
+            <Lieu>47.884396;-106.086064</Lieu>
+            <Lieu>45.989759;-105.160992</Lieu>
+            <Lieu>45.903996;-101.090675</Lieu>
+            <Lieu>43.403941;-104.790963</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Herbivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie>Le tricératops avait un large crâne. Il portait une corne sur le museau, au-dessus des narines et une paire de cornes de près d’un mètre de longueur, réparties au-dessus de chaque œil. A l’arrière du crâne se dresse une collerette osseuse ornée d’os. Celle-ci était très solide. Ces cornes lui permettait de se défendre./nLe tricératops vivait en troupeaux et parfois en compagnie d’autres dinosaures.</ModeDeVie>
+            <ModeAlimentation>Il mangeait des feuilles mais aucune herbe.</ModeAlimentation>
+            <Commentaire>Triceratops signifie littéralement « tête à cornes »./nSon grand ennemie était le Tyrannosaure.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
             <NomCommun>T-rex, « Roi des lézards tyrans »</NomCommun>
             <NomScientifique>Tyrannosaurus rex</NomScientifique>
         </Nom>
@@ -588,6 +701,24 @@
             <ModeDeVie>Tyrannosaurus était un carnassier bipède doté d'un crâne massif équilibré par une longue queue puissante. Comparés à ses larges membres postérieurs, les bras du Tyrannosaurus étaient petits et atrophiés et ne portaient que deux doigts griffus.</ModeDeVie>
             <ModeAlimentation>De loin le plus grand des carnivores de son temps, le T- rex a été un superprédateur au sommet de la chaîne alimentaire, chassant notamment des herbivores de grande taille tels que les Hadrosauridae et les Ceratopsidae, même si certains experts suggèrent qu'il était avant tout charognard.</ModeAlimentation>
             <Commentaire>Il est le plus grand Tyrannosauridae connu et l'un des plus grands carnivores terrestres ayant existé sur la planète.</Commentaire>
+        </DescriptionDetaillee>
+    </Dinosaure>
+    <Dinosaure>
+        <Nom>
+            <NomCommun>« Pied rapide »</NomCommun>
+            <NomScientifique>Velocipes</NomScientifique>
+        </Nom>
+        <Taille />
+        <Poids />
+        <Epoque>TRIAS</Epoque>
+        <LieuDecouverteFossile>
+            <Lieu>50.787301;18.714781</Lieu>
+        </LieuDecouverteFossile>
+        <RegimeAlimentaire>Carnivore</RegimeAlimentaire>
+        <DescriptionDetaillee>
+            <ModeDeVie />
+            <ModeAlimentation />
+            <Commentaire>Velocipes signifie littéralement « pied rapide ».</Commentaire>
         </DescriptionDetaillee>
     </Dinosaure>
     <Dinosaure>
