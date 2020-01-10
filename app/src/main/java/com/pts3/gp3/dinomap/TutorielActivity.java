@@ -15,7 +15,7 @@ public class TutorielActivity extends AppCompatActivity {
     static ImageView imgTuto;
     static Button btnSuivant;
     static TextView textInstruction;
-    static int i = 0;
+    static int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,9 @@ public class TutorielActivity extends AppCompatActivity {
         btnSuivant = findViewById(R.id.btnSuivant);
         textInstruction = findViewById(R.id.textInstruction);
         imgTuto = findViewById(R.id.imgTuto);
-        i = 0;
-        mettreAJourTexteImageTuto();
+        i = 1;
+
+        miseAzero();
 
 
         btnSuivant.setOnClickListener(new View.OnClickListener() {
@@ -36,11 +37,17 @@ public class TutorielActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 mettreAJourTexteImageTuto();
-                if (i == 12) {
+                if (i == 13) {
                     startActivity(new Intent(TutorielActivity.this, MainActivity.class));
                 }
             }
         });
+    }
+
+    private void miseAzero() {
+        imgTuto.setImageResource(R.drawable.accueil);
+        textInstruction.setText("Vous avez le choix de choisir entre explorer la carte," +
+                " faire des quizs, explorer l’encyclopédie et savoir qui a fait l’application.");
     }
 
 
@@ -48,7 +55,7 @@ public class TutorielActivity extends AppCompatActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
 
-        i = 0;
+        i = 1;
 
 
     }
@@ -59,7 +66,7 @@ public class TutorielActivity extends AppCompatActivity {
         i++;
         switch (i) {
             case 1:
-                imgTuto.setImageResource(R.drawable.accueil1);
+                imgTuto.setImageResource(R.drawable.accueil);
                 textInstruction.setText("Vous avez le choix de choisir entre explorer la carte," +
                         " faire des quizs, explorer l’encyclopédie et savoir qui a fait l’application.");
                 break;
