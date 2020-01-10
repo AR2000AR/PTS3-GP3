@@ -72,9 +72,8 @@ public class TutorielActivity extends AppCompatActivity {
 
             case 2:
                 imgTuto.setImageResource(R.drawable.carte1);
-                textInstruction.setText("Voici la carte, vous pouvez naviguer sur la carte en glissant la carte avec vos doigts, " +
-                        "vous pouvez modifier l’époque que vous voulez explorer. " +
-                        "En bas de l’écran, il y une frise chronologique que l’on peut faire glisser de gauche à droite le point qui indique l’époque actuelle.");
+                textInstruction.setText("Voici la carte, vous pouvez naviguer sur la carte en glissant la carte avec vos doigts. " +
+                        "Vous pouvez modifier l’époque que vous voulez explorer grâce à la frise chronologique que l’on peut faire glisser,le point indique l’époque actuelle.\n");
                 break;
 
             case 3:
@@ -113,21 +112,26 @@ public class TutorielActivity extends AppCompatActivity {
                 break;
 
             case 9:
+                imgTuto.setImageResource(R.drawable.tuto);
+                textInstruction.setText("Vous pouvez appuyer sur « lancer le tutoriel » pour lancer à nouveau le tutoriel.\n");
+                break;
+
+            case 10:
                 imgTuto.setImageResource(R.drawable.quiz1);
                 textInstruction.setText("Vous devez appuyer sur la proposition par les trois que vous pensez correctes.\n");
                 break;
 
-            case 10:
+            case 11:
                 imgTuto.setImageResource(R.drawable.quiz2);
                 textInstruction.setText("Un message de réussite s'affiche si c’est la bonne réponse avec le montant de pièce gagné.");
                 break;
 
-            case 11:
+            case 12:
                 imgTuto.setImageResource(R.drawable.quiz3);
                 textInstruction.setText("Un message d’erreur avec la bonne réponse s’affiche si c’est la mauvaise réponse.\n");
                 break;
 
-            case 12:
+            case 13:
                 imgTuto.setImageResource(R.drawable.quiz4);
                 textInstruction.setText("Vous pouvez voir le nombre de pièce accumulé ici.\n");
                 break;
