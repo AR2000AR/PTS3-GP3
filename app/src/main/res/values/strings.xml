@@ -42,4 +42,16 @@
     <string name="non">non</string>
     <string name="ok">ok</string>
 
+    <string name="metre">mètre</string>
+    <string name="decimetre">décimètre</string>
+    <string name="centimetre">centimètre</string>
+
+    <string name="tonne">tonne</string>
+    <string name="kilo">kilogramme</string>
+    <string name="gramme">gramme</string>
+    <string name="milligramme">milligramme</string>
+
+    <string name="plurielUnite">s</string>
+
+
 </resources>

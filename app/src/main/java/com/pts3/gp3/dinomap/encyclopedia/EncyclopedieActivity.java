@@ -256,31 +256,31 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
 
     private String makeSizeString(double size) {
         Double sizeDouble = new Double(size);
-        final String[] unit = {"m", "dm", "cm", "mm"};
+        final int[] unit = {R.string.metre, R.string.decimetre, R.string.centimetre};
         int i = 0;
         while (!(size > 1 && size < 100) && getDecimalPart(size) != 0 && i < unit.length) {
-            size *= 10;
+            size = multiple10(size);
             i++;
             if (i == 1) {
-                size *= 10;
+                size = multiple10(size);
                 i++;
             }
         }
-        return String.format("%s%s", doubleToString(size), unit[i]);
+        return makeUnitString(size, unit[i]);
     }
 
     private String makeWeightString(double weight) {
-        final String[] unit = {"t", "", "", "kg", "g", "mg"};
+        final int[] unit = {R.string.tonne, 0, 0, R.string.kilo, R.string.gramme, R.string.milligramme};
         int i = 0;
         while (!(weight > 1 && weight < 100) && getDecimalPart(weight) != 0 && i < unit.length) {
-            weight *= 10;
+            weight = multiple10(weight);
             i++;
             if (i == 1) {
-                weight *= 100;
+                weight = multiple10(multiple10(weight));
                 i += 2;
             }
         }
-        return String.format("%s%s", doubleToString(weight), unit[i]);
+        return makeUnitString(weight, unit[i]);
     }
 
     private String doubleToString(double d) {
@@ -289,5 +289,28 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         } else {
             return Double.toString(d);
         }
+    }
+
+    private String makeUnitString(double d, int unit) {
+        return makeUnitString(d, getString(unit));
+    }
+
+    private String makeUnitString(double d, String unit) {
+        String res = String.format("%s %s", doubleToString(d), unit);
+        if (d >= 2.0) {
+            res += getString(R.string.plurielUnite);
+        }
+        return res;
+    }
+
+    private double multiple10(double d) {
+        String s = Double.toString(d);
+        int indexOfDecimal = s.indexOf(".");
+        StringBuilder sb = new StringBuilder(s);
+        sb.deleteCharAt(indexOfDecimal);
+        sb.insert(indexOfDecimal + 1, ".");
+        sb.append(0);
+        //if(sb.charAt(0)=='0') sb.deleteCharAt(0);
+        return Double.parseDouble(sb.toString());
     }
 }
