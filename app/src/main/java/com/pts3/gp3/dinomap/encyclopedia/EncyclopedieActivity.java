@@ -258,7 +258,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         Double sizeDouble = new Double(size);
         final String[] unit = {"m", "dm", "cm", "mm"};
         int i = 0;
-        while (!(size > 0 && size < 100) && getDecimalPart(size) != 0 && i < unit.length) {
+        while (!(size > 1 && size < 100) && getDecimalPart(size) != 0 && i < unit.length) {
             size *= 10;
             i++;
             if (i == 1) {
@@ -272,7 +272,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
     private String makeWeightString(double weight) {
         final String[] unit = {"t", "", "", "kg", "g", "mg"};
         int i = 0;
-        while (!(weight > 0 && weight < 100) && getDecimalPart(weight) != 0 && i < unit.length) {
+        while (!(weight > 1 && weight < 100) && getDecimalPart(weight) != 0 && i < unit.length) {
             weight *= 10;
             i++;
             if (i == 1) {
