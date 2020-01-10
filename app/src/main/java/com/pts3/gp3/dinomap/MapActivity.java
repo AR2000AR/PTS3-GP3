@@ -230,7 +230,10 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                     //int r = s[1].indexOf(d.getNomScientifique().toLowerCase());
 
 
-                    //Log.e("S[0][0] = ",tableauIcdm[0][0]);
+                    //Log.e("S[0][0]
+                    //
+                    //
+                    // = ",tableauIcdm[0][0]);
 
                     int i = list.indexOf(d) + 1;
 

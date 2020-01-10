@@ -45,6 +45,10 @@
         <activity
             android:name=".CreditActivity"
             android:screenOrientation="sensorPortrait" />
+
+        <activity
+            android:name=".TutorielActivity"
+            android:screenOrientation="sensorPortrait" />
     </application>
 
 </manifest>
