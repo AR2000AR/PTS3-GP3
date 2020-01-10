@@ -26,10 +26,10 @@
     <string name="encyclopedia_lieu">Lieu \:</string>
     <string name="encyclopedia_regime">Régime :</string>
 
-    <string name="audrezet" translatable="false">Rémi\nAudrézet</string>
-    <string name="croq" translatable="false">Camille\nCroq</string>
-    <string name="baron" translatable="false">Alexandre\nBaron</string>
-    <string name="rouxel" translatable="false">Valentin\nRouxel</string>
+    <string name="audrezet" translatable="false">Rémi Audrézet</string>
+    <string name="croq" translatable="false">Camille Croq</string>
+    <string name="baron" translatable="false">Alexandre Baron</string>
+    <string name="rouxel" translatable="false">Valentin Rouxel</string>
 
     <string name="map_titre">Carte des dinosaures</string>
 
