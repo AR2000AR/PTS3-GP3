@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -15,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.MainActivity;
 import com.pts3.gp3.dinomap.R;
-import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 import com.pts3.gp3.dinomap.data.GestionaireDePiece;
 import com.pts3.gp3.dinomap.data.Question;
 import com.pts3.gp3.dinomap.data.QuestionParser;
@@ -83,6 +81,8 @@ public class QuizzActivity extends AppCompatActivity {
         }
 
         idQuestion = genererReponse();
+
+        actNbPiece();
     }
 
     public boolean testerLaProposition(View v){
@@ -104,6 +104,7 @@ public class QuizzActivity extends AppCompatActivity {
             result = "Réponse correct vous avez gagné 10 pièces";
             GestionaireDePiece gp = new GestionaireDePiece(QuizzActivity.this);
             gp.setNbPiece(gp.getNbPiece()+10);
+            actNbPiece();
         }else {
             result = "Réponse incorrect la réponse était " + questions.get(idQuestion).getReponse();
         }
@@ -166,6 +167,10 @@ public class QuizzActivity extends AppCompatActivity {
             }
             return i;
         }
+    }
+
+    private void actNbPiece() {
+        ((TextView) findViewById(R.id.nbPiece)).setText(Integer.toString(new GestionaireDePiece(this).getNbPiece()));
     }
 
 }

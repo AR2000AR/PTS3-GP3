@@ -6,7 +6,7 @@
     android:background="@color/test3"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -19,23 +19,51 @@
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/boutonretour" />
 
         <TextView
             android:id="@+id/textQuestionActuelle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
             android:gravity="clip_vertical|left"
             android:paddingStart="5dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="Question n°"
             android:textAlignment="gravity"
-            android:textAppearance="@style/titreAcitvite" />
-    </LinearLayout>
+            android:textAppearance="@style/titreAcitvite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nbPiece"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nbPiece"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="0"
+            android:textAppearance="@style/nbPieceSyle"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/coin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -66,7 +94,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/icodinomap" />
+            app:srcCompat="@drawable/icointerro" />
 
         <Button
             android:id="@+id/btnRep1"
