@@ -295,7 +295,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     // permet de redimensionner la taille des markers
     private Bitmap resizeMapIcons(String iconName) {
         Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(), getResources().getIdentifier(iconName, "drawable", getPackageName()));
-        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, imageBitmap.getWidth() / 10, imageBitmap.getHeight() / 10, false);
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, imageBitmap.getWidth() / 2, imageBitmap.getHeight() / 2, false);
         return resizedBitmap;
     }
 
