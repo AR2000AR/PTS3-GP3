@@ -109,16 +109,16 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         if (dino.getTaille()[0] == -1 && dino.getTaille()[1] == -1) {
             text_TailleDino.setText("Aucune donnée");
         } else if (dino.getTaille()[0] == -1) {
-            text_TailleDino.setText(dino.getTaille()[1] + "m de haut");
+            text_TailleDino.setText(makeSizeString(dino.getTaille()[1]) + " de haut");
         } else if (dino.getTaille()[1] == -1) {
-            text_TailleDino.setText(dino.getTaille()[0] + "m de long");
+            text_TailleDino.setText(makeSizeString(dino.getTaille()[0]) + " de long");
         } else {
-            text_TailleDino.setText(dino.getTaille()[0] + "m de long,\n" + " " + dino.getTaille()[1] + "m de haut");
+            text_TailleDino.setText(makeSizeString(dino.getTaille()[0]) + " de long,\n" + " " + makeSizeString(dino.getTaille()[1]) + " de haut");
         }
         if (dino.getPoids() == -1) {
             text_PoidsDino.setText("Aucune donnée");
         } else {
-            text_PoidsDino.setText(dino.getPoids() + " tonne(s)");
+            text_PoidsDino.setText(makeWeightString(dino.getPoids()));
         }
         for (Epoque epoque : dino.getEpoques()) {
             if (text_EpoqueDino.getText() == "") {
@@ -246,5 +246,48 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         view.setTextSize(20);
         view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/trebuc.ttf"));
         return view;
+    }
+
+    private int getDecimalPart(double d) {
+        String s = Double.toString(d);
+        int indexOfDecimal = s.indexOf(".");
+        return Integer.parseInt(s.substring(indexOfDecimal + 1));
+    }
+
+    private String makeSizeString(double size) {
+        Double sizeDouble = new Double(size);
+        final String[] unit = {"m", "dm", "cm", "mm"};
+        int i = 0;
+        while (!(size > 0 && size < 100) && getDecimalPart(size) != 0 && i < unit.length) {
+            size *= 10;
+            i++;
+            if (i == 1) {
+                size *= 10;
+                i++;
+            }
+        }
+        return String.format("%s%s", doubleToString(size), unit[i]);
+    }
+
+    private String makeWeightString(double weight) {
+        final String[] unit = {"t", "", "", "kg", "g", "mg"};
+        int i = 0;
+        while (!(weight > 0 && weight < 100) && getDecimalPart(weight) != 0 && i < unit.length) {
+            weight *= 10;
+            i++;
+            if (i == 1) {
+                weight *= 100;
+                i += 2;
+            }
+        }
+        return String.format("%s%s", doubleToString(weight), unit[i]);
+    }
+
+    private String doubleToString(double d) {
+        if (getDecimalPart(d) == 0) {
+            return Long.toString(Math.round(d));
+        } else {
+            return Double.toString(d);
+        }
     }
 }
