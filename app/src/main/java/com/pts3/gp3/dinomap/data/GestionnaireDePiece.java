@@ -3,11 +3,11 @@ package com.pts3.gp3.dinomap.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class GestionaireDePiece extends Gestionaire {
+public class GestionnaireDePiece extends Gestionnaire {
 
     private static final String PIECE = "piece";
 
-    public GestionaireDePiece(Context context) {
+    public GestionnaireDePiece(Context context) {
         super(context);
     }
 

@@ -21,8 +21,8 @@ import com.pts3.gp3.dinomap.R;
 import com.pts3.gp3.dinomap.data.Dino;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
 import com.pts3.gp3.dinomap.data.Epoque;
-import com.pts3.gp3.dinomap.data.GestionaireAchat;
-import com.pts3.gp3.dinomap.data.GestionaireDePiece;
+import com.pts3.gp3.dinomap.data.GestionnaireAchat;
+import com.pts3.gp3.dinomap.data.GestionnaireDePiece;
 
 import org.jdom.JDOMException;
 
@@ -87,7 +87,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
             e.printStackTrace();
         }
 
-        GestionaireAchat gestionaireAchat = new GestionaireAchat(this);
+        GestionnaireAchat gestionaireAchat = new GestionnaireAchat(this);
         if (gestionaireAchat.isUnlocked(dino)) {
             boutonUnlock.setImageResource(R.drawable.cadenaouvert);
         } else {
@@ -147,14 +147,14 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
 
     public void onClick(View v) {
 
-        final GestionaireAchat gestionaireAchat = new GestionaireAchat(getBaseContext());
+        final GestionnaireAchat gestionaireAchat = new GestionnaireAchat(getBaseContext());
         if (gestionaireAchat.isUnlocked(dino)) {
             afficherInfo(v);
         } else {
             AlertDialog.Builder alertB = new AlertDialog.Builder(this);
             alertB.setTitle(getString(R.string.debloquerDinoTitre));
             alertB.setCancelable(true);
-            int nbPiece = new GestionaireDePiece(this).getNbPiece();
+            int nbPiece = new GestionnaireDePiece(this).getNbPiece();
             StringBuilder message = new StringBuilder();
             message.append(getString(R.string.debloquerDinoMessage));
             message.append("\n");
@@ -172,7 +172,7 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         gestionaireAchat.setUnlocked(dino, true);
-                        GestionaireDePiece gestionaireDePiece = new GestionaireDePiece(EncyclopedieActivity.this);
+                        GestionnaireDePiece gestionaireDePiece = new GestionnaireDePiece(EncyclopedieActivity.this);
                         gestionaireDePiece.setNbPiece(gestionaireDePiece.getNbPiece() - 10);
                         dialog.dismiss();
                         boutonUnlock.callOnClick();

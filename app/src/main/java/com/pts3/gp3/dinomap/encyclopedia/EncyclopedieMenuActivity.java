@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.R;
 import com.pts3.gp3.dinomap.data.DinoDatabaseParser;
-import com.pts3.gp3.dinomap.data.GestionaireAchat;
+import com.pts3.gp3.dinomap.data.GestionnaireAchat;
 
 import org.jdom.JDOMException;
 
@@ -51,7 +51,7 @@ public class EncyclopedieMenuActivity extends AppCompatActivity {
         int c = 0;
         int[] background = {getColor(R.color.test3), getColor(R.color.test2)};
 
-        GestionaireAchat gestionaireAchat = new GestionaireAchat(this);
+        GestionnaireAchat gestionaireAchat = new GestionnaireAchat(this);
 
         for (String[] nom : database.getDinoNameListe()) {
             ViewNomDino dinoView = new ViewNomDino(this, background[c++ % 2], nom[DinoDatabaseParser.NOM_SCIENTIFIQUE], nom[DinoDatabaseParser.NOM_COMMUN]);
