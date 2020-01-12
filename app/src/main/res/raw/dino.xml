@@ -657,7 +657,7 @@
     <Dinosaure>
         <Nom>
             <NomCommun>Tricératops</NomCommun>
-            <NomScientifique>Tricératops</NomScientifique>
+            <NomScientifique>Triceratops</NomScientifique>
         </Nom>
         <Taille>10;4</Taille>
         <Poids>8</Poids>
