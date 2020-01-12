@@ -16,11 +16,13 @@ import org.jdom.JDOMException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EncyclopedieMenuActivity extends AppCompatActivity {
 
     private DinoDatabaseParser database;
+    private List<ViewNomDino> viewNomDinos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,8 @@ public class EncyclopedieMenuActivity extends AppCompatActivity {
         });
 
         LinearLayout listLayout = findViewById(R.id.listeLayout);
+
+        viewNomDinos = new ArrayList<>();
 
         InputStream inputStream = getResources().openRawResource(R.raw.dino);
         try {
@@ -56,8 +60,17 @@ public class EncyclopedieMenuActivity extends AppCompatActivity {
         for (String[] nom : database.getDinoNameListe()) {
             ViewNomDino dinoView = new ViewNomDino(this, background[c++ % 2], nom[DinoDatabaseParser.NOM_SCIENTIFIQUE], nom[DinoDatabaseParser.NOM_COMMUN]);
             dinoView.setUnlocked(gestionaireAchat.isUnlocked(database.getDino(nom)));
+            viewNomDinos.add(dinoView);
             listLayout.addView(dinoView);
         }
     }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        GestionnaireAchat gestionnaireAchat = new GestionnaireAchat(this);
+        for (ViewNomDino view : viewNomDinos) {
+            view.setUnlocked(gestionnaireAchat.isUnlocked(database.getDino(view.getDinoId())));
+        }
+    }
 }
