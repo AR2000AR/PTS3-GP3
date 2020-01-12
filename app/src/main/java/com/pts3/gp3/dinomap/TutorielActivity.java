@@ -38,7 +38,8 @@ public class TutorielActivity extends AppCompatActivity {
 
                 mettreAJourTexteImageTuto();
                 if (i == 13) {
-                    startActivity(new Intent(TutorielActivity.this, MainActivity.class));
+                    finish();
+                    startActivity(new Intent(TutorielActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
                 }
             }
         });
