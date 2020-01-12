@@ -19,7 +19,7 @@ public class CreditActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CreditActivity.this, TutorielActivity.class));
+                startActivity(new Intent(CreditActivity.this, TutorielActivity.class).setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
             }
         });
     }
