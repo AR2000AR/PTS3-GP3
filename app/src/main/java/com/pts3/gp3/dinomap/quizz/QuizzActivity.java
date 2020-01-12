@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.pts3.gp3.dinomap.MainActivity;
 import com.pts3.gp3.dinomap.R;
-import com.pts3.gp3.dinomap.data.GestionaireDePiece;
+import com.pts3.gp3.dinomap.data.GestionnaireDePiece;
 import com.pts3.gp3.dinomap.data.Question;
 import com.pts3.gp3.dinomap.data.QuestionParser;
 
@@ -102,7 +102,7 @@ public class QuizzActivity extends AppCompatActivity {
         Log.i("", "afficherStatutReponse: " + testerLaProposition(v));
         if(testerLaProposition(v)){
             result = "Réponse correct vous avez gagné 10 pièces";
-            GestionaireDePiece gp = new GestionaireDePiece(QuizzActivity.this);
+            GestionnaireDePiece gp = new GestionnaireDePiece(QuizzActivity.this);
             gp.setNbPiece(gp.getNbPiece()+10);
             actNbPiece();
         }else {
@@ -170,7 +170,7 @@ public class QuizzActivity extends AppCompatActivity {
     }
 
     private void actNbPiece() {
-        ((TextView) findViewById(R.id.nbPiece)).setText(Integer.toString(new GestionaireDePiece(this).getNbPiece()));
+        ((TextView) findViewById(R.id.nbPiece)).setText(Integer.toString(new GestionnaireDePiece(this).getNbPiece()));
     }
 
 }

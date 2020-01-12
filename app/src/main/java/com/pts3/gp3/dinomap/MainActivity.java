@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.pts3.gp3.dinomap.data.GestionaireDePiece;
+import com.pts3.gp3.dinomap.data.GestionnaireDePiece;
 import com.pts3.gp3.dinomap.encyclopedia.EncyclopedieMenuActivity;
 import com.pts3.gp3.dinomap.quizz.QuizzActivity;
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         TextView nbPiece = findViewById(R.id.pieces);
-        GestionaireDePiece gestionaireDePiece = new GestionaireDePiece(this);
+        GestionnaireDePiece gestionaireDePiece = new GestionnaireDePiece(this);
         nbPiece.setText(Integer.toString(gestionaireDePiece.getNbPiece()));
     }
 }

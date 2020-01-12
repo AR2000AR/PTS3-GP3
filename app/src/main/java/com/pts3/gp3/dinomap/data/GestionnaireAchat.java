@@ -3,10 +3,10 @@ package com.pts3.gp3.dinomap.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class GestionaireAchat extends Gestionaire {
+public class GestionnaireAchat extends Gestionnaire {
 
 
-    public GestionaireAchat(Context context) {
+    public GestionnaireAchat(Context context) {
         super(context);
     }
 
