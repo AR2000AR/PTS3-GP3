@@ -223,7 +223,13 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
             for (String img : imgPath) {
                 Log.e("path img", img);
 
-                if (img.equals(nomDino.toLowerCase() + ".jpg")) {
+                if (img.toLowerCase().equals(nomDino.toLowerCase() + ".jpg")) {
+                    InputStream is = assetManager.open("images/" + img);
+                    Log.e("path img", img);
+                    Bitmap bm = BitmapFactory.decodeStream(is);
+                    imageDino.setImageBitmap(bm);
+                    return true;
+                }else if(img.toLowerCase().equals(nomDino.toLowerCase() + ".png")) {
                     InputStream is = assetManager.open("images/" + img);
                     Log.e("path img", img);
                     Bitmap bm = BitmapFactory.decodeStream(is);

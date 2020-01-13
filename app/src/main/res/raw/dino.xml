@@ -613,7 +613,7 @@
     </Dinosaure>
     <Dinosaure>
         <Nom>
-            <NomCommun>« lézard faucheur »</NomCommun>
+            <NomCommun>« Lézard faucheur »</NomCommun>
             <NomScientifique>Therizinosaurus</NomScientifique>
         </Nom>
         <Taille>9.0;5.0</Taille>
