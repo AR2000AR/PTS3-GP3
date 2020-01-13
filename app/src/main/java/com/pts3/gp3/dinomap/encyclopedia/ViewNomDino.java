@@ -84,6 +84,13 @@ public class ViewNomDino extends ConstraintLayout implements View.OnClickListene
         getContext().startActivity(intent);
     }
 
+    public String[] getDinoId() {
+        String[] nom = new String[2];
+        nom[DinoDatabaseParser.NOM_COMMUN] = nomCommun;
+        nom[DinoDatabaseParser.NOM_SCIENTIFIQUE] = nomScientifique;
+        return nom;
+    }
+
     public void setUnlocked(boolean unlocked) {
         ImageView img = innerLayout.findViewById(R.id.coin);
         if (unlocked) {

@@ -1,7 +1,6 @@
 package com.pts3.gp3.dinomap.encyclopedia;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -135,10 +134,10 @@ public class EncyclopedieActivity extends AppCompatActivity implements View.OnCl
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), EncyclopedieMenuActivity.class);
+                //Intent intent = new Intent(v.getContext(), EncyclopedieMenuActivity.class);
                 finish();
                 //Intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(intent);
+                //startActivity(intent);
 
             }
         });
